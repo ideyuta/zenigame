@@ -103,17 +103,6 @@
   -webkit-transform: translate3d(0, 0, 0);
 }
 
-
-// Cards
-//-------------------------------
-
-@mixin cards($width, $height) {
-  @include size($width - 6px, $height - 6px);
-  @include box_shadow(0 0 2px $light_gray);
-  padding: 3px;
-  background: $white;
-  overflow: hidden;
-}
 // Partials 
 //-------------------------------
 
@@ -130,6 +119,26 @@
     display: inline-block;
   }
 }
+
+
+
+.text {
+  @include typo(14px, $black, normal, 1.45);
+  letter-spacing: -1px;
+}
+
+.text-sm {
+  @include typo(12px, $light-black, normal, 1.45);
+}
+
+.text-xs {
+  @include typo(10px, $dark-gray, normal, 1.45);
+  letter-spacing: -1px;
+}
+
+
+
+
 
 
 

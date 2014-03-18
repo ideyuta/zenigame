@@ -1,0 +1,13 @@
+// Zenigame
+//
+// Cards 
+//-------------------------------
+
+@mixin cards($width, $height, $padding:3px) {
+  @include size($width - $padding * 2, $height - $padding * 2);
+  @include box_shadow(0 0 2px $light_gray);
+  background: $white;
+  padding: $padding;
+  overflow: hidden;
+}
+

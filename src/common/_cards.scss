@@ -1,0 +1,35 @@
+//
+// Cards 
+//-------------------------------
+
+.card-box {
+  padding: 0 1px;
+  float: left;
+}
+
+// Card 
+//-------------------------------
+
+.card-coupon {
+  @extend %anim-bloom;
+  @include cards(156px, 240px); 
+}
+
+// Card Animation
+//-------------------------------
+
+.anim-highlight {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transition-property: padding;
+  transition-duration: 300ms;
+  &:hover { padding: 0 10px; }
+}
+
+%anim-bloom {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transition-property: width;
+  transition-duration: 300ms;
+}
+

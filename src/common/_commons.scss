@@ -45,14 +45,7 @@
 }
 
 
-// Card 
-//-------------------------------
 
-.card {
-  @include box_shadow(0 1px 2px $light-gray);
-  @include border_radius($radius);
-  background: $white;
-}
 
 .toggle {
   .toggle-icon {
