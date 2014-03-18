@@ -1,0 +1,66 @@
+/* 
+  Zenigame
+  reset
+*/
+
+a, abbr, acronym, address, applet, b, big, blockquote, body, caption, center,
+cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6,
+html, i, iframe, ins, img, kbd, label, legend, li, object, ol, p, pre, q, s, samp,
+small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt,
+u, ul, var {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+body {
+  font-family: $font-family-body;
+  background: $extra-light-gray;
+  -webkit-text-size-adjust: none;
+  letter-spacing: .05em;
+}
+
+a {
+  color: $anchor-color;
+  &:hover { text-decoration: none; }
+}
+
+a:focus { outline: none; }
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+h1 { font-size: $font-size-1; }
+
+h2 { font-size: $font-size-2; }
+
+h3 { font-size: $font-size-3; }
+
+h4 { font-size: $font-size-4; }
+
+h5 { font-size: $font-size-5; }
+
+h6 { font-size: $font-size-6; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+input, textarea {
+  padding: 0;
+  margin: 0;
+}
+
+ol, ul { list-style: none; }
+
+table {
+  border-collapse: collapse; 
+  border-spacing: 0;
+}
+
+caption, th { text-align: left; }

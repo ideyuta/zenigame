@@ -1,0 +1,67 @@
+// Zenigame
+//
+// Common 
+//-------------------------------
+
+.pull-left { float: left; }
+.pull-right { float: right; }
+.flush-left { text-align: left !important; }
+.flush-right { text-align: right !important; }
+.flush-center { text-align: center; }
+
+.is-ok { color: $green; }
+.is-no { color: $yellow; }
+
+.plain { text-decoration: none; }
+.pb20 { padding-bottom: 20px; }
+.pt20 { padding-top: 20px; }
+
+// Button
+//-------------------------------
+
+%btn {
+  @include btn(auto, 28px, 0 20px);
+  @include typo(13px, null, normal, 28px);
+  @include border(1px, solid, null);
+}
+
+.btn-default {
+  @extend %btn;
+  @include btn-varient($light-gray, $white);
+}
+
+.btn-extra {
+  @extend %btn;
+  @include btn-varient($white, $blue);
+}
+
+.btn-entry {
+  @extend %btn;
+  @include btn-varient($white, $green);
+}
+
+.btn-group {
+  padding: 10px;
+}
+
+
+// Card 
+//-------------------------------
+
+.card {
+  @include box_shadow(0 1px 2px $light-gray);
+  @include border_radius($radius);
+  background: $white;
+}
+
+.toggle {
+  .toggle-icon {
+    @include b_img("#{$img_path}/icon-toggle-down.png", no-repeat, right, 16px); 
+  }
+  &.is-active {
+    .toggle-icon {
+      @include b_img("#{$img_path}/icon-toggle-up.png", no-repeat, right, 16px);
+    }
+  }
+}
+
