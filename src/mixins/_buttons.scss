@@ -1,5 +1,7 @@
-// Button
-// 
+// Zenigame
+//
+// Button 
+//-------------------------------
 
 @mixin btn($width, $height, $padding:null, $_radius:$radius) {
   @include size($width, $height);
@@ -11,7 +13,7 @@
 }
 
 @mixin btn-varient($color, $background-color) {
-  @include gradient($background-color);
+  @include btn-gradient($background-color);
   border-color: darken($background-color, 10%);
   color: $color;
 }

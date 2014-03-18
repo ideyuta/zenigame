@@ -104,6 +104,16 @@
 }
 
 
+// Cards
+//-------------------------------
+
+@mixin cards($width, $height) {
+  @include size($width - 6px, $height - 6px);
+  @include box_shadow(0 0 2px $light_gray);
+  padding: 3px;
+  background: $white;
+  overflow: hidden;
+}
 // Partials 
 //-------------------------------
 
