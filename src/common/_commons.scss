@@ -50,8 +50,8 @@
 //-------------------------------
 
 %btn {
-  @include btn(auto, 28px, 0 20px);
-  @include typo(13px, null, normal, 28px);
+  @include btn(auto, 28px, 0 10px);
+  @include typo(12px, null, normal, 28px);
   @include border(1px, solid, null);
 }
 
@@ -68,6 +68,12 @@
 .btn-entry {
   @extend %btn;
   @include btn-varient($white, $green);
+}
+
+
+.btn-spring {
+  @extend %btn;
+  @include btn-varient($white, $pink);
 }
 
 .btn-group {
