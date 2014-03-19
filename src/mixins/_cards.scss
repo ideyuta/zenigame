@@ -3,11 +3,11 @@
 // Cards 
 //-------------------------------
 
-@mixin cards($width, $height, $padding:3px) {
-  @include size($width - $padding * 2, $height - $padding * 2);
-  @include box_shadow(0 0 2px $light_gray);
+@mixin cards($width, $height, $pt:3px, $pr:$pt, $pb:$pt, $pl:$pt) {
+  @include size($width - ($pr + $pl), $height - ($pt + $pb));
+  @include box_shadow(0 1px 2px $light_gray);
   background: $white;
-  padding: $padding;
+  padding: $pt $pr $pb $pl;
   overflow: hidden;
 }
 

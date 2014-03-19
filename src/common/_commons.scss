@@ -13,10 +13,21 @@
 .is-no { color: $yellow; }
 
 .plain { text-decoration: none; }
+
+// Padding 
+//-------------------------------
+
+.pr10 { padding-right: 10px; }
+.pb10 { padding-bottom: 10px; }
 .pb20 { padding-bottom: 20px; }
 .pt20 { padding-top: 20px; }
 
+// Letter Spacing 
+//-------------------------------
 
+.ls-1 { letter-spacing: -1px !important; }
+.ls0 { letter-spacing: 0px !important; }
+.ls1 { letter-spacing: 1px !important; }
 
 // Color 
 //-------------------------------
@@ -29,20 +40,27 @@
 // Text 
 //-------------------------------
 
-
-.text {
-  @include typo(14px, $black, normal, 1.45);
-  letter-spacing: -1px;
+.text-lg {
+  @include typo(17px, $black, 400, 1.45);
 }
 
+.text {
+  @include typo(14px, $black, 400, 1.45);
+}
+a.text { color: $blue; }
+
 .text-sm {
-  @include typo(12px, $light-black, normal, 1.45);
+  @include typo(12px, $light-black, 300, 1.45);
 }
 
 .text-xs {
-  @include typo(10px, $dark-gray, normal, 1.45);
+  @include typo(10px, $dark-gray, 300, 1.45);
 }
 
+.text-loose {
+  @extend .text;
+  line-height: 1.7em;
+}
 
 
 
@@ -57,7 +75,7 @@
 
 .btn-default {
   @extend %btn;
-  @include btn-varient($light-gray, $white);
+  @include btn-varient($dark_gray, $white);
 }
 
 .btn-extra {
@@ -69,6 +87,22 @@
   @extend %btn;
   @include btn-varient($white, $green);
 }
+
+.btn-large-entry {
+  @extend .btn-entry;
+  @include btn-resize(40px, 14px, null);
+}
+
+.btn-large-extra {
+  @extend .btn-extra;
+  @include btn-resize(40px, 14px, null);
+}
+
+.btn-sm-entry {
+  @extend .btn-entry;
+  @include btn-resize(22px, 12px, null);
+}
+
 
 
 .btn-spring {

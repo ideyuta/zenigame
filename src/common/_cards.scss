@@ -15,6 +15,18 @@
   @include cards(156px, 240px); 
 }
 
+.card-coupon-promotion {
+  @include cards(900px, 220px, 0);
+  @include border(1px, solid, $extra-light-gray, $radius);
+  @include box-shadow(none);
+}
+
+.card-promotion {
+  @include cards(445px, auto, 24px, 20px, 24px, 20px);
+  @include border-radius($radius);
+}
+
+
 // Card Animation
 //-------------------------------
 

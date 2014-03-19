@@ -18,6 +18,7 @@ body {
   font-family: $font-family-body;
   background: $extra-light-gray;
   -webkit-text-size-adjust: none;
+  line-height: 0;
 }
 
 a {
@@ -27,21 +28,44 @@ a {
 
 a:focus { outline: none; }
 
-strong { font-weight: bold; }
+strong { font-weight: 600; }
 
 em { font-style: italic; }
 
-h1 { font-size: $font-size-1; }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
 
-h2 { font-size: $font-size-2; }
+h1 {
+  font-size: $font-size-1;
+  line-height: $font-size-1;
+}
 
-h3 { font-size: $font-size-3; }
+h2 {
+  font-size: $font-size-2;
+  line-height: $font-size-2; 
+}
 
-h4 { font-size: $font-size-4; }
+h3 {
+  font-size: $font-size-3;
+  line-height: $font-size-3;
+}
 
-h5 { font-size: $font-size-5; }
+h4 {
+  font-size: $font-size-4;
+  line-height: $font-size-4;
+}
 
-h6 { font-size: $font-size-6; }
+h5 {
+  font-size: $font-size-5;
+  line-height: $font-size-5; 
+}
+
+h6 {
+  font-size: $font-size-6;
+  line-height: $font-size-6; 
+}
+
 
 blockquote, q { quotes: none; }
 

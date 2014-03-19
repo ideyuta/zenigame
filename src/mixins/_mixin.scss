@@ -86,6 +86,13 @@
   -ms-filter: 'alpha( opacity=#{$_opacity})';
 }
 
+// Blur
+@mixin blur($value) {
+  -webkit-filter: blur($value); 
+  -o-filter: blur($value); 
+  filter: blur($value); 
+}
+
 // Underline on mouseover 
 @mixin on_underline {
   text-decoration: none;

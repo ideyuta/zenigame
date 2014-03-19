@@ -1,0 +1,17 @@
+//
+// Modals 
+//-------------------------------
+
+.modal {
+  @include size(100%);
+  @include b_img("#{$img-path}/bg-modal.png", repeat);
+  @include pos(absolute, 0, 0, 9000);
+  display: none;
+}
+
+%modal-box {
+  @include border(1px, solid , $extra-light-gray, $radius);
+  background: $white;
+}
+
+
