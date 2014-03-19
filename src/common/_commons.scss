@@ -16,6 +16,36 @@
 .pb20 { padding-bottom: 20px; }
 .pt20 { padding-top: 20px; }
 
+
+
+// Color 
+//-------------------------------
+
+.cr { color: $red; }
+.cg { color: $green; }
+.cb { color: $blue; }
+.cy { color: $yellow; }
+
+// Text 
+//-------------------------------
+
+
+.text {
+  @include typo(14px, $black, normal, 1.45);
+  letter-spacing: -1px;
+}
+
+.text-sm {
+  @include typo(12px, $light-black, normal, 1.45);
+}
+
+.text-xs {
+  @include typo(10px, $dark-gray, normal, 1.45);
+}
+
+
+
+
 // Button
 //-------------------------------
 

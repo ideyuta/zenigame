@@ -121,27 +121,6 @@
 }
 
 
-
-.text {
-  @include typo(14px, $black, normal, 1.45);
-  letter-spacing: -1px;
-}
-
-.text-sm {
-  @include typo(12px, $light-black, normal, 1.45);
-}
-
-.text-xs {
-  @include typo(10px, $dark-gray, normal, 1.45);
-  letter-spacing: -1px;
-}
-
-
-
-
-
-
-
 // Media Query
 $bp-phone: 480px;
 $bp-tablet: 768px;
