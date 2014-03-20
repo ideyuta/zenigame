@@ -16,9 +16,11 @@ u, ul, var {
 
 body {
   font-family: $font-family-body;
+  font-family: $font-family-body-ie8/9;
   background: $extra-light-gray;
   -webkit-text-size-adjust: none;
   line-height: 0;
+  -ms-zoom: 1;
 }
 
 a {

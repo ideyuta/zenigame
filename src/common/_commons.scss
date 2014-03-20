@@ -116,6 +116,12 @@ a.text { color: $blue; }
 
 
 
+.blur { 
+  @include blur(20px);
+}
+
+
+
 
 .toggle {
   .toggle-icon {
