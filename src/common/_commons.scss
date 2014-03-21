@@ -3,6 +3,8 @@
 // Common 
 //-------------------------------
 
+.clear { clear: both; }
+
 .pull-left { float: left; }
 .pull-right { float: right; }
 .flush-left { text-align: left !important; }
@@ -45,9 +47,9 @@
 }
 
 .text {
-  @include typo(14px, $black, 400, 1.45);
+  @include typo(14px, $black, 300, 1.45);
 }
-a.text { color: $blue; }
+
 
 .text-sm {
   @include typo(12px, $light-black, 300, 1.45);
@@ -62,7 +64,9 @@ a.text { color: $blue; }
   line-height: 1.7em;
 }
 
-
+a.text { color: $blue; }
+a.text-sm { color: $blue; }
+a.text-xs { color: $blue; }
 
 // Button
 //-------------------------------
@@ -73,9 +77,15 @@ a.text { color: $blue; }
   @include border(1px, solid, null);
 }
 
+
+.btn {
+  @extend %btn;
+  @include btn-varient($dark-gray, $white);
+}
+
 .btn-default {
   @extend %btn;
-  @include btn-varient($dark_gray, $white);
+  @include btn-varient($dark-gray, $white);
 }
 
 .btn-extra {
@@ -96,6 +106,18 @@ a.text { color: $blue; }
 .btn-large-extra {
   @extend .btn-extra;
   @include btn-resize(40px, 14px, null);
+}
+
+
+
+.btn-sm {
+  @extend .btn;
+  @include btn-resize(22px, 12px, null);
+}
+
+.btn-sm-extra {
+  @extend .btn-extra;
+  @include btn-resize(22px, 12px, null);
 }
 
 .btn-sm-entry {
@@ -122,6 +144,56 @@ a.text { color: $blue; }
 
 
 
+// dropdown menu 
+//-------------------------------
+
+.dropdown {
+  @include pos(relative, 0, 0, 1);
+  .btn, .btn:hover {
+    @include b_img("#{$img_path}/icon-toggle-down.png", no-repeat, right, 16px);
+  }
+}
+
+.dropdown-menu {
+  @include pos(absolute, 35px, 0, 2);
+  @include box_shadow(0 1px 2px $dark_gray);
+  @include border_radius($radius);
+  display: none;
+  width: auto;
+  padding: 10px 15px;
+  background: $white;
+  li { padding: 5px 0; }
+  a {
+    @include typo(13px, $white, null, 1.45);
+    color: $light_black;
+    white-space: nowrap;
+    text-decoration: none;
+    &:hover { color: $blue; }
+  }
+}
+
+
+// Tab Navigation 
+//-------------------------------
+
+.nav-tabs {
+  @include size(auto, 29px);
+  line-height: 28px;
+  li {
+    padding: 0 5px 0 0;
+    float: left;
+    a {
+      @include border(1px, solid, $light_gray, $radius $radius 0 0);
+      @include typo(13px, $dark_gray, bold, 28px);
+      text-decoration: none;
+      padding: 0 20px;
+      background: $extra_light_gray;
+      display: block;
+      position: relative;
+      bottom: 0;
+    }
+  }
+}
 
 .toggle {
   .toggle-icon {
