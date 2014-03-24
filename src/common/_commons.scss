@@ -11,18 +11,27 @@
 .flush-right { text-align: right !important; }
 .flush-center { text-align: center; }
 
-.is-ok { color: $green; }
-.is-no { color: $yellow; }
+.is-ok { color: $green !important; }
+.is-no { color: $yellow !important; }
 
 .plain { text-decoration: none; }
+
+.inline-block { display: inline-block; }
 
 // Padding 
 //-------------------------------
 
 .pr10 { padding-right: 10px; }
 .pb10 { padding-bottom: 10px; }
+.pt10 { padding-top: 10px; }
 .pb20 { padding-bottom: 20px; }
 .pt20 { padding-top: 20px; }
+
+
+// Margin 
+//-------------------------------
+
+.m0 { margin: 0 !important; }
 
 // Letter Spacing 
 //-------------------------------
@@ -65,6 +74,7 @@
 }
 
 a.text { color: $blue; }
+a.text-lg { color: $blue; }
 a.text-sm { color: $blue; }
 a.text-xs { color: $blue; }
 
@@ -98,14 +108,21 @@ a.text-xs { color: $blue; }
   @include btn-varient($white, $green);
 }
 
-.btn-large-entry {
-  @extend .btn-entry;
-  @include btn-resize(40px, 14px, null);
+
+
+.btn-lg {
+  @extend .btn;
+  @include btn-resize(36px, 14px, null);
 }
 
-.btn-large-extra {
+.btn-lg-entry {
+  @extend .btn-entry;
+  @include btn-resize(36px, 14px, null);
+}
+
+.btn-lg-extra {
   @extend .btn-extra;
-  @include btn-resize(40px, 14px, null);
+  @include btn-resize(36px, 14px, null);
 }
 
 
@@ -131,17 +148,6 @@ a.text-xs { color: $blue; }
   @extend %btn;
   @include btn-varient($white, $pink);
 }
-
-.btn-group {
-  padding: 10px;
-}
-
-
-
-.blur { 
-  @include blur(20px);
-}
-
 
 
 // dropdown menu 
@@ -177,20 +183,21 @@ a.text-xs { color: $blue; }
 //-------------------------------
 
 .nav-tabs {
-  @include size(auto, 29px);
-  line-height: 28px;
+  @include size(auto, 35px);
+  position: relative;
   li {
     padding: 0 5px 0 0;
     float: left;
     a {
-      @include border(1px, solid, $light_gray, $radius $radius 0 0);
-      @include typo(13px, $dark_gray, bold, 28px);
-      text-decoration: none;
+      @extend .text-sm;
+      @include border-radius($radius $radius 0 0);
+      line-height: 35px;
       padding: 0 20px;
-      background: $extra_light_gray;
       display: block;
-      position: relative;
-      bottom: 0;
+      &.is-active {
+        @include border(1px 1px 0 1px, solid, $light-gray);
+      }
+      &:hover { text-decoration: none; }
     }
   }
 }
@@ -205,4 +212,5 @@ a.text-xs { color: $blue; }
     }
   }
 }
+
 

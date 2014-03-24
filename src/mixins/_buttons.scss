@@ -8,22 +8,22 @@
   @include border-radius($_radius);
   display: inline-block;
   padding: $padding;
-  text-decoration: none;
+  text-decoration: none !important;
   text-align: center;
 }
 
 @mixin btn-varient($color, $background-color) {
   @include btn-gradient($background-color);
-  border-color: darken($background-color, 5%);
+  border-color: darken($background-color, 10%);
   color: $color;
 }
 
 @mixin btn-gradient ($start-color) {
-  $end-color: darken($start-color, 3%);
+  $end-color: darken($start-color, 5%);
   background: $start-color;
   background: -moz-linear-gradient(top, $start-color, $end-color);
   background: -webkit-gradient(linear, left top, left bottom, from($start-color), to($end-color));
-  &:hover { background: darken($start-color, 5%); }
+  &:hover { background: darken($start-color, 6%); }
 }
 
 @mixin btn-resize($height, $font-size, $padding) {
