@@ -223,3 +223,6 @@ a.text-xs { color: $blue; }
 }
 
 
+.blur {
+  @include blur(15px);
+}
