@@ -22,6 +22,7 @@
 //-------------------------------
 
 .pr10 { padding-right: 10px; }
+.pl10 { padding-left: 10px; }
 .pb10 { padding-bottom: 10px; }
 .pt10 { padding-top: 10px; }
 .pb20 { padding-bottom: 20px; }
@@ -43,10 +44,11 @@
 // Color 
 //-------------------------------
 
-.cr { color: $red; }
-.cg { color: $green; }
-.cb { color: $blue; }
-.cy { color: $yellow; }
+.cr { color: $red !important; }
+.cg { color: $green !important; }
+.cb { color: $blue !important; }
+.cy { color: $yellow !important; }
+.cgr { color: $gray !important; }
 
 // Text 
 //-------------------------------
@@ -90,7 +92,7 @@ a.text-xs { color: $blue; }
 
 .btn {
   @extend %btn;
-  @include btn-varient($dark-gray, $white);
+  @include btn-varient($blue, $white);
 }
 
 .btn-default {
@@ -107,6 +109,12 @@ a.text-xs { color: $blue; }
   @extend %btn;
   @include btn-varient($white, $green);
 }
+
+.btn-warning {
+  @extend %btn;
+  @include btn-varient($white, $red);
+}
+
 
 
 
