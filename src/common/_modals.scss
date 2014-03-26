@@ -2,7 +2,7 @@
 // Modals 
 //-------------------------------
 
-.modal {
+#modal {
   @include size(100%);
   @include b_img("#{$img-path}/bg-modal.png", repeat);
   @include pos(absolute, 0, 0, 9000);
