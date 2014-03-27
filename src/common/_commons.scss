@@ -177,28 +177,6 @@ a.text-xs { color: $blue; }
 }
 
 
-// Tab Navigation 
-//-------------------------------
-
-.nav-tabs {
-  @include size(auto, 35px);
-  position: relative;
-  li {
-    padding: 0 5px 0 0;
-    float: left;
-    a {
-      @extend .text-sm;
-      @include border-radius($radius $radius 0 0);
-      line-height: 35px;
-      padding: 0 20px;
-      display: block;
-      &.is-active {
-        @include border(1px 1px 0 1px, solid, $light-gray);
-      }
-      &:hover { text-decoration: none; }
-    }
-  }
-}
 
 .toggle {
   .toggle-icon {
