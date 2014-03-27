@@ -52,23 +52,12 @@
 
 // Text 
 //-------------------------------
+$default-text-size: 14px !default;
 
-.text-lg {
-  @include typo(17px, $black, 400, 1.45);
-}
-
-.text {
-  @include typo(14px, $black, 300, 1.45);
-}
-
-
-.text-sm {
-  @include typo(12px, $light-black, 300, 1.45);
-}
-
-.text-xs {
-  @include typo(10px, $dark-gray, 300, 1.45);
-}
+.text-lg { @include typo($default-text-size + 3px, $black, 400, 1.45); }
+.text { @include typo($default-text-size, $black, 300, 1.45); }
+.text-sm { @include typo($default-text-size - 2px, $light-black, 300, 1.45); }
+.text-xs { @include typo($default-text-size - 4px, $dark-gray, 300, 1.45); }
 
 .text-loose {
   @extend .text;

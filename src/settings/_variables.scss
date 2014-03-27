@@ -10,6 +10,7 @@ $dark-gray: #666;
 $gray: #999;
 $light-gray: #ccc;
 $extra-light-gray: #f2f2f2;
+$dark-white: #fafafa;
 $white: #fff;
 
 // Colors
@@ -47,6 +48,6 @@ $font-size-5: $font-size-default + 0px;
 $font-size-6: $font-size-default - 2px;
 
 // Radius
-$radius: 4px;
+$radius: 4px !default;
 
 
