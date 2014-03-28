@@ -24,7 +24,7 @@ body {
 }
 
 a {
-  color: $anchor-color;
+  color: $blue;
   &:hover { text-decoration: none; }
 }
 
@@ -75,6 +75,8 @@ blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none;
 }
+
+button { box-sizing: content-box; }
 
 input, textarea {
   padding: 0;

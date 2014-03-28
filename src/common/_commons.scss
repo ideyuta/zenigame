@@ -18,6 +18,20 @@
 
 .inline-block { display: inline-block; }
 
+.nowrap { white-space: nowrap; }
+
+// Grid 
+//-------------------------------
+
+%grid { overflow: hidden; }
+
+@for $value from 1 through $grid-column {
+  .grid#{$value} {
+    @extend %grid;
+    width: $grid-size * $value;
+  }
+}
+
 // Padding 
 //-------------------------------
 

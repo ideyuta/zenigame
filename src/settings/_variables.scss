@@ -26,14 +26,8 @@ $dark-red: #BF3F26;
 $dark-green: #188052;
 $dark-blue: #264CBF;
 $dark-yellow: #A69520;
-
-
-
+// Colors Extension
 $pink: #f69;
-
-
-$anchor-color: $blue;
-$notice-color: $light_yellow;
 
 // Font Settings
 $font-family-body: Helvetica Neue, Helvetica, MS Sans Serif, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Yu Gothic', 'ＭＳＰ ゴシック', Arial, sans-serif;
@@ -50,4 +44,7 @@ $font-size-6: $font-size-default - 2px;
 // Radius
 $radius: 4px !default;
 
+// Grid
+$grid-column: 12 !default;
+$grid-size: 100% / $grid-column;
 
