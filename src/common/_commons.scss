@@ -21,6 +21,7 @@
 // Padding 
 //-------------------------------
 
+.p10 { padding: 10px; }
 .pr10 { padding-right: 10px; }
 .pl10 { padding-left: 10px; }
 .pb10 { padding-bottom: 10px; }
@@ -33,6 +34,14 @@
 //-------------------------------
 
 .m0 { margin: 0 !important; }
+
+
+// Border 
+//-------------------------------
+
+.bt1 { border-top: 1px solid $extra-light-gray; }
+.bb1 { border-bottom: 1px solid $extra-light-gray; }
+
 
 // Letter Spacing 
 //-------------------------------
