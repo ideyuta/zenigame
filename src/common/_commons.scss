@@ -7,6 +7,7 @@
 
 .pull-left { float: left; }
 .pull-right { float: right; }
+.pull-center { margin: 0 auto; }
 .flush-left { text-align: left !important; }
 .flush-right { text-align: right !important; }
 .flush-center { text-align: center; }
@@ -44,11 +45,17 @@
 
 .p5 { padding: 5px; }
 .p10 { padding: 10px; }
+
 .pr10 { padding-right: 10px; }
+.pr20 { padding-right: 20px; }
+
 .pl10 { padding-left: 10px; }
+.pl20 { padding-left: 20px; }
+
 .pb10 { padding-bottom: 10px; }
-.pt10 { padding-top: 10px; }
 .pb20 { padding-bottom: 20px; }
+
+.pt10 { padding-top: 10px; }
 .pt20 { padding-top: 20px; }
 
 
@@ -225,3 +232,4 @@ a.text-xs { color: $blue; }
   @include blur(15px);
   position: relative;
 }
+
