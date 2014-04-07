@@ -40,7 +40,7 @@
   }
 }
 
-// Padding 
+// Padding - Px 
 //-------------------------------
 
 .p5 { padding: 5px; }
@@ -58,12 +58,19 @@
 .pt10 { padding-top: 10px; }
 .pt20 { padding-top: 20px; }
 
+// Padding - Percent 
+//-------------------------------
+
+.pp3 { padding: 3%; }
+.ppbs3 { padding: 0 3%; }
+.pptb3 { padding: 3% 0; }
 
 // Margin 
 //-------------------------------
 
 .m0 { margin: 0 !important; }
-
+.mr10 { margin-right: 10px; }
+.mr20 { margin-right: 25px; }
 
 // Border 
 //-------------------------------
@@ -87,6 +94,7 @@
 .cb { color: $blue !important; }
 .cy { color: $yellow !important; }
 .cgr { color: $gray !important; }
+.cw { color: $white !important; }
 
 // Text 
 //-------------------------------
