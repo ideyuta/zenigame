@@ -46,9 +46,11 @@
 .p5 { padding: 5px; }
 .p10 { padding: 10px; }
 
+.pr5 { padding-right: 5px; }
 .pr10 { padding-right: 10px; }
 .pr20 { padding-right: 20px; }
 
+.pl5 { padding-left: 5px; }
 .pl10 { padding-left: 10px; }
 .pl20 { padding-left: 20px; }
 
@@ -56,6 +58,7 @@
 .pb10 { padding-bottom: 10px; }
 .pb20 { padding-bottom: 20px; }
 
+.pt5 { padding-top: 5px; }
 .pt10 { padding-top: 10px; }
 .pt20 { padding-top: 20px; }
 
@@ -111,6 +114,13 @@ $default-text-size: 14px !default;
   line-height: 1.7em;
 }
 
+.t-lg { @include typo($default-text-size + 3px, $black, 400, 1.45); }
+.t { @include typo($default-text-size, $black, 300, 1.45); }
+.t-sm { @include typo($default-text-size - 2px, $light-black, 300, 1.45); }
+.t-xs { @include typo($default-text-size - 4px, $dark-gray, 300, 1.45); }
+
+.t-loose { line-height: 1.7em !important; }
+
 a.text { color: $blue; }
 a.text-lg { color: $blue; }
 a.text-sm { color: $blue; }
@@ -131,7 +141,7 @@ a.text-xs { color: $blue; }
   @include btn-varient($blue, $white);
 }
 
-.btn-default {
+.btn-gray {
   @extend %btn;
   @include btn-varient($dark-gray, $white);
 }
@@ -173,6 +183,11 @@ a.text-xs { color: $blue; }
 
 .btn-sm {
   @extend .btn;
+  @include btn-resize(22px, 12px, null);
+}
+
+.btn-sm-gray {
+  @extend .btn-gray;
   @include btn-resize(22px, 12px, null);
 }
 
