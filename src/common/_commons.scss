@@ -100,6 +100,18 @@
 .cgr { color: $gray !important; }
 .cw { color: $white !important; }
 
+
+// Background Color 
+//-------------------------------
+
+.bcr { background-color: $light-red !important; }
+.bcg { background-color: $light-green !important; }
+.bcb { background-color: $light-blue !important; }
+.bcy { background-color: $light-yellow !important; }
+.bcgr { background-color: $extra-light-gray !important; }
+.bcw { background-color: $white !important; }
+
+
 // Text 
 //-------------------------------
 $default-text-size: 14px !default;
@@ -120,6 +132,12 @@ $default-text-size: 14px !default;
 .t-xs { @include typo($default-text-size - 4px, $dark-gray, 300, 1.45); }
 
 .t-loose { line-height: 1.7em !important; }
+
+a.t { color: $blue; }
+a.t-lg { color: $blue; }
+a.t-sm { color: $blue; }
+a.t-xs { color: $blue; }
+
 
 a.text { color: $blue; }
 a.text-lg { color: $blue; }
