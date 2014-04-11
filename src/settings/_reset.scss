@@ -76,7 +76,10 @@ blockquote:before, blockquote:after, q:before, q:after {
   content: none;
 }
 
-button { box-sizing: content-box; }
+button {
+  box-sizing: content-box;
+  cursor: pointer;
+}
 
 input, textarea {
   padding: 0;
