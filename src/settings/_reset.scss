@@ -39,35 +39,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: $font-size-1;
-  line-height: $font-size-1;
+  $size: $default-font-size + 11px;
+  font-size: $size;
+  line-height: $size;
 }
 
 h2 {
-  font-size: $font-size-2;
-  line-height: $font-size-2; 
+  $size: $default-font-size + 8px;
+  font-size: $size;
+  line-height: $size;
 }
 
 h3 {
-  font-size: $font-size-3;
-  line-height: $font-size-3;
+  $size: $default-font-size + 5px;
+  font-size: $size;
+  line-height: $size;
 }
 
 h4 {
-  font-size: $font-size-4;
-  line-height: $font-size-4;
+  $size: $default-font-size + 2px;
+  font-size: $size;
+  line-height: $size;
 }
 
 h5 {
-  font-size: $font-size-5;
-  line-height: $font-size-5; 
+  $size: $default-font-size;
+  font-size: $size;
+  line-height: $size;
 }
 
 h6 {
-  font-size: $font-size-6;
-  line-height: $font-size-6; 
+  $size: $default-font-size + -2px;
+  font-size: $size;
+  line-height: $size;
 }
-
 
 blockquote, q { quotes: none; }
 

@@ -1,0 +1,87 @@
+// Zenigame - Button
+//
+// .btn - Default Button
+// .btn-gray - Default Button Color Gray
+//
+// Styleguide 1.0.1
+
+%btn {
+  @include btn(auto, 28px, 0 10px);
+  @include typo(12px, null, normal, 28px);
+  @include border(1px, solid, null);
+}
+
+
+.btn {
+  @extend %btn;
+  @include btn-varient($blue, $white);
+}
+
+.btn-gray {
+  @extend %btn;
+  @include btn-varient($dark-gray, $white);
+}
+
+.btn-extra {
+  @extend %btn;
+  @include btn-varient($white, $blue);
+}
+
+.btn-entry {
+  @extend %btn;
+  @include btn-varient($white, $green);
+}
+
+.btn-warning {
+  @extend %btn;
+  @include btn-varient($white, $red);
+}
+
+
+
+
+.btn-lg {
+  @extend .btn;
+  @include btn-resize(36px, 14px, null);
+}
+
+.btn-lg-entry {
+  @extend .btn-entry;
+  @include btn-resize(36px, 14px, null);
+}
+
+.btn-lg-extra {
+  @extend .btn-extra;
+  @include btn-resize(36px, 14px, null);
+}
+
+
+
+.btn-sm {
+  @extend .btn;
+  @include btn-resize(22px, 12px, null);
+}
+
+.btn-sm-gray {
+  @extend .btn-gray;
+  @include btn-resize(22px, 12px, null);
+}
+
+.btn-sm-extra {
+  @extend .btn-extra;
+  @include btn-resize(22px, 12px, null);
+}
+
+.btn-sm-entry {
+  @extend .btn-entry;
+  @include btn-resize(22px, 12px, null);
+}
+
+
+
+.btn-spring {
+  @extend %btn;
+  @include btn-varient($white, $pink);
+}
+
+

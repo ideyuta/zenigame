@@ -1,11 +1,8 @@
-// Zenigame
-//
 // Button 
-//-------------------------------
 
-@mixin btn($width, $height, $padding:null, $_radius:$radius) {
+@mixin btn($width, $height, $padding: null, $radius: $default-radius) {
   @include size($width, $height);
-  @include border-radius($_radius);
+  @include border-radius($radius);
   display: inline-block;
   padding: $padding;
   text-decoration: none !important;

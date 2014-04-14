@@ -1,0 +1,8 @@
+// Blur
+
+@mixin blur($blur) {
+  -webkit-filter: blur($blur);
+  -moz-filter: blur($blur); 
+  -o-filter: blur($blur); 
+  filter: blur($blur); 
+}

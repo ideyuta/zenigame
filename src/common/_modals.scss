@@ -4,13 +4,14 @@
 
 #modal {
   @include size(100%);
-  @include b_img("#{$img-path}/bg-modal.png", repeat);
-  @include pos(absolute, 0, 0, 9000);
+  @include bg-img("#{$img-path}/bg-modal.png", repeat);
+  @include pos(absolute, 0, 0);
+  z-index: 9000;
   display: none;
 }
 
 %modal-box {
-  @include border(1px, solid , $extra-light-gray, $radius);
+  @include border(1px, solid , $extra-light-gray, $default-radius);
   background: $white;
 }
 

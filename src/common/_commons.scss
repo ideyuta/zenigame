@@ -1,7 +1,8 @@
 // Zenigame
 //
-// Common 
-//-------------------------------
+// Styleguide 1.0.0
+
+@import "buttons";
 
 .clear { clear: both; }
 .clearfix { @include clearfix; }
@@ -121,22 +122,11 @@
 
 // Text 
 //-------------------------------
-$default-text-size: 14px !default;
 
-.text-lg { @include typo($default-text-size + 3px, $black, 400, 1.45); }
-.text { @include typo($default-text-size, $black, 300, 1.45); }
-.text-sm { @include typo($default-text-size - 2px, $light-black, 300, 1.45); }
-.text-xs { @include typo($default-text-size - 4px, $dark-gray, 300, 1.45); }
-
-.text-loose {
-  @extend .text;
-  line-height: 1.7em;
-}
-
-.t-lg { @include typo($default-text-size + 3px, $black, 400, 1.45); }
-.t { @include typo($default-text-size, $black, 300, 1.45); }
-.t-sm { @include typo($default-text-size - 2px, $light-black, 300, 1.45); }
-.t-xs { @include typo($default-text-size - 4px, $dark-gray, 300, 1.45); }
+.t-lg { @include typo($default-font-size + 3px, $black, 400, 1.45); }
+.t { @include typo($default-font-size, $black, 300, 1.45); }
+.t-sm { @include typo($default-font-size - 2px, $light-black, 300, 1.45); }
+.t-xs { @include typo($default-font-size - 4px, $dark-gray, 300, 1.45); }
 
 .t-loose { line-height: 1.7em !important; }
 
@@ -148,94 +138,6 @@ a.t-sm { color: $blue; }
 a.t-xs { color: $blue; }
 
 
-a.text { color: $blue; }
-a.text-lg { color: $blue; }
-a.text-sm { color: $blue; }
-a.text-xs { color: $blue; }
-
-// Button
-//-------------------------------
-
-%btn {
-  @include btn(auto, 28px, 0 10px);
-  @include typo(12px, null, normal, 28px);
-  @include border(1px, solid, null);
-}
-
-
-.btn {
-  @extend %btn;
-  @include btn-varient($blue, $white);
-}
-
-.btn-gray {
-  @extend %btn;
-  @include btn-varient($dark-gray, $white);
-}
-
-.btn-extra {
-  @extend %btn;
-  @include btn-varient($white, $blue);
-}
-
-.btn-entry {
-  @extend %btn;
-  @include btn-varient($white, $green);
-}
-
-.btn-warning {
-  @extend %btn;
-  @include btn-varient($white, $red);
-}
-
-
-
-
-.btn-lg {
-  @extend .btn;
-  @include btn-resize(36px, 14px, null);
-}
-
-.btn-lg-entry {
-  @extend .btn-entry;
-  @include btn-resize(36px, 14px, null);
-}
-
-.btn-lg-extra {
-  @extend .btn-extra;
-  @include btn-resize(36px, 14px, null);
-}
-
-
-
-.btn-sm {
-  @extend .btn;
-  @include btn-resize(22px, 12px, null);
-}
-
-.btn-sm-gray {
-  @extend .btn-gray;
-  @include btn-resize(22px, 12px, null);
-}
-
-.btn-sm-extra {
-  @extend .btn-extra;
-  @include btn-resize(22px, 12px, null);
-}
-
-.btn-sm-entry {
-  @extend .btn-entry;
-  @include btn-resize(22px, 12px, null);
-}
-
-
-
-.btn-spring {
-  @extend %btn;
-  @include btn-varient($white, $pink);
-}
-
-
 // dropdown menu 
 //-------------------------------
 
@@ -243,14 +145,14 @@ a.text-xs { color: $blue; }
   @include pos(relative, 0, 0, 1);
   .btn { padding: 0 30px 0 10px; }
   .btn, .btn:hover {
-    @include b_img("#{$img_path}/icon-toggle-down.png", no-repeat, right, 16px);
+    @include bg-img("#{$img_path}/icon-toggle-down.png", no-repeat, right, 16px);
   }
 }
 
 .dropdown-menu {
   @include pos(absolute, 90%, 0, 2);
-  @include box_shadow(0 1px 2px $dark_gray);
-  @include border_radius($radius);
+  @include box-shadow(0 1px 2px $dark-gray);
+  @include border-radius($default-radius);
   display: none;
   width: auto;
   padding: 10px 15px;
@@ -258,7 +160,7 @@ a.text-xs { color: $blue; }
   li { padding: 5px 0; }
   a {
     @include typo(13px, $white, null, 1.45);
-    color: $light_black;
+    color: $light-black;
     white-space: nowrap;
     text-decoration: none;
     &:hover { color: $blue; }
@@ -269,11 +171,11 @@ a.text-xs { color: $blue; }
 
 .toggle {
   .toggle-icon {
-    @include b_img("#{$img_path}/icon-toggle-down.png", no-repeat, right, 16px); 
+    @include bg-img("#{$img_path}/icon-toggle-down.png", no-repeat, right, 16px); 
   }
   &.is-active {
     .toggle-icon {
-      @include b_img("#{$img_path}/icon-toggle-up.png", no-repeat, right, 16px);
+      @include bg-img("#{$img_path}/icon-toggle-up.png", no-repeat, right, 16px);
     }
   }
 }

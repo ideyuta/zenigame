@@ -1,0 +1,11 @@
+// Size 
+//
+// widthとheightを指定するショートカット
+// 1つの引数のみ指定すると高さも同時に指定される
+
+@mixin size($width, $height:$width, $min-width:null, $min-height:$min-width) {
+  width: $width;
+  height: $height;
+  min-width: $min-width;
+  min-height: $min-height;
+}

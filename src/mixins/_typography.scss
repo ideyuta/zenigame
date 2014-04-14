@@ -1,0 +1,14 @@
+// Typography
+
+@mixin typo($size: $default-font-size,
+           $color: $default-text-color,
+          $weight: normal,
+     $line-height: $default-line-height,
+           $space: 0)
+{
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  line-height: $line-height;
+  letter-spacing: $space;
+}

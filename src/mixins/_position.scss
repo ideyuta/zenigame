@@ -1,0 +1,18 @@
+// Position 
+//
+// positionを指定するショートカット
+
+@mixin pos($pos, $top, $right, $bottom, $left) {
+  position: $pos;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// z-index
+@mixin z($z:0) {
+  position: relative;
+  z-index: $z;
+}
+

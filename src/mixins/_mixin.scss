@@ -3,32 +3,29 @@
 // Mixin 
 //-------------------------------
 
-// Clearfix
-@mixin clearfix {
-  *zoom: 1;
-  &:after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
+@import "background-image";
+@import "blur";
+@import "border";
+@import "box-shadow";
+@import "clearfix";
+@import "media-query";
+@import "opacity";
+@import "position";
+@import "size";
+@import "space";
+@import "transition";
+@import "typography";
 
-// Size
-@mixin size($_width, $_height:$_width) {
-  width: $_width;
-  height: $_height;
-}
+@import "button"; // include: border
+@import "card"; // include: box-shadow
+
+
+// old -------------------------------------
 
 // Block 
 @mixin block($_padding:null, $_margin:null) {
   padding: $_padding;
   margin: $_margin;
-}
-
-// z-index
-@mixin z($z:0) {
-  position: relative;
-  z-index: $z;
 }
 
 // position 
@@ -39,60 +36,6 @@
   z-index: $_z;
 }
 
-// Border & Radius
-@mixin border($width:1px, $style:solid, $color:$extra-light-gray, $radius:null) {
-  border-style: $style;
-  border-color: $color;
-  border-width: $width;
-  @include border_radius($radius);
-}
-
-@mixin border_radius($radius:$_radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
-}
-
-// Shadow
-@mixin box_shadow($value) {
-  -webkit-box-shadow: $value;
-  -moz-box-shadow: $value;
-  -ms-box-shadow: $value;
-  box-shadow: $value;
-}
-
-// Typograpy
-@mixin typo($size:13px, $color:null, $weight:null, $line-height:1.7, $space:null) {
-  font-size: $size;
-  color: $color;
-  font-weight: $weight;
-  line-height: $line-height;
-  letter-spacing: $space;
-}
-
-// Background Image
-@mixin b_img($url, $repeat:no-repeat, $pos:null, $size:null) {
-  background-image: url(#{$url});
-  background-repeat: $repeat;
-  background-position: $pos;
-  background-size: $size;
-}
-
-// Opacity
-@mixin opacity($value) {
-  $_opacity: $value * 100;
-  opacity: $value;
-  filter: alpha( opacity=$_opacity);
-  -ms-filter: 'alpha( opacity=#{$_opacity})';
-}
-
-// Blur
-@mixin blur($value) {
-  -webkit-filter: blur($value); 
-  -o-filter: blur($value); 
-  filter: blur($value); 
-}
-
 // Underline on mouseover 
 @mixin on_underline {
   text-decoration: none;
@@ -100,16 +43,6 @@
     text-decoration: underline;
   }
 }
-
-// CSS3 Transition
-@mixin transition($_duration:300ms) {
-  transition: transform 300ms;
-  -webkit-transition: -webkit-transform 300ms;
-  // GPU処理用
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-}
-
 // Partials 
 //-------------------------------
 
@@ -126,33 +59,4 @@
     display: inline-block;
   }
 }
-
-
-// Media Query
-$bp-phone: 480px;
-$bp-tablet: 768px;
-
-@mixin media($media-width) {
-  @if $test == false {
-    @if $media-width == phone {
-      @media only screen and (max-device-width: $bp-phone), 
-      only screen and (max-device-width: $bp-phone) and (-o-min-device-pixel-ratio: 2/1), 
-      only screen and (max-device-width: $bp-tablet) and (-webkit-min-device-pixel-ratio: 2), 
-      only screen and (min-device-pixel-ratio: 2) {
-        @content;
-      }
-    }
-    @else if $media-width == tablet {
-      @media only screen and (max-device-width: $bp-tablet) { @content; }
-    }
-  } @else {
-    @if $media-width == phone {
-      @media only screen and (max-width: $bp-phone) { @content; }
-    }
-    @else if $media-width == tablet {
-      @media only screen and (max-width: $bp-tablet) { @content; }
-    }
-  }
-}
-
 

@@ -1,0 +1,27 @@
+// Clearfix 
+//
+// Supported:
+//   IE 6+
+//   Chrome
+//   Firefox 2+
+//   Safari 2+
+//   Opera 9.27+ 
+//
+// Source:
+//   http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// Reference:
+//   http://kojika17.com/2013/06/clearfix-2013.html
+//   http://coliss.com/articles/build-websites/operation/css/css-micro-clearfix.html
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

@@ -1,0 +1,15 @@
+// Border
+//
+
+@mixin border($width: 1px, $style: solid, $color: $extra-light-gray, $radius:null) {
+  border-style: $style;
+  border-color: $color;
+  border-width: $width;
+  @include border-radius($radius);
+}
+
+@mixin border-radius($radius: $default-radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
