@@ -4,6 +4,7 @@
 //-------------------------------
 
 .clear { clear: both; }
+.clearfix { @include clearfix; }
 
 .pull-left { float: left; }
 .pull-right { float: right; }
@@ -26,7 +27,10 @@
 // Grid 
 //-------------------------------
 
-%grid { overflow: hidden; }
+%grid {
+  overflow: hidden;
+  box-sizing: border-box;
+}
 
 .grid05 {
   @extend %grid;
@@ -81,7 +85,10 @@
 
 .bt1 { border-top: 1px solid $extra-light-gray; }
 .bb1 { border-bottom: 1px solid $extra-light-gray; }
-
+.bb1o2 {
+  @extend .bb1;
+  border-color: rgba($extra-light-gray, .2);
+}
 
 // Letter Spacing 
 //-------------------------------
@@ -132,6 +139,8 @@ $default-text-size: 14px !default;
 .t-xs { @include typo($default-text-size - 4px, $dark-gray, 300, 1.45); }
 
 .t-loose { line-height: 1.7em !important; }
+
+.t-sdw { text-shadow: 0 1px 1px rgba($light-black, .3); }
 
 a.t { color: $blue; }
 a.t-lg { color: $blue; }
