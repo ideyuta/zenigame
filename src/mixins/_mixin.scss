@@ -23,17 +23,9 @@
 // old -------------------------------------
 
 // Block 
-@mixin block($_padding:null, $_margin:null) {
-  padding: $_padding;
-  margin: $_margin;
-}
-
-// position 
-@mixin pos($_pos, $_top:0, $_left:0, $_z:null) {
-  position: $_pos;
-  top: $_top;
-  left: $_left;
-  z-index: $_z;
+@mixin block($padding:null, $margin:null) {
+  padding: $padding;
+  margin: $margin;
 }
 
 // Underline on mouseover 
@@ -46,16 +38,17 @@
 // Partials 
 //-------------------------------
 
-@mixin thumb($_width:150px, $_height:125px, $_border:3px) {
-  @include size($_width + $_border * 2, $_height + $_border * 2);
-  @include border_radius($radius);
-  @include pos(relative, 0, 0, 1);
+@mixin thumb($width:150px, $height:125px, $border:3px) {
+  @include size($width + $border * 2, $height + $border * 2);
+  @include border-radius($default-radius);
+  @include pos(relative, 0, 0);
+  z-index: 1;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
   img { 
-    @include border($_border, solid, $white, $radius);
-    @include size($_width, auto); 
+    @include border($border, solid, $white, $default-radius);
+    @include size($width, auto); 
     display: inline-block;
   }
 }

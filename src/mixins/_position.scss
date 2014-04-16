@@ -2,7 +2,7 @@
 //
 // positionを指定するショートカット
 
-@mixin pos($pos, $top, $right, $bottom, $left) {
+@mixin pos($pos, $top: null, $left: null, $bottom: null, $right: null) {
   position: $pos;
   top: $top;
   right: $right;
