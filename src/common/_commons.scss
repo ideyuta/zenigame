@@ -105,6 +105,7 @@
 .cg { color: $green !important; }
 .cb { color: $blue !important; }
 .cy { color: $yellow !important; }
+.cdy { color: $dark-yellow !important; }
 .cgr { color: $gray !important; }
 .cw { color: $white !important; }
 
@@ -136,6 +137,14 @@ a.t { color: $blue; }
 a.t-lg { color: $blue; }
 a.t-sm { color: $blue; }
 a.t-xs { color: $blue; }
+
+
+// Opacity 
+//-------------------------------
+
+.o3 { @include opacity(.3); }
+.o5 { @include opacity(.5); }
+.o8 { @include opacity(.8); }
 
 
 // dropdown menu 

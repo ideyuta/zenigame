@@ -9,6 +9,7 @@
 @import "box-shadow";
 @import "clearfix";
 @import "media-query";
+@import "modal";
 @import "opacity";
 @import "position";
 @import "size";
@@ -20,16 +21,8 @@
 @import "card"; // include: box-shadow
 
 
-// old -------------------------------------
-
-// Block 
-@mixin block($padding:null, $margin:null) {
-  padding: $padding;
-  margin: $margin;
-}
-
 // Underline on mouseover 
-@mixin on_underline {
+@mixin on-underline {
   text-decoration: none;
   &:hover {
     text-decoration: underline;

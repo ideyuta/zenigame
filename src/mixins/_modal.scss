@@ -1,0 +1,9 @@
+// Modals 
+
+@mixin modal($z: 9000) {
+  @include size(100%);
+  @include bg-img("#{$img-path}/bg-modal.png", repeat);
+  @include pos(absolute, 0, 0);
+  z-index: $z;
+  display: none;
+}

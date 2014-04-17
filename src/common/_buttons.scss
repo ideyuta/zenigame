@@ -79,6 +79,17 @@
 
 
 
+.btn-xs {
+  @extend .btn;
+  @include btn-resize(18px, 10px, null);
+}
+
+.btn-xs-entry {
+  @extend .btn-entry;
+  @include btn-resize(18px, 10px, null);
+}
+
+
 .btn-spring {
   @extend %btn;
   @include btn-varient($white, $pink);

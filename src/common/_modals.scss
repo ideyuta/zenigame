@@ -2,17 +2,9 @@
 // Modals 
 //-------------------------------
 
-#modal {
-  @include size(100%);
-  @include bg-img("#{$img-path}/bg-modal.png", repeat);
-  @include pos(absolute, 0, 0);
-  z-index: 9000;
-  display: none;
-}
+#modal { @include modal; }
 
 %modal-box {
   @include border(1px, solid , $extra-light-gray, $default-radius);
   background: $white;
 }
-
-
