@@ -3,6 +3,10 @@
 // Valiables 
 //-------------------------------
 
+// Font Settings
+$font-family-body: Helvetica Neue, Helvetica, MS Sans Serif, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Yu Gothic', 'ＭＳＰ ゴシック', Arial, sans-serif;
+$font-family-body-ie8: 'ＭＳ Ｐゴシック',sans-serif;
+
 // Monotone
 $black: #000;
 $light-black: #333;
@@ -17,37 +21,25 @@ $white: #fff;
 $red: #f53;
 $green: #24B574;
 $blue: #36f;
-$yellow: #F2DA30;
-$light-red: #FFF0F0;
-$light-green: #E8FFF4;
-$light-blue: #F0F3FF;
-$light-yellow: #FFFDE3;
-$dark-red: #BF3F26;
+$yellow: #f2da30;
+$light-red: #fff0f0;
+$light-green: #e8fff4;
+$light-blue: #f0f3ff;
+$light-yellow: #fffde3;
+$dark-red: #bf3f26;
 $dark-green: #188052;
-$dark-blue: #264CBF;
-$dark-yellow: #A69520;
+$dark-blue: #264cbf;
+$dark-yellow: #a69520;
 // Colors Extension
 $pink: #f69;
-
-// Font Settings
-$font-family-body: Helvetica Neue, Helvetica, MS Sans Serif, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Yu Gothic', 'ＭＳＰ ゴシック', Arial, sans-serif;
-$font-family-body-ie8: 'ＭＳ Ｐゴシック',sans-serif;
-
-$font-size-default: 14px;
-$font-size-1: $font-size-default + 11px;
-$font-size-2: $font-size-default + 8px;
-$font-size-3: $font-size-default + 5px;
-$font-size-4: $font-size-default + 2px;
-$font-size-5: $font-size-default + 0px;
-$font-size-6: $font-size-default - 2px;
-
-
-$default-font-size: 14px !default;
-$default-text-color: $light-black !default;
-$default-line-height: 1.65 !default;
-$default-radius: 4px !default;
 
 // Grid
 $grid-column: 12 !default;
 $grid-size: 100% / $grid-column;
+
+// Default Value Settings
+$default-font-size: 14px !default;
+$default-text-color: $light-black !default;
+$default-line-height: 1.55 !default;
+$default-radius: 4px !default;
 

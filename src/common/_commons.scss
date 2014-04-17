@@ -124,12 +124,12 @@
 // Text 
 //-------------------------------
 
-.t-lg { @include typo($default-font-size + 3px, $black, 400, 1.45); }
-.t { @include typo($default-font-size, $black, 300, 1.45); }
-.t-sm { @include typo($default-font-size - 2px, $light-black, 300, 1.45); }
-.t-xs { @include typo($default-font-size - 4px, $dark-gray, 300, 1.45); }
+.t-lg { @include typo($default-font-size + 3px, $black, 400, $default-line-height); }
+.t { @include typo($default-font-size, $black, 300, $default-line-height); }
+.t-sm { @include typo($default-font-size - 2px, $light-black, 300, $default-line-height); }
+.t-xs { @include typo($default-font-size - 4px, $dark-gray, 300, $default-line-height); }
 
-.t-loose { line-height: 1.7em !important; }
+.t-loose { line-height: $default-line-height + .3 !important; }
 
 .t-sdw { text-shadow: 0 1px 1px rgba($light-black, .3); }
 
