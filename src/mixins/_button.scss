@@ -11,7 +11,7 @@
 
 @mixin btn-varient($color, $background-color) {
   @include btn-gradient($background-color);
-  border-color: darken($background-color, 10%);
+  border-color: darken($background-color, 15%);
   color: $color;
 }
 
