@@ -8,14 +8,14 @@ $font-family-body: Helvetica Neue, Helvetica, MS Sans Serif, 'ヒラギノ角ゴ
 $font-family-body-ie8: 'ＭＳ Ｐゴシック',sans-serif;
 
 // Monotone
-$black: #000;
-$light-black: #333;
-$dark-gray: #666;
-$gray: #999;
-$light-gray: #ccc;
-$extra-light-gray: #f2f2f2;
-$dark-white: #fafafa;
-$white: #fff;
+$black: #000; // 0%
+$light-black: #333; // 20%
+$dark-gray: #666; // 40%
+$gray: #999; // 60%
+$light-gray: #ccc; // 80%
+$extra-light-gray: #f2f2f2; // 95%
+$dark-white: #fafafa; // 98%
+$white: #fff; // 100%
 
 // Colors
 $red: #f53;

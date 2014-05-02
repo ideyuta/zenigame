@@ -71,14 +71,25 @@
 //-------------------------------
 
 .pp3 { padding: 3%; }
-.ppbs3 { padding: 0 3%; }
-.pptb3 { padding: 3% 0; }
+.ppb3 { padding-bottom: 3%; }
+.ppbs3 {
+  padding-right: 3%;
+  padding-left: 3%;
+}
+.pptb3 {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
 
 // Margin 
 //-------------------------------
 
 .m0 { margin: 0 !important; }
+
+.mt10 { margin-top: 10px; }
 .mr10 { margin-right: 10px; }
+
 .mr20 { margin-right: 25px; }
 
 // Border 
