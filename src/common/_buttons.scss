@@ -9,6 +9,7 @@
   @include btn(auto, 28px, 0 10px);
   @include typo($default-font-size - 2px, null, normal, 28px);
   @include border(1px, solid, null);
+  -webkit-user-select: none;
 }
 
 

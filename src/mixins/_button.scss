@@ -20,7 +20,9 @@
   background: $start-color;
   background: -moz-linear-gradient(top, $start-color, $end-color);
   background: -webkit-gradient(linear, left top, left bottom, from($start-color), to($end-color));
-  &:hover { background: darken($start-color, 6%); }
+  @include media(pc) {
+    &:hover { background: darken($start-color, 6%); }
+  }
 }
 
 @mixin btn-resize($height, $font-size, $padding) {
