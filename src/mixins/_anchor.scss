@@ -1,0 +1,15 @@
+// Anchor 
+
+@mixin block-anchor($padding: 3%) {
+  @include size(100% - $padding * 2, auto);
+  display: block;
+  padding: $padding;
+  text-decoration: none !important;
+}
+
+@mixin anchor-varient($color, $background-color) {
+  border-color: darken($background-color, 15%);
+  color: $color;
+  &:hover { background-color: darken($background-color, 6%); }
+}
+

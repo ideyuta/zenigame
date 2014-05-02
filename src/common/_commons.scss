@@ -194,6 +194,8 @@ a.t-xs { color: $blue; }
 }
 
 
+// toggle 
+//-------------------------------
 
 .toggle {
   .toggle-icon {
@@ -206,6 +208,8 @@ a.t-xs { color: $blue; }
   }
 }
 
+// blur 
+//-------------------------------
 
 .blur {
   @include blur(15px);
@@ -213,5 +217,31 @@ a.t-xs { color: $blue; }
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     display: none;
   }
+}
+
+
+
+// list-group
+//-------------------------------
+
+.list-group {
+  width: 100%;
+  border-collapse: collapse;
+  li {
+    @extend .t-sm;
+    @include border(0 0 1px 0, solid, $extra-light-gray);
+    vertical-align: middle;
+    p { padding: 0 5px; }
+  }
+}
+
+
+// block anchor 
+//-------------------------------
+
+.b-anchor {
+  @include block-anchor;
+  @include anchor-varient($blue, $white);
+  @include bg-img("#{$img-path}/icon/icon-15.png", no-repeat, right 10px center, 15px);
 }
 
