@@ -91,6 +91,7 @@
 .mt10 { margin-top: 10px; }
 .mr10 { margin-right: 10px; }
 
+.mt20 { margin-top: 20px; }
 .mr20 { margin-right: 25px; }
 
 // Border 
@@ -130,6 +131,7 @@
 .bcb { background-color: $light-blue !important; }
 .bcy { background-color: $light-yellow !important; }
 .bcgr { background-color: $extra-light-gray !important; }
+.bcdw { background-color: $dark-white !important; }
 .bcw { background-color: $white !important; }
 
 
@@ -229,7 +231,6 @@ a.t-xs { color: $blue; }
   width: 100%;
   border-collapse: collapse;
   li {
-    @extend .t-sm;
     @include border(0 0 1px 0, solid, $extra-light-gray);
     vertical-align: middle;
     p { padding: 0 5px; }
@@ -242,7 +243,8 @@ a.t-xs { color: $blue; }
 
 .b-anchor {
   @include block-anchor;
-  @include anchor-varient($blue, $white);
-  @include bg-img("#{$img-path}/icon/icon-15.png", no-repeat, right 10px center, 15px);
+  @include anchor-varient($light-black, $white);
+  @include bg-img("#{$img-path}/icon/icon-13.png", no-repeat, right 10px center, 15px);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-
