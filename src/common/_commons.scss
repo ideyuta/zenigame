@@ -244,7 +244,7 @@ a.t-xs { color: $blue; }
 .b-anchor {
   @include block-anchor;
   @include anchor-varient($light-black, $white);
-  @include bg-img("#{$img-path}/icon/icon-13.png", no-repeat, right 10px center, 15px);
+  @include bg-img("#{$img-path}/icon/icon-14.png", no-repeat, right 10px center, 15px);
   padding-top: 10px;
   padding-bottom: 10px;
 }
