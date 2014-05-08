@@ -101,6 +101,10 @@
 
 .bt1 { border-top: 1px solid $extra-light-gray; }
 .bb1 { border-bottom: 1px solid $extra-light-gray; }
+.bt3 { border-top: 3px solid $extra-light-gray; }
+.bb3 { border-bottom: 3px solid $extra-light-gray; }
+
+.dot { border-style: dotted; }
 .bb1o2 {
   @extend .bb1;
   border-color: rgba($extra-light-gray, .2);
@@ -234,8 +238,9 @@ a.t-xs { color: $blue; }
   border-collapse: collapse;
   li {
     @include border(0 0 1px 0, solid, $extra-light-gray);
+    position: relative;
     vertical-align: middle;
-    p { padding: 0 5px; }
+    p { padding: 10px 5px; }
   }
 }
 
@@ -250,3 +255,86 @@ a.t-xs { color: $blue; }
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+
+
+
+// toggle swith
+// powered by http://proto.io/freebies/onoff/
+//-------------------------------
+
+
+.onoffswitch {
+    position: absolute;
+    top: 6px;
+    right: 3%;
+    width: 70px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+}
+
+.onoffswitch-checkbox { display: none; }
+
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.onoffswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -moz-transition: margin 100ms ease-in 0s;
+  -webkit-transition: margin 100ms ease-in 0s;
+  -o-transition: margin 100ms ease-in 0s;
+  transition: margin 100ms ease-in 0s;
+  &:before,
+  &:after {
+    @include size(50%, 30px);
+    @include box-shadow(0 0 2px $light-gray inset);
+    @include border-radius(15px); 
+    float: left;
+    padding: 0;
+    line-height: 30px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  &:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: $green;
+    color: $white;
+  }
+  &:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: $extra-light-gray;
+    color: $gray;
+    text-align: right;
+  }
+}
+
+.onoffswitch-switch {
+  @include size(26px);
+  @include pos(absolute, 2px, null, null, 42px);
+  @include box-shadow(0 0 1px $light-gray);
+  margin: 0px;
+  background: #FFFFFF;
+  border-radius: 18px;
+  -moz-transition: all 100ms ease-in 0s;
+  -webkit-transition: all 100ms ease-in 0s;
+  -o-transition: all 100ms ease-in 0s;
+  transition: all 100ms ease-in 0s; 
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 2px; 
+}
+
