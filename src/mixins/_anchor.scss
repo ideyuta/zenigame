@@ -1,9 +1,8 @@
 // Anchor 
 
-@mixin block-anchor($padding: 3%) {
-  @include size(100% - $padding * 2, auto);
+@mixin block-anchor {
+  @include size(100%, auto);
   display: block;
-  padding: $padding;
   text-decoration: none !important;
 }
 

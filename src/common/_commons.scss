@@ -238,9 +238,9 @@ a.t-xs { color: $blue; }
   border-collapse: collapse;
   li {
     @include border(0 0 1px 0, solid, $extra-light-gray);
+    padding: 10px 3%;
     position: relative;
     vertical-align: middle;
-    p { padding: 10px 5px; }
   }
 }
 
@@ -251,9 +251,7 @@ a.t-xs { color: $blue; }
 .b-anchor {
   @include block-anchor;
   @include anchor-varient($light-black, $white);
-  @include bg-img("#{$img-path}/icon/icon-14.png", no-repeat, right 10px center, 15px);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  @include bg-img("#{$img-path}/icon/icon-14.png", no-repeat, right 0 center, 15px);
 }
 
 
@@ -264,77 +262,69 @@ a.t-xs { color: $blue; }
 //-------------------------------
 
 
-.onoffswitch {
-    position: absolute;
-    top: 6px;
-    right: 3%;
-    width: 70px;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select: none;
-}
-
-.onoffswitch-checkbox { display: none; }
-
-.onoffswitch-label {
+.toggleswitch {
+  position: absolute;
+  top: 6px;
+  right: 3%;
+  width: 70px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select: none;
+ .checkbox { display: none; }
+ label {
     display: block;
     overflow: hidden;
     cursor: pointer;
     border-radius: 16px;
-}
-
-.onoffswitch-inner {
-  width: 200%;
-  margin-left: -100%;
-  -moz-transition: margin 100ms ease-in 0s;
-  -webkit-transition: margin 100ms ease-in 0s;
-  -o-transition: margin 100ms ease-in 0s;
-  transition: margin 100ms ease-in 0s;
-  &:before,
-  &:after {
-    @include size(50%, 30px);
-    @include box-shadow(0 0 2px $light-gray inset);
-    @include border-radius(15px); 
-    float: left;
-    padding: 0;
-    line-height: 30px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
   }
-  &:before {
-    content: "ON";
-    padding-left: 10px;
-    background-color: $green;
-    color: $white;
+  .inner {
+    width: 200%;
+    margin-left: -100%;
+    -moz-transition: margin 100ms ease-in 0s;
+    -webkit-transition: margin 100ms ease-in 0s;
+    -o-transition: margin 100ms ease-in 0s;
+    transition: margin 100ms ease-in 0s;
+    &:before,
+    &:after {
+      @include size(50%, 30px);
+      @include box-shadow(0 0 2px $light-gray inset);
+      @include border-radius(15px); 
+      float: left;
+      padding: 0;
+      line-height: 30px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    &:before {
+      content: "ON";
+      padding-left: 10px;
+      background-color: $green;
+      color: $white;
+    }
+    &:after {
+      content: "OFF";
+      padding-right: 10px;
+      background-color: $extra-light-gray;
+      color: $gray;
+      text-align: right;
+    }
   }
-  &:after {
-    content: "OFF";
-    padding-right: 10px;
-    background-color: $extra-light-gray;
-    color: $gray;
-    text-align: right;
+  .switch {
+    @include size(26px);
+    @include pos(absolute, 2px, null, null, 42px);
+    @include box-shadow(0 0 1px $light-gray);
+    margin: 0px;
+    background: $white;
+    border-radius: 18px;
+    -moz-transition: all 100ms ease-in 0s;
+    -webkit-transition: all 100ms ease-in 0s;
+    -o-transition: all 100ms ease-in 0s;
+    transition: all 100ms ease-in 0s; 
   }
-}
-
-.onoffswitch-switch {
-  @include size(26px);
-  @include pos(absolute, 2px, null, null, 42px);
-  @include box-shadow(0 0 1px $light-gray);
-  margin: 0px;
-  background: #FFFFFF;
-  border-radius: 18px;
-  -moz-transition: all 100ms ease-in 0s;
-  -webkit-transition: all 100ms ease-in 0s;
-  -o-transition: all 100ms ease-in 0s;
-  transition: all 100ms ease-in 0s; 
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-    margin-left: 0;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-    right: 2px; 
+  .checkbox:checked + label {
+    .inner { margin-left: 0; }
+    .switch { right: 2px; }
+  }
 }
 
