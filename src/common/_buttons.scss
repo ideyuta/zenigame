@@ -95,3 +95,24 @@
   @extend %btn;
   @include btn-varient($white, $pink);
 }
+
+
+
+
+
+.check-btn {
+  @include size(auto, 40px);
+  @include border(1px, solid, $extra-light-gray);
+  display: block;
+  line-height: 40px;
+  background: $white;
+  &.selected {
+    background: $light-blue;
+  }
+}
+
+
+
+
+
+
