@@ -81,6 +81,11 @@
 .pt10 { padding-top: 10px; }
 .pt20 { padding-top: 20px; }
 
+.ptb10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .ptb20 {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -100,7 +105,17 @@
   padding-top: 3%;
   padding-bottom: 3%;
 }
-
+.pp4 { padding: 4%; }
+.ppt4 { padding-top: 4%; }
+.ppb4 { padding-bottom: 4%; }
+.ppbs4 {
+  padding-right: 4%;
+  padding-left: 4%;
+}
+.pptb4 {
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
 
 // Margin 
 //-------------------------------
