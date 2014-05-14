@@ -7,9 +7,8 @@
 
 %btn {
   @include btn(auto, 28px, 0 10px);
-  @include typo($default-font-size - 2px, null, normal, 28px);
+  @include typo(12px, null, normal, 28px);
   @include border(1px, solid, null);
-  -webkit-user-select: none;
 }
 
 
@@ -91,28 +90,14 @@
 }
 
 
-.btn-spring {
+.btn-season {
   @extend %btn;
-  @include btn-varient($white, $pink);
+  @include btn-varient(#00A29A, #FAEE00);
+  background: #FAEE00;
 }
 
-
-
-
-
-.check-btn {
-  @include size(auto, 40px);
-  @include border(1px, solid, $extra-light-gray);
-  display: block;
-  line-height: 40px;
-  background: $white;
-  &.selected {
-    background: $light-blue;
-  }
+.btn-beginner-coupon {
+  @extend %btn;
+  @include btn-varient(#fff, $red);
+  background: $red;
 }
-
-
-
-
-
-
