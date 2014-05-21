@@ -265,21 +265,6 @@ a.t-xs { color: $blue; }
 
 
 
-// list-group
-//-------------------------------
-
-.list-group {
-  width: 100%;
-  border-collapse: collapse;
-  li {
-    @include border(0 0 1px 0, solid, $extra-light-gray);
-    padding: 10px 3%;
-    position: relative;
-    vertical-align: middle;
-  }
-}
-
-
 // block anchor 
 //-------------------------------
 
