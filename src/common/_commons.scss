@@ -81,6 +81,11 @@
 .pt10 { padding-top: 10px; }
 .pt20 { padding-top: 20px; }
 
+.ptb5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .ptb10 {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -271,7 +276,7 @@ a.t-xs { color: $blue; }
 .b-anchor {
   @include block-anchor;
   @include anchor-varient($light-black, $white);
-  @include bg-img("#{$img-path}/icon/icon-14.png", no-repeat, right 0 center, 15px);
+  @include bg-img("#{$img-path}/icon/icon-07.png", no-repeat, right 0 center, 15px);
 }
 
 
@@ -281,28 +286,24 @@ a.t-xs { color: $blue; }
 // powered by http://proto.io/freebies/onoff/
 //-------------------------------
 
-
+.toggletitle {
+  line-height: 30px;
+}
 .toggleswitch {
-  position: absolute;
-  top: 6px;
-  right: 3%;
-  width: 70px;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select: none;
- .checkbox { display: none; }
- label {
+  @include size(70px, 30px);
+  @include pos(relative, 0, null, null, 0);
+  .checkbox { display: none; }
+  label {
+    @include size(100%);
     display: block;
     overflow: hidden;
-    cursor: pointer;
     border-radius: 16px;
   }
   .inner {
     width: 200%;
+    height: 100%;
     margin-left: -100%;
-    -moz-transition: margin 100ms ease-in 0s;
     -webkit-transition: margin 100ms ease-in 0s;
-    -o-transition: margin 100ms ease-in 0s;
     transition: margin 100ms ease-in 0s;
     &:before,
     &:after {
@@ -312,7 +313,6 @@ a.t-xs { color: $blue; }
       float: left;
       padding: 0;
       line-height: 30px;
-      -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
     }
@@ -337,9 +337,7 @@ a.t-xs { color: $blue; }
     margin: 0px;
     background: $white;
     border-radius: 18px;
-    -moz-transition: all 100ms ease-in 0s;
     -webkit-transition: all 100ms ease-in 0s;
-    -o-transition: all 100ms ease-in 0s;
     transition: all 100ms ease-in 0s; 
   }
   .checkbox:checked + label {
