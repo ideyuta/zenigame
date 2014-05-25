@@ -37,6 +37,13 @@
   @include btn-varient($white, $red);
 }
 
+.btn-border {
+  @extend %btn;
+  border-color: $white;
+  color: $white;
+}
+
+
 
 
 
