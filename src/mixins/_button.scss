@@ -13,6 +13,9 @@
   @include btn-gradient($background-color);
   border-color: darken($background-color, 15%);
   color: $color;
+  &:active {
+    background: darken($background-color, 5%);
+  }
 }
 
 @mixin btn-gradient ($start-color) {

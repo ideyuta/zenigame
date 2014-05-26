@@ -33,11 +33,6 @@
   box-sizing: border-box;
 }
 
-.vw { width: 100vw; }
-.vh { height: 100vh; }
-.pw { width: 100%; }
-.ph { height: 100%; }
-
 .grid05 {
   @extend %grid;
   width: $grid-size / 2;
@@ -62,39 +57,22 @@
 // Padding - Px 
 //-------------------------------
 
-.p5 { padding: 5px; }
-.p10 { padding: 10px; }
-.p15 { padding: 15px; }
-.p20 { padding: 20px; }
-
-.pr5 { padding-right: 5px; }
-.pr10 { padding-right: 10px; }
-.pr20 { padding-right: 20px; }
-
-.pl5 { padding-left: 5px; }
-.pl10 { padding-left: 10px; }
-.pl20 { padding-left: 20px; }
-
-.pb5 { padding-bottom: 5px; }
-.pb10 { padding-bottom: 10px; }
-.pb20 { padding-bottom: 20px; }
-
-.pt5 { padding-top: 5px; }
-.pt10 { padding-top: 10px; }
-.pt20 { padding-top: 20px; }
-
-.ptb5 {
-  padding-top: 5px;
-  padding-bottom: 5px;
+@for $value from 1 through 4 {
+  .p#{5*$value} { padding: 5px * $value; }
+  .pt#{5*$value} { padding-top: 5px * $value; }
+  .pr#{5*$value} { padding-right: 5px * $value; }
+  .pb#{5*$value} { padding-bottom: 5px * $value; }
+  .pl#{5*$value} { padding-left: 5px * $value; }
+  .ptb#{5*$value} {
+    padding-top: 5px * $value;
+    padding-bottom: 5px * $value;
+  }
+  .pbs#{5*$value} {
+    padding-right: 5px * $value;
+    padding-left: 5px * $value;
+  }
 }
-.ptb10 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.ptb20 {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+
 
 .pbs5 {
   padding-left: 5px;
