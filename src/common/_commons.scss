@@ -31,6 +31,7 @@
 %grid {
   overflow: hidden;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 .grid05 {
@@ -273,7 +274,7 @@ a.t-xs { color: $blue; }
 .b-anchor {
   @include block-anchor;
   @include anchor-varient($light-black, $white);
-  @include bg-img("#{$img-path}/icon/icon-07.png", no-repeat, right 0 center, 15px);
+  @include bg-img("#{$img-path}/icon/icon-07.png", no-repeat, right center, 15px);
 }
 
 
