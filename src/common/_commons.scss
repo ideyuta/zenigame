@@ -307,28 +307,26 @@ a.t-xs { color: $blue; }
     width: 200%;
     height: 100%;
     margin-left: -100%;
-    -webkit-transition: margin 100ms ease-in 0s;
-    transition: margin 100ms ease-in 0s;
+    -webkit-transition: margin 100ms ease-in;
+    transition: margin 100ms ease-in;
     &:before,
     &:after {
-      @include size(50%, 30px);
+      @include size(45%, 30px);
       @include box-shadow(0 0 2px $light-gray inset);
       @include border-radius(15px); 
       float: left;
       padding: 0;
       line-height: 30px;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
     }
     &:before {
       content: "ON";
-      padding-left: 10px;
+      padding-left: 5%;
       background-color: $green;
       color: $white;
     }
     &:after {
       content: "OFF";
-      padding-right: 10px;
+      padding-right: 5%;
       background-color: $extra-light-gray;
       color: $gray;
       text-align: right;
