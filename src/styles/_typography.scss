@@ -1,0 +1,32 @@
+/*
+Typography
+
+Markup:
+<p class="{$modifiers}">あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+<p class="{$modifiers}">Lorem ipsum dolor sit amet, consectetur adipisicing
+elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+.display2 - display
+.display - display
+.headline - headline
+.title - title
+.subtitle - subtitle
+.caption - caption
+.minimum - minimum
+
+Styleguide 2.1.1
+*/
+
+.display2 {
+  @include typo(56px, $light-black, 300, $default-line-height - 0.2);
+  letter-spacing: -3px;
+}
+.display {
+  @include typo(34px, $light-black, 300, $default-line-height - 0.1);
+  letter-spacing: -1px;
+}
+.headline { @include typo(24px, $light-black, 300, $default-line-height); }
+.title { @include typo(20px, $light-black, 700, $default-line-height); }
+.subtitle { @include typo($default-font-size + 2px, $dark-gray, 300, $default-line-height); }
+.caption { @include typo(12px, $gray, 100, $default-line-height); }
+.minimum { @include typo(10px, $light-black, 100, $default-line-height); }

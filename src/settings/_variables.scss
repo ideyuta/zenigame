@@ -1,9 +1,35 @@
-// Zenigame
-//
-// Valiables 
-//-------------------------------
+/*
+Valiables 
 
-// Font Settings
+Font
+========
+
+Family
+---------
+* font-familyの基本設定
+* IE8の表示崩れに対応するフラグがある
+
+Size
+---------
+default-font-sizeを各プロダクトごとに設定することで、自動的にfont-sizeを計算してくれる。
+文字のジャンプ率を合わせるために、できるだけ独自にfont-sizeは実行しないこと。
+
+Colors
+===========
+
+Monotone
+---------
+モノトーンカラー。白背景に文字として使えるのは基本的にgrayより濃い色。
+
+Color
+--------
+基本4色。パートナーカラーに合わせて設定を変えるのもよし。
+メインカラーとアクセントカラーなど設定できるように今後するかも。
+
+Styleguide 1.3
+*/
+
+// Font
 $font-family-body: Helvetica Neue, Helvetica, MS Sans Serif, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Yu Gothic', 'ＭＳＰ ゴシック', Arial, sans-serif;
 $font-family-body-ie8: 'ＭＳ Ｐゴシック',sans-serif;
 
@@ -18,6 +44,7 @@ $dark-white: #fafafa; // 98%
 $white: #fff; // 100%
 
 // Colors
+/*
 $red: #f53;
 $green: #009844;
 //$green: #24B574;
@@ -32,6 +59,35 @@ $dark-red: #bf3f26;
 $dark-green: #188052;
 $dark-blue: #264cbf;
 $dark-yellow: #a69520;
+*/
+
+
+// Colors
+
+$blue: #075BD8;
+$extra-light-blue: #C7D3E6;
+$light-blue: #437CD2;
+$dark-blue: #033886;
+$extra-dark-blue: #011C45;
+
+$red: #FF3d10;
+$extra-light-red: #FFE1D9;
+$light-red: #FF6440;
+$dark-red: #CB2700;
+$extra-dark-red: #691400;
+
+$green: #0dd15c;
+$extra-light-green: #C8EAD6;
+$light-green: #36DA79;
+$dark-green: #00923B;
+$extra-dark-green: #004B1F;
+
+$yellow: #FFA100;
+$extra-light-yellow: #FFF1D9;
+$light-yellow: #FFB840;
+$dark-yellow: #CB8000;
+$extra-dark-yellow: #694200;
+
 
 // Colors Extension
 $pink: #f69;

@@ -17,7 +17,7 @@ $bp-tablet: 768px;
 $bp-pc: 900px;
 
 @mixin media($media-width) {
-  @if $test == false {
+  @if $zn-phone-test == false {
     @if $media-width == phone {
       @media only screen and (max-device-width: $bp-phone), 
       only screen and (max-device-width: $bp-phone) and (-o-min-device-pixel-ratio: 2/1), 

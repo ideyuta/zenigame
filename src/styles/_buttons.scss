@@ -1,0 +1,97 @@
+/*
+Raised Button
+
+Markup:
+<button class="r btn {$modifiers}">Button of button</button>
+<div class="r btn {$modifiers}">Button of div</div>
+<a class="r btn {$modifiers}">Button of a</a>
+
+.extra - This button is pressed.
+.entry - This button is disabled.
+.caution - This button is disabled.
+.danger - This button is disabled.
+
+Styleguide 2.2.1 
+*/
+
+.btn.r {
+  @include btn(40px);
+  @include typo($default-font-size, null, 300, 40px);
+  @include btn-varient($dark-gray, $white);
+}
+.btn.r.extra { @include btn-varient($white, $blue); }
+.btn.r.entry { @include btn-varient($white, $green); }
+.btn.r.caution { @include btn-varient($white, $yellow); }
+.btn.r.danger { @include btn-varient($white, $red); }
+
+/*
+Flat Button
+
+Markup:
+<button class="f btn {$modifiers}">Button of button</button>
+<div class="f btn {$modifiers}">Button of div</div>
+<a class="f btn {$modifiers}">Button of a</a>
+
+.extra - This button is pressed.
+.entry - This button is disabled.
+.caution - This button is disabled.
+.danger - This button is disabled.
+
+Styleguide 2.2.2 
+*/
+
+.btn.f {
+  @include btn(40px);
+  @include typo($default-font-size, null, 300, 40px);
+  background: none;
+  border: 0;
+  &:hover { background: $dark-white; }
+  &:active { background: $extra-light-gray; }
+}
+.btn.f.extra { color: $blue;}
+.btn.f.entry { color: $green; }
+.btn.f.caution { color: $yellow; }
+.btn.f.danger { color: $red; }
+
+/*
+Button Size
+
+Markup:
+<button class="r btn {$modifiers}">Button of button</button>
+<button class="f btn {$modifiers}">Button of button</button>
+
+.lg - This button is pressed.
+.md - This button is disabled.
+.sm - This button is disabled.
+.xs - This button is disabled.
+
+Styleguide 2.2.3
+*/
+
+.btn.lg { @include btn-resize(56px, $default-font-size + 4px); }
+.btn.md { @include btn-resize(48px, $default-font-size + 2px); }
+.btn.sm { @include btn-resize(32px, $default-font-size - 2px); }
+.btn.xs { @include btn-resize(24px, $default-font-size - 4px); }
+
+/*
+Button State
+
+Markup:
+<button class="r btn {$modifiers}">Button of button</button>
+<button class="f btn {$modifiers}">Button of button</button>
+
+.is-disable - This button is pressed.
+.is-justified - This button is disabled.
+
+Styleguide 2.2.4
+*/
+
+// TODO desableちゃんとする
+.btn.is-disable { @include opacity(.4); }
+.btn.is-justified {
+  @include border(1px 0, null, null, 0);
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+

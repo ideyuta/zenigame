@@ -18,9 +18,10 @@ module.exports = (grunt) ->
           'coffee:test'
         ]
       compass:
-        files: ['src/{,*/}*.{scss,sass}']
+        files: ['src/{,*/}*.{scss,sass}', 'src/settings/{,*/}*.{scss,sass}', 'src/mixins/{,*/}*.{scss,sass}', 'src/style/{,*/}*.{scss,sass}']
         tasks: [
           'compass'
+          'kss'
         ]
       options:
         livereload: true

@@ -1,16 +1,10 @@
 // Zenigame
 //
-// Markup: <button class="btn">Button</button>
-//
-// .btn - ボタンです
 //
 // Styleguide 0
 
-$test: false !default;
-$img-path: "img" !default;
-$partner-color: #000 !default;
+@import "settings/setting";
 
-@import "settings/variables";
-@import "settings/reset";
+
 @import "mixins/mixin";
-@import "common/common";
+@import "styles/common";

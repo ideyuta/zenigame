@@ -1,34 +1,54 @@
-// Button 
+/*
+Button Mixin
 
-@mixin btn($width, $height, $padding: null, $radius: $default-radius) {
-  @include size($width, $height);
-  @include border-radius($radius);
-  display: inline-block;
+基本ボタン生成
+----------------
+@include btn($height, $padding: null, $radius: null)
+
+ボタンカラーバリエーション設定
+--------------------------------
+@include btn-varient($color, $background-color)
+
+ボタングラデーション設定
+-----------------------------
+@include btn-gradient($start-color)
+
+Styleguide 3.1
+*/
+
+
+// TODO IE8以下対応（box-sizing）
+
+@mixin btn($height, $padding: 0 $height/2, $radius: $default-radius) {
+  @include size(auto, $height);
+  @include border(1px, solid, null,$radius);
+  @include box-shadow(0);
   padding: $padding;
+  display: inline-block;
+  box-sizing: content-box;
   text-decoration: none !important;
-  text-align: center;
+  cursor: pointer;
+  &:focus { outline: none; }
 }
 
 @mixin btn-varient($color, $background-color) {
   @include btn-gradient($background-color);
-  border-color: darken($background-color, 15%);
+  border-color: darken($background-color, 8%);
   color: $color;
-  &:active {
-    background: darken($background-color, 5%);
-  }
+  &:active { background: darken($background-color, 6%); }
 }
 
 @mixin btn-gradient ($start-color) {
-  $end-color: darken($start-color, 5%);
+  $end-color: darken($start-color, 2%);
   background: $start-color;
   background: -moz-linear-gradient(top, $start-color, $end-color);
   background: -webkit-gradient(linear, left top, left bottom, from($start-color), to($end-color));
   @include media(pc) {
-    &:hover { background: darken($start-color, 6%); }
+    &:hover { background: darken($start-color, 4%); }
   }
 }
 
-@mixin btn-resize($height, $font-size, $padding) {
+@mixin btn-resize($height, $font-size, $padding:0 $height/2) {
   height: $height;
   line-height: $height;
   padding: $padding;

@@ -1,0 +1,165 @@
+/*
+Styles
+
+Styleguide 2.0
+*/
+
+@import "colors";
+@import "buttons";
+@import "typography";
+
+.clear { clear: both; }
+.clearfix { @include clearfix; }
+
+.pull-left { float: left; }
+.pull-right { float: right; }
+.pull-center { margin: 0 auto; }
+.flush-left { text-align: left !important; }
+.flush-right { text-align: right !important; }
+.flush-center { text-align: center; }
+
+
+// Grid 
+//-------------------------------
+
+%grid {
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.grid05 {
+  @extend %grid;
+  width: $grid-size / 2;
+}
+
+@for $value from 1 through $grid-column {
+  .grid#{$value} {
+    @extend %grid;
+    width: $grid-size * $value;
+  }
+}
+
+// Weight 
+//-------------------------------
+
+.b, strong { font-weight: 700 !important; }
+
+
+// Opacity 
+//-------------------------------
+
+.o3 { @include opacity(.3); }
+.o5 { @include opacity(.5); }
+.o8 { @include opacity(.8); }
+
+
+// dropdown menu 
+//-------------------------------
+
+.dropdown {
+  @include pos(relative, 0, 0, 1);
+  .btn { padding: 0 30px 0 10px; }
+  .btn, .btn:hover {
+    @include bg-img("#{$img_path}/icon-toggle-down.png", no-repeat, right, 16px);
+  }
+}
+
+.dropdown-menu {
+  @include pos(absolute, 90%, 0, 2);
+  @include box-shadow(0 1px 2px $dark-gray);
+  @include border-radius($default-radius);
+  display: none;
+  width: auto;
+  padding: 10px 15px;
+  background: $white;
+  li { padding: 5px 0; }
+  a {
+    @include typo(13px, $white, null, 1.45);
+    color: $light-black;
+    white-space: nowrap;
+    text-decoration: none;
+    &:hover { color: $blue; }
+  }
+}
+
+
+// toggle 
+//-------------------------------
+
+.toggle {
+  .toggle-icon {
+    @include bg-img("#{$img_path}/icon-toggle-down.png", no-repeat, right, 16px); 
+  }
+  &.is-active {
+    .toggle-icon {
+      @include bg-img("#{$img_path}/icon-toggle-up.png", no-repeat, right, 16px);
+    }
+  }
+}
+
+
+// toggle swith
+// powered by http://proto.io/freebies/onoff/
+//-------------------------------
+
+.toggletitle {
+  line-height: 30px;
+}
+.toggleswitch {
+  @include size(70px, 30px);
+  @include pos(relative, 0, null, null, 0);
+  .checkbox { display: none; }
+  label {
+    @include size(100%);
+    display: block;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  .inner {
+    width: 200%;
+    height: 100%;
+    margin-left: -100%;
+    -webkit-transition: margin 100ms ease-in 0s;
+    transition: margin 100ms ease-in 0s;
+    &:before,
+    &:after {
+      @include size(50%, 30px);
+      @include box-shadow(0 0 2px $light-gray inset);
+      @include border-radius(15px); 
+      float: left;
+      padding: 0;
+      line-height: 30px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    &:before {
+      content: "ON";
+      padding-left: 10px;
+      background-color: $green;
+      color: $white;
+    }
+    &:after {
+      content: "OFF";
+      padding-right: 10px;
+      background-color: $extra-light-gray;
+      color: $gray;
+      text-align: right;
+    }
+  }
+  .switch {
+    @include size(26px);
+    @include pos(absolute, 2px, null, null, 42px);
+    @include box-shadow(0 0 1px $light-gray);
+    margin: 0px;
+    background: $white;
+    border-radius: 18px;
+    -webkit-transition: all 100ms ease-in 0s;
+    transition: all 100ms ease-in 0s; 
+  }
+  .checkbox:checked + label {
+    .inner { margin-left: 0; }
+    .switch { right: 2px; }
+  }
+}
+
