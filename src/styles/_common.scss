@@ -12,33 +12,14 @@ Styleguide 2.0
 .clearfix { @include clearfix; }
 
 .pull-left { float: left; }
-.pull-right { float: right; }
+.pull-right { float: right !important; }
 .pull-center { margin: 0 auto; }
 .flush-left { text-align: left !important; }
 .flush-right { text-align: right !important; }
 .flush-center { text-align: center; }
 
 
-// Grid 
-//-------------------------------
-
-%grid {
-  overflow: hidden;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-.grid05 {
-  @extend %grid;
-  width: $grid-size / 2;
-}
-
-@for $value from 1 through $grid-column {
-  .grid#{$value} {
-    @extend %grid;
-    width: $grid-size * $value;
-  }
-}
+body { font-family: $font-family-body; }
 
 // Weight 
 //-------------------------------
@@ -52,6 +33,103 @@ Styleguide 2.0
 .o3 { @include opacity(.3); }
 .o5 { @include opacity(.5); }
 .o8 { @include opacity(.8); }
+
+
+// Grid
+//-------------------------------
+
+// TODO スマホの場合パーセントに置き換える
+
+$default-pc-width: 1024px;
+$default-width: 100%;
+
+.row {
+  @include clearfix;
+  @include size($default-width, auto);
+  overflow: hidden;
+}
+
+@for $divide from 2 through 5 {
+  .d#{$divide} {
+    .column {
+      @include size(floor($default-width / $divide), auto);
+      float: left;
+      @for $unite from 2 through $divide - 1 {
+        &.u#{$unite} {
+          width: floor($default-width / $divide * $unite)
+        }
+      }
+    }
+  }
+}
+.contents {
+  @include size(90%, auto);
+  @include space(4%, 4px auto);
+  @include border(1px, solid, $extra-light-gray, $default-radius);
+  background: $white;
+}
+
+
+// Tab
+//-------------------------------
+
+.tabheader {
+  @include size(100%, 40px);
+  z-index: 1;
+  .tabnav {
+    li {
+      padding: 0 5px 0 0;
+      float: left;
+      cursor: pointer;
+      p {
+        @include border-radius($default-radius $default-radius 0 0);
+        line-height: 40px;
+        padding: 0 20px;
+        background: $dark-white;
+        &:hover { background: $extra-light-gray; }
+      }
+      &.is-active {
+        cursor: default;
+        p {
+          background: $light-black;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+
+// Select Box
+//-------------------------------
+
+.selectbox {
+  @include size(88%, 48px);
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  .selected {
+    @include btn(48px, 0 4%);
+    @include typo($default-font-size, $gray, 300, 48px);
+    @include btn-varient($dark-gray, $white);
+    width: 92%;
+  }
+  .selectnav {
+    @include size(100%, auto);
+    @include border(1px, solid, $extra-light-gray, 2px);
+    @include pos(absolute, 0, 0);
+    @include box-shadow(0 2px 8px $gray);
+    display: none;
+    background: $white;
+    z-index: 2;
+    li {
+      @include size(92%, 48px);
+      @include typo($default-font-size, $gray, 300, 48px);
+      padding: 0 4%;
+      &:last-child { border: 0; }
+    }
+  }
+}
 
 
 // dropdown menu 
