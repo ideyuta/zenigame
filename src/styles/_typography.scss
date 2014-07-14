@@ -17,16 +17,12 @@ elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 Styleguide 2.1.1
 */
 
-.display2 {
-  @include typo(56px, $light-black, 300, $default-line-height - 0.2);
-  letter-spacing: -3px;
-}
-.display {
-  @include typo(34px, $light-black, 300, $default-line-height - 0.1);
-  letter-spacing: -1px;
-}
-.headline { @include typo(24px, $light-black, 300, $default-line-height); }
-.title { @include typo(20px, $light-black, 700, $default-line-height); }
-.subtitle { @include typo($default-font-size + 2px, $dark-gray, 300, $default-line-height); }
-.caption { @include typo(12px, $gray, 100, $default-line-height); }
-.minimum { @include typo(10px, $light-black, 100, $default-line-height); }
+.display2 { @include typo_display2; }
+.display1 { @include typo_display1; }
+.headline { @include typo_headline; }
+.title { @include typo_title; }
+.subtitle { @include typo_subtitle; }
+.body2 { @include typo_body2; }
+.body1 { @include typo_body1; }
+.caption { @include typo_caption; }
+.minimum { @include typo_minimum; }
