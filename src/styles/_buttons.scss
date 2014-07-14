@@ -16,7 +16,7 @@ Styleguide 2.2.1
 
 .btn.r {
   @include btn(40px);
-  @include typo($default-font-size, null, 300, 40px);
+  @include typo($default-font-size, $gray, 300, 40px);
   @include btn-varient($dark-gray, $white);
 }
 .btn.r.extra { @include btn-varient($white, $blue); }
@@ -42,7 +42,7 @@ Styleguide 2.2.2
 
 .btn.f {
   @include btn(40px);
-  @include typo($default-font-size, null, 300, 40px);
+  @include typo($default-font-size, $dark-gray, 300, 40px);
   background: none;
   border: 0;
   &:hover { background: $dark-white; }
@@ -81,17 +81,26 @@ Markup:
 <button class="f btn {$modifiers}">Button of button</button>
 
 .is-disable - This button is pressed.
-.is-justified - This button is disabled.
+.is-fit - This button is disabled.
 
 Styleguide 2.2.4
 */
 
 // TODO desableちゃんとする
 .btn.is-disable { @include opacity(.4); }
-.btn.is-justified {
+.btn.is-fit {
   @include border(1px 0, null, null, 0);
   width: 100%;
-  padding: 0;
-  text-align: center;
 }
 
+
+
+.btngroup {
+  &.v { li { padding: 5px 0; } }
+  &.h {
+    li {
+      padding: 0 5px;
+      float: left;
+    }
+  }
+}
