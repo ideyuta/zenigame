@@ -14,7 +14,7 @@
 
 $bp-phone: 480px;
 $bp-tablet: 768px;
-$bp-pc: 900px;
+$bp-pc: 1024px;
 
 @mixin media($media-width) {
   @if $zn-phone-test == false {
