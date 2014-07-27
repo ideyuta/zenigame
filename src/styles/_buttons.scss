@@ -70,8 +70,8 @@ Styleguide 2.2.3
 
 .btn.lg { @include btn-resize(56px, $default-font-size + 4px); }
 .btn.md { @include btn-resize(48px, $default-font-size + 2px); }
-.btn.sm { @include btn-resize(32px, $default-font-size - 2px); }
-.btn.xs { @include btn-resize(24px, $default-font-size - 4px); }
+.btn.sm { @include btn-resize(32px, $default-font-size - 1px); }
+.btn.xs { @include btn-resize(24px, $default-font-size - 3px); }
 
 /*
 Button State
@@ -96,11 +96,27 @@ Styleguide 2.2.4
 
 
 .btngroup {
-  &.v { li { padding: 5px 0; } }
+  font-size: 0;
+  display: inline;
+  &.v {
+    .btn { @include border-radius(0); }
+    .btn:first-child {
+      @include border-radius($default-radius $default-radius 0 0);
+    }
+    .btn:last-child {
+      @include border-radius(0 0 $default-radius $default-radius);
+    }
+  }
   &.h {
-    li {
-      padding: 0 5px;
-      float: left;
+    .btn {
+      @include border-radius(0);
+      + .btn { border-left: 0; }
+    }
+    .btn:first-child {
+      @include border-radius($default-radius 0 0 $default-radius);
+    }
+    .btn:last-child {
+      @include border-radius(0 $default-radius $default-radius 0);
     }
   }
 }
