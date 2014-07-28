@@ -218,7 +218,6 @@ a.t-xs { color: $blue; }
   @include pos(relative, 0, 0, 1);
   .btn { padding: 0 30px 0 10px; }
   .btn, .btn:hover {
-    @include bg-img("#{$img_path}/icon-toggle-down.png", no-repeat, right, 16px);
   }
 }
 
@@ -246,11 +245,9 @@ a.t-xs { color: $blue; }
 
 .toggle {
   .toggle-icon {
-    @include bg-img("#{$img_path}/icon-toggle-down.png", no-repeat, right, 16px); 
   }
   &.is-active {
     .toggle-icon {
-      @include bg-img("#{$img_path}/icon-toggle-up.png", no-repeat, right, 16px);
     }
   }
 }
@@ -274,13 +271,13 @@ a.t-xs { color: $blue; }
 .b-anchor {
   @include block-anchor;
   @include anchor-varient($light-black, $white);
-  @include bg-img("#{$img-path}/icon/icon-07.png", no-repeat, right center, 15px);
+  @include bg-img("icon/icon-07.png", no-repeat, right center, 15px);
 }
 
 .b-anchor-open {
   @include block-anchor;
   @include anchor-varient($light-black, $white);
-  @include bg-img("#{$img-path}/icon/icon-35.png", no-repeat, right center, 22px);
+  @include bg-img("icon/icon-35.png", no-repeat, right center, 22px);
 }
 
 
