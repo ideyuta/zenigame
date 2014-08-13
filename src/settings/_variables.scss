@@ -44,25 +44,6 @@ $dark-white: #fafafa; // 98%
 $white: #fff; // 100%
 
 // Colors
-/*
-$red: #f53;
-$green: #009844;
-//$green: #24B574;
-$blue: #075ad8;
-//$blue: #36f;
-$yellow: #f2da30;
-$light-red: #fff0f0;
-$light-green: #e8fff4;
-$light-blue: #f0f3ff;
-$light-yellow: #fffde3;
-$dark-red: #bf3f26;
-$dark-green: #188052;
-$dark-blue: #264cbf;
-$dark-yellow: #a69520;
-*/
-
-
-// Colors
 
 $blue: #075BD8;
 $extra-light-blue: #C7D3E6;
@@ -88,19 +69,15 @@ $light-yellow: #FFB840;
 $dark-yellow: #CB8000;
 $extra-dark-yellow: #694200;
 
-
 // Colors Extension
 $pink: #f69;
 $sky: #39c;
 $gold: #b28247;
-
-// Grid
-$grid-column: 12 !default;
-$grid-size: 100% / $grid-column;
 
 // Default Value Settings
 $default-font-size: 14px !default;
 $default-text-color: $light-black !default;
 $default-line-height: 1.55 !default;
 $default-radius: 4px !default;
+$default-view-width: 1024px !default;
 
