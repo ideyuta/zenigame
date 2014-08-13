@@ -1,22 +1,20 @@
 /*
 Config
 
-$zn-phone-test
+$phone-test
 ------------------
 スマホ用スタイルをwebで確認するためフラグ。具体的には、MediaQueryの切り替えをおこなってる
 
-$zn-img-path
------------------
-zenigame内で利用する画像のパス設定
-
-$zn-theme-color
+$theme-color
 ------------------
 テーマカラー
 
 Styleguide 1.2
 */
 
-$zn-phone-test: false !default;
-$zn-img-path: "img" !default;
-$img-path: "img" !default;
-$zn-theme-color: #000 !default;
+$phone-test: false !default;
+$bp-phone: 480px;
+$bp-tablet: 768px;
+$bp-pc: 1024px;
+
+$theme-color: #000 !default;

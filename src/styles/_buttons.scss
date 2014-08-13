@@ -94,8 +94,24 @@ Styleguide 2.2.4
 }
 
 
+/*
+Button Group
 
-.btngroup {
+Markup:
+<div class="BtnGroup {$modifiers}">
+  <button class="r btn">Button of button</button>
+  <button class="f btn">Button of button</button>
+  <button class="f btn">Button of button</button>
+</div>
+
+.v - 縦並び
+.h - 横並び
+
+Styleguide 2.2.5
+*/
+
+
+.BtnGroup {
   font-size: 0;
   display: inline;
   &.v {
