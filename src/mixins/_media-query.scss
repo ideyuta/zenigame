@@ -11,13 +11,8 @@
 // Referense:
 //   http://screensiz.es/phone
 
-
-$bp-phone: 480px;
-$bp-tablet: 768px;
-$bp-pc: 1024px;
-
 @mixin media($media-width) {
-  @if $zn-phone-test == false {
+  @if $phone-test == false {
     @if $media-width == phone {
       @media only screen and (max-device-width: $bp-phone), 
       only screen and (max-device-width: $bp-phone) and (-o-min-device-pixel-ratio: 2/1), 

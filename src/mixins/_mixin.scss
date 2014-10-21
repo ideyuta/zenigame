@@ -6,9 +6,7 @@ Mixins
 Styleguide 3
 */
 
-@import "anchor";
 @import "background-image";
-@import "blur";
 @import "border";
 @import "box-shadow";
 @import "clearfix";
@@ -18,35 +16,6 @@ Styleguide 3
 @import "position";
 @import "size";
 @import "space";
-@import "transition";
 @import "typography";
 
-@import "button"; // include: border
-@import "card"; // include: box-shadow
-
-
-// Underline on mouseover 
-@mixin on-underline {
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-// Partials 
-//-------------------------------
-
-@mixin thumb($width:150px, $height:125px, $border:3px) {
-  @include size($width + $border * 2, $height + $border * 2);
-  @include border-radius($default-radius);
-  @include pos(relative, 0, 0);
-  z-index: 1;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  img { 
-    @include border($border, solid, $white, $default-radius);
-    @include size($width, auto); 
-    display: inline-block;
-  }
-}
-
+@import "button";
