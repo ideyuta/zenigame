@@ -44,50 +44,31 @@ $dark-white: #fafafa; // 98%
 $white: #fff; // 100%
 
 // Colors
-/*
-$red: #f53;
-$green: #009844;
-//$green: #24B574;
-$blue: #075ad8;
-//$blue: #36f;
-$yellow: #f2da30;
-$light-red: #fff0f0;
-$light-green: #e8fff4;
-$light-blue: #f0f3ff;
-$light-yellow: #fffde3;
-$dark-red: #bf3f26;
-$dark-green: #188052;
-$dark-blue: #264cbf;
-$dark-yellow: #a69520;
-*/
 
+$blue: #39c;
+$red: #f33;
+$green: #3c6;
+$yellow: #fc0;
 
-// Colors
+$extra-light-blue: lighten($blue, 45%);
+$light-blue: lighten($blue, 16%);
+$dark-blue: darken($blue, 16%);
+$extra-dark-blue: darken($blue, 45%);
 
-$blue: #075BD8;
-$extra-light-blue: #C7D3E6;
-$light-blue: #437CD2;
-$dark-blue: #033886;
-$extra-dark-blue: #011C45;
+$extra-light-red: lighten($red, 45%);
+$light-red: lighten($red, 16%);
+$dark-red: darken($red, 16%);
+$extra-dark-red: darken($red, 45%);
 
-$red: #FF3d10;
-$extra-light-red: #FFE1D9;
-$light-red: #FF6440;
-$dark-red: #CB2700;
-$extra-dark-red: #691400;
+$extra-light-green: lighten($green, 45%);
+$light-green: lighten($green, 16%);
+$dark-green: darken($green, 16%);
+$extra-dark-green: darken($green, 45%);
 
-$green: #0dd15c;
-$extra-light-green: #C8EAD6;
-$light-green: #36DA79;
-$dark-green: #00923B;
-$extra-dark-green: #004B1F;
-
-$yellow: #FFA100;
-$extra-light-yellow: #FFF1D9;
-$light-yellow: #FFB840;
-$dark-yellow: #CB8000;
-$extra-dark-yellow: #694200;
-
+$extra-light-yellow: lighten($yellow, 45%);
+$light-yellow: lighten($yellow, 16%);
+$dark-yellow: darken($yellow, 16%);
+$extra-dark-yellow: darken($yellow, 45%);
 
 // Colors Extension
 $pink: #f69;
