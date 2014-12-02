@@ -15,8 +15,8 @@ Styleguide 2.2.1
 */
 
 .btn.r {
-  @include btn(40px);
-  @include typo($default-font-size, $gray, 300, 40px);
+  @include btn(20px);
+  @include typo($default-font-size, $gray, 300, 20px);
   @include btn-varient($dark-gray, $white);
 }
 .btn.r.extra { @include btn-varient($white, $blue); }
@@ -41,8 +41,8 @@ Styleguide 2.2.2
 */
 
 .btn.f {
-  @include btn(40px);
-  @include typo($default-font-size, $dark-gray, 300, 40px);
+  @include btn(20px);
+  @include typo($default-font-size, $dark-gray, 300, 20px);
   background: none;
   border: 0;
   &:hover { background: $dark-white; }
@@ -68,10 +68,10 @@ Markup:
 Styleguide 2.2.3
 */
 
-.btn.lg { @include btn-resize(56px, $default-font-size + 4px); }
-.btn.md { @include btn-resize(48px, $default-font-size + 2px); }
-.btn.sm { @include btn-resize(32px, $default-font-size - 1px); }
-.btn.xs { @include btn-resize(24px, $default-font-size - 3px); }
+.btn.lg { @include btn-resize(28px, $default-font-size + 4px); }
+.btn.md { @include btn-resize(24px, $default-font-size + 2px); }
+.btn.sm { @include btn-resize(18px, $default-font-size - 1px); }
+.btn.xs { @include btn-resize(14px, $default-font-size - 3px); }
 
 /*
 Button State
