@@ -1,0 +1,12 @@
+// Icon
+
+@mixin icon($size) {
+  @include size($size);
+  &:before {
+    @include size($size);
+    content: "";
+    text-decoration: inherit;
+    display: inline-block;
+    background-size: $size;
+  }
+}
