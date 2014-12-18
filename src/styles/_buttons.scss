@@ -17,7 +17,7 @@ Styleguide 2.2.1
 .btn.r {
   @include btn(20px);
   @include typo($default-font-size, $gray, 300, 20px);
-  @include btn-varient($dark-gray, $white);
+  @include btn-varient($dark-gray, $dark-white);
 }
 .btn.r.extra { @include btn-varient($white, $blue); }
 .btn.r.entry { @include btn-varient($white, $green); }
