@@ -92,7 +92,9 @@ Styleguide 2.2.4
 .btn.is-disable { @include opacity(.4); }
 .btn.is-fit {
   @include border(1px 0, null, null, 0);
-  width: 100%;
+  width: 92%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 
