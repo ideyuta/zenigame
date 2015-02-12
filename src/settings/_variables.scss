@@ -46,14 +46,14 @@ $white: #fff; // 100%
 
 // Colors
 
-$blue: #3be;
+$blue: #3ae;
 $red: #f33;
 $green: #3c6;
 $yellow: #fde299;
 $pink: #fd6f86;
 $mocha: #9C9082;
 
-$extra-light-blue: lighten($blue, 55%);
+$extra-light-blue: lighten($blue, 42%);
 $light-blue: lighten($blue, 16%);
 $dark-blue: darken($blue, 16%);
 $extra-dark-blue: darken($blue, 45%);
