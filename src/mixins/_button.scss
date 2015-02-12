@@ -44,9 +44,7 @@ Styleguide 3.1
   background: $start-color;
   background: -moz-linear-gradient(top, $start-color, $end-color);
   background: -webkit-gradient(linear, left top, left bottom, from($start-color), to($end-color));
-  @include media(pc) {
-    &:hover { background: darken($start-color, 4%); }
-  }
+  &:hover { background: darken($start-color, 3%); }
 }
 
 @mixin btn-resize($height, $font-size, $padding: $height/2 $height) {
