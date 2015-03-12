@@ -1,12 +1,13 @@
 // Icon
 
-@mixin icon($size) {
-  @include size($size);
+@mixin icon($w, $h:$w) {
+  @include size($w, $h);
   &:before {
-    @include size($size);
+    @include size($w, $h);
     content: "";
     text-decoration: inherit;
     display: inline-block;
-    background-size: $size;
+    background-size: $w $h;
+    vertical-align: top;
   }
 }
