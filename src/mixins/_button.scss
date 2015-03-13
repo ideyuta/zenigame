@@ -39,8 +39,7 @@ Styleguide 3.1
   &:active { background: darken($background-color, 6%); }
 }
 
-@mixin btn-gradient ($start-color) {
-  $end-color: darken($start-color, 2%);
+@mixin btn-gradient ($start-color, $end-color: darken($start-color, 2%)) {
   background: $start-color;
   background: -moz-linear-gradient(top, $start-color, $end-color);
   background: -webkit-gradient(linear, left top, left bottom, from($start-color), to($end-color));
