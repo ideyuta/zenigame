@@ -1,37 +1,7 @@
-/*
-Valiables 
-
-Font
-========
-
-Family
----------
-* font-familyの基本設定
-* IE8の表示崩れに対応するフラグがある
-
-Size
----------
-default-font-sizeを各プロダクトごとに設定することで、自動的にfont-sizeを計算してくれる。
-文字のジャンプ率を合わせるために、できるだけ独自にfont-sizeは実行しないこと。
-
-Colors
-===========
-
-Monotone
----------
-モノトーンカラー。白背景に文字として使えるのは基本的にgrayより濃い色。
-
-Color
---------
-基本4色。パートナーカラーに合わせて設定を変えるのもよし。
-メインカラーとアクセントカラーなど設定できるように今後するかも。
-
-Styleguide 1.3
-*/
-
 // Font
-$font-family-body: Helvetica Neue, Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-$font-family-body-ie8: 'ＭＳ Ｐゴシック', sans-serif;
+$font: Helvetica Neue, Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$font-ie8: 'ＭＳ Ｐゴシック', sans-serif;
+$font-serif: 'YuMincho', 'Yu Mincho', 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro';
 
 // Monotone
 $black: #000; // 0%
@@ -45,7 +15,6 @@ $dark-white: #fafafa; // 98%
 $white: #fff; // 100%
 
 // Colors
-
 $blue: #3ae;
 $red: #f33;
 $green: #3c6;
@@ -83,15 +52,6 @@ $light-mocha: lighten($mocha, 16%);
 $dark-mocha: darken($mocha, 16%);
 $extra-dark-mocha: darken($mocha, 38%);
 
-
 // Colors Extension
 $sky: #39c;
 $gold: #b28247;
-
-// Default Value Settings
-$default-font-size: 14px !default;
-$default-text-color: $light-black !default;
-$default-line-height: 1.55 !default;
-$default-radius: 4px !default;
-$default-view-width: 1024px !default;
-

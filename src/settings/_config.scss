@@ -1,20 +1,14 @@
-/*
-Config
-
-$phone-test
-------------------
-スマホ用スタイルをwebで確認するためフラグ。具体的には、MediaQueryの切り替えをおこなってる
-
-$theme-color
-------------------
-テーマカラー
-
-Styleguide 1.2
-*/
-
-$phone-test: false !default;
+// Break Point
 $bp-phone: 480px;
 $bp-tablet: 768px;
 $bp-pc: 1024px;
 
-$theme-color: #000 !default;
+// Theme Color
+$theme-color: $black !default;
+
+// Default Value Settings
+$default-font-size: 14px !default;
+$default-text-color: $light-black !default;
+$default-line-height: 1.55 !default;
+$default-radius: 4px !default;
+$default-view-width: 1024px !default;
