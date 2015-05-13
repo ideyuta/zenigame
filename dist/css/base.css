@@ -1,0 +1,1101 @@
+@charset "UTF-8";
+/*
+Settings
+
+Settingsファイルについて
+=========================
+settingsは、zenigameおよびzenigameを導入するプロダクトの初期化処理を行うファイル群。
+
+Styleguide 1
+*/
+/*
+Reset Browser Style
+
+* Eric Meyer's Reset CSS v2.0 http://cssreset.com
+
+Styleguide 1.1
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+Valiables 
+
+Font
+========
+
+Family
+---------
+* font-familyの基本設定
+* IE8の表示崩れに対応するフラグがある
+
+Size
+---------
+default-font-sizeを各プロダクトごとに設定することで、自動的にfont-sizeを計算してくれる。
+文字のジャンプ率を合わせるために、できるだけ独自にfont-sizeは実行しないこと。
+
+Colors
+===========
+
+Monotone
+---------
+モノトーンカラー。白背景に文字として使えるのは基本的にgrayより濃い色。
+
+Color
+--------
+基本4色。パートナーカラーに合わせて設定を変えるのもよし。
+メインカラーとアクセントカラーなど設定できるように今後するかも。
+
+Styleguide 1.3
+*/
+/*
+Config
+
+$phone-test
+------------------
+スマホ用スタイルをwebで確認するためフラグ。具体的には、MediaQueryの切り替えをおこなってる
+
+$theme-color
+------------------
+テーマカラー
+
+Styleguide 1.2
+*/
+/*
+Mixins
+
+
+
+Styleguide 3
+*/
+/*
+Button Mixin
+
+基本ボタン生成
+----------------
+@include btn($height, $padding: null, $radius: null)
+
+ボタンカラーバリエーション設定
+--------------------------------
+@include btn-varient($color, $background-color)
+
+ボタングラデーション設定
+-----------------------------
+@include btn-gradient($start-color)
+
+Styleguide 3.1
+*/
+/*
+Styles
+
+Styleguide 2.0
+*/
+/*
+Colors
+
+Markup:
+<div class="clearfix">
+<div class="sample extra-light-{$modifiers}"></div>
+<div class="sample light-{$modifiers}"></div>
+<div class="sample {$modifiers}"></div>
+<div class="sample dark-{$modifiers}"></div>
+<div class="sample extra-dark-{$modifiers}"></div>
+</div>
+
+.blue - blue
+.red - red
+.green - green
+.yellow - yellow
+
+Styleguide 2.0.1 
+*/
+.sample {
+  width: 120px;
+  height: 40px;
+  float: left;
+}
+
+.extra-light-blue {
+  background: #f9fcfe;
+}
+
+.light-blue {
+  background: #7ec9f4;
+}
+
+.blue {
+  background: #3ae;
+}
+
+.dark-blue {
+  background: #1080bf;
+}
+
+.extra-dark-blue {
+  background: #052537;
+}
+
+.extra-light-red {
+  background: white;
+}
+
+.light-red {
+  background: #ff8585;
+}
+
+.red {
+  background: #f33;
+}
+
+.dark-red {
+  background: #e00000;
+}
+
+.extra-dark-red {
+  background: #4d0000;
+}
+
+.extra-light-green {
+  background: #ebfaf0;
+}
+
+.light-green {
+  background: #74dc97;
+}
+
+.green {
+  background: #3c6;
+}
+
+.dark-green {
+  background: #238b45;
+}
+
+.extra-dark-green {
+  background: #05140a;
+}
+
+.extra-light-yellow {
+  background: white;
+}
+
+.light-yellow {
+  background: #fff9e9;
+}
+
+.yellow {
+  background: #fde299;
+}
+
+.dark-yellow {
+  background: #fbcb49;
+}
+
+.extra-dark-yellow {
+  background: #ad7f03;
+}
+
+/*
+Row & Column
+
+row: 1行
+column: 1列（どちらかというとセルに近いが）
+divide: rowの分割数を指定
+unite: columnの結合数を指定
+
+Styleguide 2.0
+*/
+.Row {
+  *zoom: 1;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.Row:before, .Row:after {
+  content: '';
+  display: table;
+}
+.Row:after {
+  clear: both;
+}
+
+.d2 .column {
+  width: 50%;
+  height: auto;
+  float: left;
+}
+.d2 .column.u2 {
+  width: 100%;
+}
+.d2 .column.u1 {
+  width: 50%;
+}
+
+.d3 .column {
+  width: 33%;
+  height: auto;
+  float: left;
+}
+.d3 .column.u2 {
+  width: 66%;
+}
+
+.d4 .column {
+  width: 25%;
+  height: auto;
+  float: left;
+}
+.d4 .column.u2 {
+  width: 50%;
+}
+.d4 .column.u3 {
+  width: 75%;
+}
+
+.d5 .column {
+  width: 20%;
+  height: auto;
+  float: left;
+}
+.d5 .column.u2 {
+  width: 40%;
+}
+.d5 .column.u3 {
+  width: 60%;
+}
+.d5 .column.u4 {
+  width: 80%;
+}
+
+/*
+Raised Button
+
+Markup:
+<button class="r btn {$modifiers}">Button of button</button>
+<div class="r btn {$modifiers}">Button of div</div>
+<a class="r btn {$modifiers}">Button of a</a>
+
+.extra - This button is pressed.
+.entry - This button is disabled.
+.caution - This button is disabled.
+.danger - This button is disabled.
+
+Styleguide 2.2.1 
+*/
+.btn.r {
+  *zoom: 1;
+  width: auto;
+  height: 20px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  -ms-box-shadow: 0;
+  box-shadow: 0;
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer;
+  box-sizing: content-box;
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0;
+  background: #fafafa;
+  background: -moz-linear-gradient(top, #fafafa, whitesmoke);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(whitesmoke));
+  border-color: #e6e6e6;
+  color: #666;
+}
+.btn.r:before, .btn.r:after {
+  content: '';
+  display: table;
+}
+.btn.r:after {
+  clear: both;
+}
+.btn.r:focus {
+  outline: none;
+}
+.btn.r:hover {
+  background: #f2f2f2;
+}
+.btn.r:active {
+  background: #ebebeb;
+}
+
+.btn.r.extra {
+  background: #3ae;
+  background: -moz-linear-gradient(top, #3ae, #2aa6ed);
+  background: -webkit-gradient(linear, left top, left bottom, from(#3ae), to(#2aa6ed));
+  border-color: #1399e5;
+  color: #fff;
+}
+.btn.r.extra:hover {
+  background: #25a4ed;
+}
+.btn.r.extra:active {
+  background: #179eec;
+}
+
+.btn.r.entry {
+  background: #3c6;
+  background: -moz-linear-gradient(top, #3c6, #31c462);
+  background: -webkit-gradient(linear, left top, left bottom, from(#3c6), to(#31c462));
+  border-color: #2bab56;
+  color: #fff;
+}
+.btn.r.entry:hover {
+  background: #30c060;
+}
+.btn.r.entry:active {
+  background: #2db45a;
+}
+
+.btn.r.caution {
+  background: #fde299;
+  background: -moz-linear-gradient(top, #fde299, #fddf8f);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fde299), to(#fddf8f));
+  border-color: #fcd771;
+  color: #fff;
+}
+.btn.r.caution:hover {
+  background: #fdde8a;
+}
+.btn.r.caution:active {
+  background: #fcd97b;
+}
+
+.btn.r.danger {
+  background: #f33;
+  background: -moz-linear-gradient(top, #f33, #ff2929);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f33), to(#ff2929));
+  border-color: #ff0a0a;
+  color: #fff;
+}
+.btn.r.danger:hover {
+  background: #ff2424;
+}
+.btn.r.danger:active {
+  background: #ff1414;
+}
+
+.btn.r.action {
+  background: #fd6f86;
+  background: -moz-linear-gradient(top, #fd6f86, #fd657e);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fd6f86), to(#fd657e));
+  border-color: #fc4764;
+  color: #fff;
+}
+.btn.r.action:hover {
+  background: #fd6079;
+}
+.btn.r.action:active {
+  background: #fd516d;
+}
+
+/*
+Flat Button
+
+Markup:
+<button class="f btn {$modifiers}">Button of button</button>
+<div class="f btn {$modifiers}">Button of div</div>
+<a class="f btn {$modifiers}">Button of a</a>
+
+.extra - This button is pressed.
+.entry - This button is disabled.
+.caution - This button is disabled.
+.danger - This button is disabled.
+
+Styleguide 2.2.2 
+*/
+.btn.f {
+  *zoom: 1;
+  width: auto;
+  height: 20px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  -ms-box-shadow: 0;
+  box-shadow: 0;
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer;
+  box-sizing: content-box;
+  font-size: 13px;
+  color: #666;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0;
+  background: none;
+  border: 0;
+}
+.btn.f:before, .btn.f:after {
+  content: '';
+  display: table;
+}
+.btn.f:after {
+  clear: both;
+}
+.btn.f:focus {
+  outline: none;
+}
+.btn.f:hover {
+  background: #fafafa;
+}
+.btn.f:active {
+  background: #f2f2f2;
+}
+
+.btn.f.extra {
+  color: #3ae;
+}
+
+.btn.f.entry {
+  color: #3c6;
+}
+
+.btn.f.caution {
+  color: #fde299;
+}
+
+.btn.f.danger {
+  color: #f33;
+}
+
+.btn.f.action {
+  color: #fd6f86;
+}
+
+/*
+Button Size
+
+Markup:
+<button class="r btn {$modifiers}">Button of button</button>
+<button class="f btn {$modifiers}">Button of button</button>
+
+.lg - This button is pressed.
+.md - This button is disabled.
+.sm - This button is disabled.
+.xs - This button is disabled.
+
+Styleguide 2.2.3
+*/
+.btn.lg {
+  height: 28px;
+  line-height: 28px;
+  padding: 14px 28px;
+  font-size: 17px;
+}
+
+.btn.md {
+  height: 24px;
+  line-height: 24px;
+  padding: 12px 24px;
+  font-size: 15px;
+}
+
+.btn.sm {
+  height: 18px;
+  line-height: 18px;
+  padding: 9px 18px;
+  font-size: 12px;
+}
+
+.btn.xs {
+  height: 14px;
+  line-height: 14px;
+  padding: 7px 14px;
+  font-size: 10px;
+}
+
+/*
+Button State
+
+Markup:
+<button class="r btn {$modifiers}">Button of button</button>
+<button class="f btn {$modifiers}">Button of button</button>
+
+.is-disable - This button is pressed.
+.is-fit - This button is disabled.
+
+Styleguide 2.2.4
+*/
+.btn.is-disable {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -moz-filter: "alpha( opacity=40)";
+}
+
+.btn.is-fit {
+  border-width: 1px 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  width: 92%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+/*
+Button Group
+
+Markup:
+<div class="BtnGroup {$modifiers}">
+  <button class="r btn">Button of button</button>
+  <button class="f btn">Button of button</button>
+  <button class="f btn">Button of button</button>
+</div>
+
+.v - 縦並び
+.h - 横並び
+
+Styleguide 2.2.5
+*/
+.BtnGroup {
+  font-size: 0;
+  display: inline;
+}
+.BtnGroup.v .btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.BtnGroup.v .btn:first-child {
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.BtnGroup.v .btn:last-child {
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+.BtnGroup.h .btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.BtnGroup.h .btn + .btn {
+  border-left: 0;
+}
+.BtnGroup.h .btn:first-child {
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+.BtnGroup.h .btn:last-child {
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/*
+Typography
+
+Markup:
+<p class="{$modifiers}">あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+<p class="{$modifiers}">Lorem ipsum dolor sit amet, consectetur adipisicing
+elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+.display2 - display
+.display - display
+.headline - headline
+.title - title
+.subtitle - subtitle
+.caption - caption
+.minimum - minimum
+
+Styleguide 2.1.1
+*/
+.display2 {
+  font-size: 56px;
+  color: #333;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: 0;
+  letter-spacing: -3px;
+}
+
+.display1 {
+  font-size: 34px;
+  color: #333;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0;
+  letter-spacing: -1px;
+}
+
+.headline {
+  font-size: 24px;
+  color: #333;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.title {
+  font-size: 20px;
+  color: #333;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.subtitle {
+  font-size: 17px;
+  color: #666;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.body2 {
+  font-size: 15px;
+  color: #666;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.body1 {
+  font-size: 13px;
+  color: #666;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.caption {
+  font-size: 12px;
+  color: #999;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.minimum {
+  font-size: 10px;
+  color: #666;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/*
+Styles
+
+Styleguide 2.0
+*/
+.clear {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-center {
+  margin: 0 auto;
+}
+
+.flush-left {
+  text-align: left !important;
+}
+
+.flush-right {
+  text-align: right !important;
+}
+
+.flush-center {
+  text-align: center;
+}
+
+body {
+  font-family: "游ゴシック", YuGothic, Helvetica Neue, Helvetica, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+.b, strong {
+  font-weight: 700 !important;
+}
+
+.o3 {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  -moz-filter: "alpha( opacity=30)";
+}
+
+.o5 {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -moz-filter: "alpha( opacity=50)";
+}
+
+.o8 {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -moz-filter: "alpha( opacity=80)";
+}
+
+.tabheader {
+  width: 100%;
+  height: 40px;
+  z-index: 1;
+}
+.tabheader .tabnav li {
+  padding: 0 5px 0 0;
+  float: left;
+  cursor: pointer;
+}
+.tabheader .tabnav li p {
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  line-height: 40px;
+  padding: 0 20px;
+  background: #fafafa;
+}
+.tabheader .tabnav li p:hover {
+  background: #f2f2f2;
+}
+.tabheader .tabnav li.is-active {
+  cursor: default;
+}
+.tabheader .tabnav li.is-active p {
+  background: #333;
+  color: #fff;
+}
+
+.selectbox {
+  width: 88%;
+  height: 48px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+.selectbox .selected {
+  *zoom: 1;
+  width: auto;
+  height: 48px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  -ms-box-shadow: 0;
+  box-shadow: 0;
+  padding: 0 4%;
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer;
+  box-sizing: content-box;
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
+  line-height: 48px;
+  letter-spacing: 0;
+  background: #fff;
+  background: -moz-linear-gradient(top, #fff, #fafafa);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fafafa));
+  border-color: #ebebeb;
+  color: #666;
+  width: 92%;
+}
+.selectbox .selected:before, .selectbox .selected:after {
+  content: '';
+  display: table;
+}
+.selectbox .selected:after {
+  clear: both;
+}
+.selectbox .selected:focus {
+  outline: none;
+}
+.selectbox .selected:hover {
+  background: #f7f7f7;
+}
+.selectbox .selected:active {
+  background: #f0f0f0;
+}
+.selectbox .selectnav {
+  width: 100%;
+  height: auto;
+  border-style: solid;
+  border-color: #f2f2f2;
+  border-width: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: 0 2px 8px #999;
+  -moz-box-shadow: 0 2px 8px #999;
+  -ms-box-shadow: 0 2px 8px #999;
+  box-shadow: 0 2px 8px #999;
+  display: none;
+  background: #fff;
+  z-index: 2;
+}
+.selectbox .selectnav li {
+  width: 92%;
+  height: 48px;
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
+  line-height: 48px;
+  letter-spacing: 0;
+  padding: 0 4%;
+}
+.selectbox .selectnav li:last-child {
+  border: 0;
+}
+
+.dropdown {
+  position: relative;
+  top: 0;
+  bottom: 1;
+  left: 0;
+}
+.dropdown .btn {
+  padding: 0 30px 0 10px;
+}
+.dropdown .btn, .dropdown .btn:hover {
+  background-image: url(/static/img/icon-toggle-down.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 90%;
+  bottom: 2;
+  left: 0;
+  -webkit-box-shadow: 0 1px 2px #666;
+  -moz-box-shadow: 0 1px 2px #666;
+  -ms-box-shadow: 0 1px 2px #666;
+  box-shadow: 0 1px 2px #666;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  display: none;
+  width: auto;
+  padding: 10px 15px;
+  background: #fff;
+}
+.dropdown-menu li {
+  padding: 5px 0;
+}
+.dropdown-menu a {
+  font-size: 13px;
+  color: #fff;
+  line-height: 1.45;
+  letter-spacing: 0;
+  color: #333;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.dropdown-menu a:hover {
+  color: #3ae;
+}
+
+.toggle .toggle-icon {
+  background-image: url(/static/img/icon-toggle-down.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 16px;
+}
+.toggle.is-active .toggle-icon {
+  background-image: url(/static/img/icon-toggle-up.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 16px;
+}
+
+.toggletitle {
+  line-height: 30px;
+}
+
+.toggleswitch {
+  width: 70px;
+  height: 30px;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+.toggleswitch .checkbox {
+  display: none;
+}
+.toggleswitch label {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.toggleswitch .inner {
+  width: 200%;
+  height: 100%;
+  margin-left: -100%;
+  -webkit-transition: margin 100ms ease-in 0s;
+  transition: margin 100ms ease-in 0s;
+}
+.toggleswitch .inner:before, .toggleswitch .inner:after {
+  width: 50%;
+  height: 30px;
+  -webkit-box-shadow: 0 0 2px #ccc inset;
+  -moz-box-shadow: 0 0 2px #ccc inset;
+  -ms-box-shadow: 0 0 2px #ccc inset;
+  box-shadow: 0 0 2px #ccc inset;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  float: left;
+  padding: 0;
+  line-height: 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.toggleswitch .inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: #3c6;
+  color: #fff;
+}
+.toggleswitch .inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #f2f2f2;
+  color: #999;
+  text-align: right;
+}
+.toggleswitch .switch {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 2px;
+  right: 42px;
+  -webkit-box-shadow: 0 0 1px #ccc;
+  -moz-box-shadow: 0 0 1px #ccc;
+  -ms-box-shadow: 0 0 1px #ccc;
+  box-shadow: 0 0 1px #ccc;
+  margin: 0px;
+  background: #fff;
+  border-radius: 18px;
+  -webkit-transition: all 100ms ease-in 0s;
+  transition: all 100ms ease-in 0s;
+}
+.toggleswitch .checkbox:checked + label .inner {
+  margin-left: 0;
+}
+.toggleswitch .checkbox:checked + label .switch {
+  right: 2px;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  -webkit-touch-callout: none;
+}
+
+html, body {
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 13px;
+  color: #333;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-transform: none;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Noto Sans Japanese", "游ゴシック", YuGothic, Helvetica Neue, Helvetica, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  background: #fff;
+}
+
+a:link {
+  color: #3ae;
+}
+a:visited {
+  color: #3ae;
+}
+a:hover {
+  color: #1080bf;
+}
+a:active {
+  color: #1080bf;
+}
+
+.highlight {
+  padding: 16px;
+  margin: 8px 0;
+  border: 1px solid #f2f2f2;
+  font-family: 'Inconsolata';
+  letter-spacing: 0.04em;
+  background: #fafafa;
+  line-height: 1.4;
+}
+.highlight .title {
+  font-size: 12px;
+}

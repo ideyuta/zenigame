@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+//-------------------------------
+// Settings
+//-------------------------------
+
+$img-path: '/static/img';
+$theme-color: #369;
+$default-view-width: 1165px;
+$default-font-size: 13px;
+$default-line-height: 1.5;
+
+@import "../../../src/zenigame";
+
+$serif: 'YuMincho', 'Yu Mincho', 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro';
+
+//-------------------------------
+// Base
+//-------------------------------
+
+// リンク要素タップ時に色変更しない
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+// iOS でリンク長押ししてもポップアップメニューを出さない
+* { -webkit-touch-callout: none; }
+// input以外選択できないようにする
+// :not(input){ -webkit-user-select: none; }
+html, body {
+  @include size(100%, auto, 100%, 100%);
+  @include typo($default-font-size, $light-black, 300, $default-line-height);
+  text-transform: none;
+  -webkit-text-size-adjust: 100%;
+  font-family:'Noto Sans Japanese', $font-family-body;
+  background: $white;
+}
+
+a {
+  &:link { color: $blue; }
+  &:visited { color: $blue; }
+  &:hover { color: $dark-blue; }
+  &:active { color: $dark-blue; }
+}
+
+.highlight  {
+  padding: 16px;
+  margin: 8px 0;
+  border: 1px solid $extra-light-gray;
+  font-family: 'Inconsolata';
+  letter-spacing: 0.04em;
+  background: $dark-white;
+  line-height: 1.4;
+  .title {
+    font-size: 12px;
+  }
+}
+
+//-------------------------------
+// Components
+//-------------------------------
