@@ -17,7 +17,7 @@ dirs =
   dist: './dist'
 
 paths =
-  jade: ["#{dirs.src}/templates/**/*.jade"]
+  jade: ["#{dirs.src}/templates/**/!(_)*.jade"]
   coffee: ["#{dirs.src}/static/coffee/**/*.coffee"]
   browserify: ["#{dirs.src}/static/coffee/base.coffee"]
   sass: ["#{dirs.src}/static/sass/**/*.scss"]
@@ -110,7 +110,7 @@ gulp.task 'optimizeJS', ->
 
 # 本番用 JS 生成
 gulp.task 'prodJS', (cb) ->
-  runSequence 'js', 'optimizeJS',dist cb
+  runSequence 'js', 'optimizeJS', cb
 
 
 ###
