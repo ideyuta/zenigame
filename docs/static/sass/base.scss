@@ -12,8 +12,6 @@ $default-line-height: 1.5;
 
 @import "../../../src/zenigame";
 
-$serif: 'YuMincho', 'Yu Mincho', 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro';
-
 //-------------------------------
 // Base
 //-------------------------------
@@ -29,7 +27,7 @@ html, body {
   @include typo($default-font-size, $light-black, 300, $default-line-height);
   text-transform: none;
   -webkit-text-size-adjust: 100%;
-  font-family:'Noto Sans Japanese', $font-family-body;
+  font-family:'Noto Sans Japanese', $font;
   background: $white;
 }
 
