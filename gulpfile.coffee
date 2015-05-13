@@ -135,7 +135,7 @@ gulp.task 'server', ->
 
 # ファイル監視とライブリロード
 gulp.task 'watch', ->
-  gulp.watch paths.jade, ['build', browserSync.reload]
+  gulp.watch paths.jade, ['jade', browserSync.reload]
   gulp.watch paths.browserify, ['js', browserSync.reload]
   gulp.watch paths.sass, ['sass', browserSync.reload]
   gulp.watch paths.image, ['image', browserSync.reload]
