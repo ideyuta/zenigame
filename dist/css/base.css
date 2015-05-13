@@ -999,10 +999,6 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-* {
-  -webkit-touch-callout: none;
-}
-
 html, body {
   width: 100%;
   height: auto;
@@ -1013,10 +1009,10 @@ html, body {
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0;
+  background: #fff;
+  font-family: "Noto Sans Japanese", Helvetica Neue, Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   text-transform: none;
   -webkit-text-size-adjust: 100%;
-  font-family: "Noto Sans Japanese", Helvetica Neue, Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-  background: #fff;
 }
 
 a:link {

@@ -7,7 +7,6 @@ browserSync = require 'browser-sync'
 gutil = require 'gulp-util'
 del = require 'del'
 exec = require('child_process').exec
-markdown = require 'gulp-markdown'
 jade = require 'gulp-jade'
 mainBowerFiles = require 'main-bower-files'
 runSequence = require 'run-sequence'
@@ -18,26 +17,11 @@ dirs =
   dist: './dist'
 
 paths =
-  md: ["#{dirs.src}/md/**/*.md"]
   jade: ["#{dirs.src}/templates/**/!(_)*.jade"]
   coffee: ["#{dirs.src}/static/coffee/**/*.coffee"]
   browserify: ["#{dirs.src}/static/coffee/base.coffee"]
   sass: ["#{dirs.src}/static/sass/**/*.scss"]
   image: ["#{dirs.src}/static/img/**/*.{png,jpg,gif}"]
-
-###
-# Markdown
-###
-
-# md -> HTML 変換
-gulp.task 'md', ->
-  gulp.src paths.md
-    .pipe markdown()
-    .pipe gulp.dest "#{dirs.src}/templates/contents/"
-
-# HTML生成
-gulp.task 'prodMd', (cb) ->
-  runSequence 'md', cb
 
 
 ###
@@ -151,7 +135,6 @@ gulp.task 'server', ->
 
 # ファイル監視とライブリロード
 gulp.task 'watch', ->
-  gulp.watch paths.md, ['md', 'jade', browserSync.reload]
   gulp.watch paths.jade, ['jade', browserSync.reload]
   gulp.watch paths.browserify, ['js', browserSync.reload]
   gulp.watch paths.sass, ['sass', browserSync.reload]
@@ -163,7 +146,7 @@ gulp.task 'watch', ->
 ###
 
 # ビルドディレクトリのcleaning
-gulp.task 'clean', del.bind null, ["#{dirs.dist}", "#{dirs.src}/templates/contents/"]
+gulp.task 'clean', del.bind null, ["#{dirs.dist}"]
 
 # デフォルトタスク (確認サーバ起動とファイル監視)
 gulp.task 'default', ['server', 'watch']
@@ -171,4 +154,4 @@ gulp.task 'default', ['server', 'watch']
 # 本番用ファイル生成タスク
 gulp.task 'build', ->
   env = 'production'
-  runSequence 'clean', 'prodMd', 'prodJade', ['prodJS', 'prodCSS', 'image']
+  runSequence 'clean', 'prodJade', ['prodJS', 'prodCSS', 'image']
