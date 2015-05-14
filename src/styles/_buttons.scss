@@ -3,6 +3,12 @@
   @include typo($base-font-size - 2px, $gray, 300, 18px);
   @include btn-varient($extra-dark-gray, $white);
   margin: 6px 4px;
+  span + [class^="znicon-"],
+  span + [class*=" znicon-"],
+  [class^="znicon-"] + span,
+  [class*=" znicon-"] + span {
+    padding: 0 0 0 8px;
+  }
 }
 
 .btn.f {

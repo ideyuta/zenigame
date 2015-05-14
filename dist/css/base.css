@@ -601,6 +601,12 @@ Button Mixin
   box-shadow: none;
   background: #f0f0f0 !important;
 }
+.btn span + [class^="znicon-"],
+.btn span + [class*=" znicon-"],
+.btn [class^="znicon-"] + span,
+.btn [class*=" znicon-"] + span {
+  padding: 0 0 0 8px;
+}
 
 .btn.f {
   -webkit-box-shadow: none;
