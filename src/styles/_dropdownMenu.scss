@@ -1,7 +1,7 @@
 .DropDownMenu {
   position: relative;
   .itemList {
-    @include box-shadow(0 1px 3px $extralight-gray);
+    @include box-shadow(0 1px 3px $extra-light-gray);
     @include border(1px, solid, $extra-light-gray, 2px);
     @include pos(absolute, 0, 0);
     background: $white;
