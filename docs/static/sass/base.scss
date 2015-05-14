@@ -21,6 +21,7 @@ $default-line-height: 1.5;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   // iOS でリンク長押ししてもポップアップメニューを出さない
   // -webkit-touch-callout: none;
+  font-family:'Noto Sans Japanese', $font;
 }
 
 // input以外選択できないようにする
@@ -29,12 +30,11 @@ html, body {
   @include size(100%, auto, 100%, 100%);
   @include typo($default-font-size, $light-black, 300, $default-line-height);
   background: $white;
-  font-family:'Noto Sans Japanese', $font;
   text-transform: none;
   -webkit-text-size-adjust: 100%;
 }
 
-a {
+.link {
   &:link { color: $blue; }
   &:visited { color: $blue; }
   &:hover { color: $dark-blue; }

@@ -1,40 +1,546 @@
 @charset "UTF-8";
-/*
-Reset Browser Style
-Eric Meyer's Reset CSS v2.0 http://cssreset.com
-*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  border: 0;
+/* normalize-scss 3.0.1+normalize.3.0.1 | MIT/GPLv2 License | bit.ly/normalize-scss */
+/* Base
+   ========================================================================== */
+/**
+ * Establish a vertical rhythm unit using $base-font-size, $base-line-height,
+ * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
+ * body `font-size` is set using `em` units.
+ */
+html {
   font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  margin: 0;
-  padding: 0;
+  line-height: 1.5em;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
   display: block;
 }
 
-body {
-  line-height: 1;
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  *display: inline;
+  *zoom: 1;
+  vertical-align: baseline;
+  /* 2 */
 }
 
-ol, ul {
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+blockquote {
+  margin: 1.5em 40px;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 2em;
+  line-height: 1.5em;
+  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h3 {
+  font-size: 1.17em;
+  line-height: 1.28205em;
+  margin-top: 1.28205em;
+  margin-bottom: 1.28205em;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+h5 {
+  font-size: 0.83em;
+  line-height: 1.80723em;
+  margin-top: 1.80723em;
+  margin-bottom: 1.80723em;
+}
+
+h6 {
+  font-size: 0.67em;
+  line-height: 2.23881em;
+  margin-top: 2.23881em;
+  margin-bottom: 2.23881em;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+p,
+pre {
+  margin: 1.5em 0;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1.5em 0;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+nav ul,
+nav ol {
   list-style: none;
+  list-style-image: none;
 }
 
-blockquote, q {
-  quotes: none;
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+  /* Improve image quality when scaled in IE 7. */
+  -ms-interpolation-mode: bicubic;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
-  content: none;
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
 }
 
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1.5em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 4. Address `font-family` inconsistency between `textarea` and other form in IE 7
+ * 5. Improve appearance and consistency with IE 6/7.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  *font-family: sans-serif;
+  /* 4 */
+  *vertical-align: middle;
+  /* 5 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 2 */
+  /**
+   * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+   * Safari (but not Chrome) clips the cancel button when the search input has
+   * padding (and `textfield` appearance).
+   */
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  margin: 0 2px;
+  /* Apply borders and padding that keep the vertical rhythm. */
+  border-color: #c0c0c0;
+  border-top-width: 0.0625em;
+  border-top-style: solid;
+  padding-top: 0.4625em;
+  border-bottom-width: 0.0625em;
+  border-bottom-style: solid;
+  padding-bottom: 0.9125em;
+  border-left-width: 0.0625em;
+  border-left-style: solid;
+  padding-left: 0.875em;
+  border-right-width: 0.0625em;
+  border-right-style: solid;
+  padding-right: 0.875em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
 }
 
 /*
@@ -46,20 +552,6 @@ Styleguide 3
 */
 /*
 Button Mixin
-
-基本ボタン生成
-----------------
-@include btn($height, $padding: null, $radius: null)
-
-ボタンカラーバリエーション設定
---------------------------------
-@include btn-varient($color, $background-color)
-
-ボタングラデーション設定
------------------------------
-@include btn-gradient($start-color)
-
-Styleguide 3.1
 */
 /*
 Styles
@@ -243,336 +735,111 @@ Styleguide 2.0
   width: 80%;
 }
 
-/*
-Raised Button
-
-Markup:
-<button class="r btn {$modifiers}">Button of button</button>
-<div class="r btn {$modifiers}">Button of div</div>
-<a class="r btn {$modifiers}">Button of a</a>
-
-.extra - This button is pressed.
-.entry - This button is disabled.
-.caution - This button is disabled.
-.danger - This button is disabled.
-
-Styleguide 2.2.1 
-*/
-.btn.r {
+.btn {
   *zoom: 1;
   width: auto;
-  height: 20px;
+  height: auto;
   border-style: solid;
+  border-color: #f2f2f2;
   border-width: 1px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  -ms-box-shadow: 0;
-  box-shadow: 0;
-  padding: 10px 20px;
+  padding: 9px 18px;
   display: inline-block;
   text-decoration: none !important;
   cursor: pointer;
-  box-sizing: content-box;
-  font-size: 13px;
+  font-size: 14px;
   color: #999;
   font-weight: 300;
-  line-height: 20px;
+  line-height: 18px;
   letter-spacing: 0;
-  background: #fafafa;
-  background: -moz-linear-gradient(top, #fafafa, whitesmoke);
-  background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(whitesmoke));
-  border-color: #e6e6e6;
-  color: #666;
+  background-color: #fff;
+  border-color: #ebebeb;
+  color: #555;
+  margin: 6px 4px;
 }
-.btn.r:before, .btn.r:after {
+.btn:before, .btn:after {
   content: '';
   display: table;
 }
-.btn.r:after {
+.btn:after {
   clear: both;
 }
-.btn.r:focus {
+.btn:focus {
   outline: none;
 }
-.btn.r:hover {
-  background: #f2f2f2;
+.btn:hover {
+  background: #f7f7f7 !important;
 }
-.btn.r:active {
-  background: #ebebeb;
-}
-
-.btn.r.extra {
-  background: #3ae;
-  background: -moz-linear-gradient(top, #3ae, #2aa6ed);
-  background: -webkit-gradient(linear, left top, left bottom, from(#3ae), to(#2aa6ed));
-  border-color: #1399e5;
-  color: #fff;
-}
-.btn.r.extra:hover {
-  background: #25a4ed;
-}
-.btn.r.extra:active {
-  background: #179eec;
+.btn:active {
+  background: #f0f0f0 !important;
 }
 
-.btn.r.entry {
-  background: #3c6;
-  background: -moz-linear-gradient(top, #3c6, #31c462);
-  background: -webkit-gradient(linear, left top, left bottom, from(#3c6), to(#31c462));
-  border-color: #2bab56;
-  color: #fff;
-}
-.btn.r.entry:hover {
-  background: #30c060;
-}
-.btn.r.entry:active {
-  background: #2db45a;
-}
-
-.btn.r.caution {
-  background: #fde299;
-  background: -moz-linear-gradient(top, #fde299, #fddf8f);
-  background: -webkit-gradient(linear, left top, left bottom, from(#fde299), to(#fddf8f));
-  border-color: #fcd771;
-  color: #fff;
-}
-.btn.r.caution:hover {
-  background: #fdde8a;
-}
-.btn.r.caution:active {
-  background: #fcd97b;
-}
-
-.btn.r.danger {
-  background: #f33;
-  background: -moz-linear-gradient(top, #f33, #ff2929);
-  background: -webkit-gradient(linear, left top, left bottom, from(#f33), to(#ff2929));
-  border-color: #ff0a0a;
-  color: #fff;
-}
-.btn.r.danger:hover {
-  background: #ff2424;
-}
-.btn.r.danger:active {
-  background: #ff1414;
-}
-
-.btn.r.action {
-  background: #fd6f86;
-  background: -moz-linear-gradient(top, #fd6f86, #fd657e);
-  background: -webkit-gradient(linear, left top, left bottom, from(#fd6f86), to(#fd657e));
-  border-color: #fc4764;
-  color: #fff;
-}
-.btn.r.action:hover {
-  background: #fd6079;
-}
-.btn.r.action:active {
-  background: #fd516d;
-}
-
-/*
-Flat Button
-
-Markup:
-<button class="f btn {$modifiers}">Button of button</button>
-<div class="f btn {$modifiers}">Button of div</div>
-<a class="f btn {$modifiers}">Button of a</a>
-
-.extra - This button is pressed.
-.entry - This button is disabled.
-.caution - This button is disabled.
-.danger - This button is disabled.
-
-Styleguide 2.2.2 
-*/
 .btn.f {
-  *zoom: 1;
-  width: auto;
-  height: 20px;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  -ms-box-shadow: 0;
-  box-shadow: 0;
-  padding: 10px 20px;
-  display: inline-block;
-  text-decoration: none !important;
-  cursor: pointer;
-  box-sizing: content-box;
-  font-size: 13px;
-  color: #666;
-  font-weight: 300;
-  line-height: 20px;
-  letter-spacing: 0;
-  background: none;
+  background-color: transparent;
   border: 0;
 }
-.btn.f:before, .btn.f:after {
-  content: '';
-  display: table;
+
+.btn.r {
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  border-radius: 18px;
 }
-.btn.f:after {
-  clear: both;
+.btn.r.lg {
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  border-radius: 32px;
 }
-.btn.f:focus {
-  outline: none;
+.btn.r.md {
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border-radius: 24px;
 }
-.btn.f:hover {
-  background: #fafafa;
+.btn.r.sm {
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
 }
-.btn.f:active {
-  background: #f2f2f2;
+.btn.r.xs {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
-.btn.f.extra {
-  color: #3ae;
-}
-
-.btn.f.entry {
-  color: #3c6;
-}
-
-.btn.f.caution {
-  color: #fde299;
-}
-
-.btn.f.danger {
-  color: #f33;
-}
-
-.btn.f.action {
-  color: #fd6f86;
-}
-
-/*
-Button Size
-
-Markup:
-<button class="r btn {$modifiers}">Button of button</button>
-<button class="f btn {$modifiers}">Button of button</button>
-
-.lg - This button is pressed.
-.md - This button is disabled.
-.sm - This button is disabled.
-.xs - This button is disabled.
-
-Styleguide 2.2.3
-*/
 .btn.lg {
-  height: 28px;
-  line-height: 28px;
-  padding: 14px 28px;
-  font-size: 17px;
+  line-height: 32px;
+  padding: 16px 32px;
+  font-size: 20px;
 }
-
 .btn.md {
-  height: 24px;
   line-height: 24px;
   padding: 12px 24px;
-  font-size: 15px;
+  font-size: 18px;
 }
-
 .btn.sm {
-  height: 18px;
-  line-height: 18px;
-  padding: 9px 18px;
-  font-size: 12px;
-}
-
-.btn.xs {
-  height: 14px;
   line-height: 14px;
   padding: 7px 14px;
+  font-size: 12px;
+}
+.btn.xs {
+  line-height: 10px;
+  padding: 5px 10px;
   font-size: 10px;
 }
 
-/*
-Button State
-
-Markup:
-<button class="r btn {$modifiers}">Button of button</button>
-<button class="f btn {$modifiers}">Button of button</button>
-
-.is-disable - This button is pressed.
-.is-fit - This button is disabled.
-
-Styleguide 2.2.4
-*/
 .btn.is-disable {
   opacity: 0.4;
   filter: alpha(opacity=40);
   -moz-filter: "alpha( opacity=40)";
 }
 
-.btn.is-fit {
-  border-width: 1px 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  width: 92%;
-  padding-left: 4%;
-  padding-right: 4%;
-}
-
-/*
-Button Group
-
-Markup:
-<div class="BtnGroup {$modifiers}">
-  <button class="r btn">Button of button</button>
-  <button class="f btn">Button of button</button>
-  <button class="f btn">Button of button</button>
-</div>
-
-.v - 縦並び
-.h - 横並び
-
-Styleguide 2.2.5
-*/
 .BtnGroup {
-  font-size: 0;
   display: inline;
 }
-.BtnGroup.v .btn {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-.BtnGroup.v .btn:first-child {
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
-}
-.BtnGroup.v .btn:last-child {
-  -webkit-border-radius: 0 0 4px 4px;
-  -moz-border-radius: 0 0 4px 4px;
-  border-radius: 0 0 4px 4px;
-}
-.BtnGroup.h .btn {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-.BtnGroup.h .btn + .btn {
+.BtnGroup .btn {
+  margin: 0;
   border-left: 0;
 }
-.BtnGroup.h .btn:first-child {
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  border-radius: 4px 0 0 4px;
-}
-.BtnGroup.h .btn:last-child {
-  -webkit-border-radius: 0 4px 4px 0;
-  -moz-border-radius: 0 4px 4px 0;
-  border-radius: 0 4px 4px 0;
+.BtnGroup .btn:first-child {
+  border-left: 1px;
 }
 
 /*
@@ -776,29 +1043,20 @@ body {
 .selectbox .selected {
   *zoom: 1;
   width: auto;
-  height: 48px;
+  height: auto;
   border-style: solid;
+  border-color: #f2f2f2;
   border-width: 1px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  -ms-box-shadow: 0;
-  box-shadow: 0;
   padding: 0 4%;
   display: inline-block;
   text-decoration: none !important;
   cursor: pointer;
-  box-sizing: content-box;
   font-size: 13px;
   color: #999;
   font-weight: 300;
   line-height: 48px;
   letter-spacing: 0;
-  background: #fff;
-  background: -moz-linear-gradient(top, #fff, #fafafa);
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fafafa));
+  background-color: #fff;
   border-color: #ebebeb;
   color: #666;
   width: 92%;
@@ -814,10 +1072,10 @@ body {
   outline: none;
 }
 .selectbox .selected:hover {
-  background: #f7f7f7;
+  background: #f7f7f7 !important;
 }
 .selectbox .selected:active {
-  background: #f0f0f0;
+  background: #f0f0f0 !important;
 }
 .selectbox .selectnav {
   width: 100%;
@@ -997,6 +1255,7 @@ body {
 
 * {
   -webkit-tap-highlight-color: transparent;
+  font-family: "Noto Sans Japanese", Helvetica Neue, Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
 html, body {
@@ -1010,21 +1269,20 @@ html, body {
   line-height: 1.5;
   letter-spacing: 0;
   background: #fff;
-  font-family: "Noto Sans Japanese", Helvetica Neue, Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   text-transform: none;
   -webkit-text-size-adjust: 100%;
 }
 
-a:link {
+.link:link {
   color: #3ae;
 }
-a:visited {
+.link:visited {
   color: #3ae;
 }
-a:hover {
+.link:hover {
   color: #1080bf;
 }
-a:active {
+.link:active {
   color: #1080bf;
 }
 
