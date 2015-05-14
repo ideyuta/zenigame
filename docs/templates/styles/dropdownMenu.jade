@@ -12,11 +12,19 @@ html
         ##DropDownMenu
 
       .DropDownMenu
-        button.btn(onclick="") ActiveItem
-        ul.itemList
-          li: a.item(href="") Item
-          li: a.item(href="") Item
-          li: a.item(href="") Item
+        button.btn.dropdownLabel Item1
+        ul.itemList.isHidden
+          li: a.item.isActive(href="") Item1
+          li: a.item(href="") Item2
+          li: a.item(href="") Item3
+
+      .DropDownMenu
+        button.btn.dropdownLabel Item1
+        ul.itemList.isHidden
+          li: a.item.isActive(href="") Item1
+          li: a.item(href="") Item2
+          li: a.item(href="") Item3
+
 
       :markdown
         ```jade

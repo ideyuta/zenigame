@@ -1,12 +1,12 @@
 .DropDownMenu {
   position: relative;
   .itemList {
-    @include box-shadow(0 1px 3px $light-gray);
+    @include box-shadow(0 1px 3px $extralight-gray);
     @include border(1px, solid, $extra-light-gray, 2px);
-    @include pos(absolute, 44px, 0);
+    @include pos(absolute, 0, 0);
     background: $white;
     margin: 4px;
-    padding: 12px 0;
+    padding: 3px 0;
     width: 260px;
     z-index: 100;
     &.isHidden {
@@ -14,16 +14,16 @@
     }
 
     .item {
+      @include typo($base-font-size - 2px, $gray, 300, 18px);
       color: $extra-dark-gray;
       display: block;
-      letter-spacing: .05em;
       padding: 8px 18px;
       text-decoration: none;
       &:hover {
         background: $extra-light-gray;
       }
       &.isActive {
-        color: $light-gray;
+        color: $blue;
         cursor: default;
         &:hover {
           background: $white;
