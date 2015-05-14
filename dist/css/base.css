@@ -742,6 +742,9 @@ Styleguide 2.0
   border-style: solid;
   border-color: #f2f2f2;
   border-width: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   padding: 9px 18px;
   display: inline-block;
   text-decoration: none !important;
@@ -751,6 +754,10 @@ Styleguide 2.0
   font-weight: 300;
   line-height: 18px;
   letter-spacing: 0;
+  -webkit-box-shadow: 0 1px 3px #f0f0f0;
+  -moz-box-shadow: 0 1px 3px #f0f0f0;
+  -ms-box-shadow: 0 1px 3px #f0f0f0;
+  box-shadow: 0 1px 3px #f0f0f0;
   background-color: #fff;
   border-color: #ebebeb;
   color: #555;
@@ -770,10 +777,18 @@ Styleguide 2.0
   background: #f7f7f7 !important;
 }
 .btn:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
   background: #f0f0f0 !important;
 }
 
 .btn.f {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
   background-color: transparent;
   border: 0;
 }
@@ -1047,6 +1062,9 @@ body {
   border-style: solid;
   border-color: #f2f2f2;
   border-width: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   padding: 0 4%;
   display: inline-block;
   text-decoration: none !important;
@@ -1056,6 +1074,10 @@ body {
   font-weight: 300;
   line-height: 48px;
   letter-spacing: 0;
+  -webkit-box-shadow: 0 1px 3px #f0f0f0;
+  -moz-box-shadow: 0 1px 3px #f0f0f0;
+  -ms-box-shadow: 0 1px 3px #f0f0f0;
+  box-shadow: 0 1px 3px #f0f0f0;
   background-color: #fff;
   border-color: #ebebeb;
   color: #666;
@@ -1075,6 +1097,10 @@ body {
   background: #f7f7f7 !important;
 }
 .selectbox .selected:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
   background: #f0f0f0 !important;
 }
 .selectbox .selectnav {

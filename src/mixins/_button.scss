@@ -6,7 +6,7 @@ Button Mixin
 @mixin btn($height, $padding: $height/2 $height) {
   @include clearfix;
   @include size(auto);
-  @include border(1px, solid, $extra-light-gray);
+  @include border(1px, solid, $extra-light-gray, 2px);
   padding: $padding;
   display: inline-block;
   text-decoration: none !important;
@@ -15,11 +15,15 @@ Button Mixin
 }
 
 @mixin btn-varient($color, $background-color) {
+  @include box-shadow(0 1px 3px darken($background-color, 6%));
   background-color: $background-color;
   border-color: darken($background-color, 8%);
   color: $color;
   &:hover { background: darken($background-color, 3%) !important; }
-  &:active { background: darken($background-color, 6%) !important; }
+  &:active {
+    @include box-shadow(none);
+    background: darken($background-color, 6%) !important;
+  }
 }
 
 @mixin btn-gradient ($start-color, $end-color: darken($start-color, 2%)) {

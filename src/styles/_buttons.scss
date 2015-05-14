@@ -6,6 +6,7 @@
 }
 
 .btn.f {
+  @include box-shadow(none);
   background-color: transparent;
   border: 0;
 }
