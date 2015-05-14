@@ -1,0 +1,34 @@
+.DropDownMenu {
+  position: relative;
+  .itemList {
+    @include box-shadow(0 1px 3px $light-gray);
+    @include border(1px, solid, $extra-light-gray, 2px);
+    @include pos(absolute, 44px, 0);
+    background: $white;
+    margin: 4px;
+    padding: 12px 0;
+    width: 260px;
+    z-index: 100;
+    &.isHidden {
+      display: none;
+    }
+
+    .item {
+      color: $extra-dark-gray;
+      display: block;
+      letter-spacing: .05em;
+      padding: 8px 18px;
+      text-decoration: none;
+      &:hover {
+        background: $extra-light-gray;
+      }
+      &.isActive {
+        color: $light-gray;
+        cursor: default;
+        &:hover {
+          background: $white;
+        }
+      }
+    }
+  }
+}
