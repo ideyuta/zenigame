@@ -22,6 +22,7 @@ paths =
   browserify: ["#{dirs.src}/static/coffee/base.coffee"]
   sass: ["#{dirs.src}/static/sass/**/*.scss"]
   image: ["#{dirs.src}/static/img/**/*.{png,jpg,gif}"]
+  font: ["./src/fonts/*"]
 
 
 ###
@@ -39,6 +40,15 @@ gulp.task 'jade', ->
 # HTML生成
 gulp.task 'prodJade', (cb) ->
   runSequence 'jade', cb
+
+###
+# Font
+###
+
+# fontデータをコピー
+gulp.task 'font', ->
+  gulp.src paths.font
+    .pipe gulp.dest "#{dirs.dist}/fonts/"
 
 
 ###
@@ -154,4 +164,4 @@ gulp.task 'default', ['server', 'watch']
 # 本番用ファイル生成タスク
 gulp.task 'build', ->
   env = 'production'
-  runSequence 'clean', 'prodJade', ['prodJS', 'prodCSS', 'image']
+  runSequence 'clean', 'prodJade', ['prodJS', 'prodCSS', 'image', 'font']
