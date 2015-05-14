@@ -12,23 +12,53 @@ html
         ##DropDownMenu
 
       .DropDownMenu
-        button.btn.dropdownLabel Item1
+        button.btn
+          span.value Item1
+          i.icon &#9662;
         ul.itemList.isHidden
           li: a.item.isActive(href="") Item1
-          li: a.item(href="") Item2
+          li: a.item(href="")
+            i.znicon-circle-plus
+            | Item2
           li: a.item(href="") Item3
-
-      .DropDownMenu
-        button.btn.dropdownLabel Item1
-        ul.itemList.isHidden
-          li: a.item.isActive(href="") Item1
-          li: a.item(href="") Item2
-          li: a.item(href="") Item3
-
 
       :markdown
         ```jade
-        a.btn(href="") BUTTON
-        button.btn BUTTON
+        .DropDownMenu
+          button.btn
+            span.value Item1
+            i.icon &#9662;
+          ul.itemList.isHidden
+            li: a.item.isActive(href="") Item1
+            li: a.item(href="")
+              i.znicon-circle-plus
+              | Item2
+            li: a.item(href="") Item3
+        ```
+
+      :markdown
+        ##DropDownMenu-Label
+
+      .DropDownMenu
+        button.btn
+          span.label ItemList
+          span.value Item1
+          i.icon &#9662;
+        ul.itemList.isHidden
+          li: a.item.isActive(href="") Item1
+          li: a.item(href="") Item2
+          li: a.item(href="") Item3
+
+      :markdown
+        ```jade
+        .DropDownMenu
+          button.btn
+            span.label ItemList
+            span.value Item1
+            i.icon &#9662;
+          ul.itemList.isHidden
+            li: a.item.isActive(href="") Item1
+            li: a.item(href="") Item2
+            li: a.item(href="") Item3
         ```
 

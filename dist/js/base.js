@@ -10409,7 +10409,7 @@ module.exports = DropDownMenu = (function() {
     $el = $(e.target);
     this.$item.removeClass('isActive');
     $el.addClass('isActive');
-    this.$btn.html($el.text());
+    this.$btn.find('.value').html($el.text());
     return this.$itemList.toggleClass('isHidden');
   };
 

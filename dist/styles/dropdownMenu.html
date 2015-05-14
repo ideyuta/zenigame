@@ -1,5 +1,24 @@
 <html><head><meta charset="utf=8"/><meta content="ideyuta" name="author"/><meta content="IE=Edge" http-equiv="X-UA-Compatible"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" name="viewport"/><meta content="website" property="og:type"/><meta content="Zenigame" property="og:title"/><meta content="http://ideyuta.com/zenigame/" property="og:url"/><meta content="" property="og:image"/><meta content="" property="og:description"/><title>zenigame&mdash;DropDownMenu</title><link rel="stylesheet" href="/css/base.css"/><link rel="stylesheet" href="/fonts/icomoon.css"/><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Inconsolata"/><link href="http://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" type="text/css"/><script>var zn = {};</script><script src="/js/base.js"></script></head><body><div class="GlobalHeader"><h1>zenigame&mdash;DropDownMenu</h1><ul><li><a href="settings.html">settings</a></li><li><a href="styles.html">styles</a></li><li><a href="mixins.html">mixins</a></li></ul></div><div class="Contents"><h2 id="dropdownmenu">DropDownMenu</h2>
-<div class="DropDownMenu"><button class="btn dropdownLabel">Item1</button><ul class="itemList isHidden"><li><a href="" class="item isActive">Item1</a></li><li><a href="" class="item">Item2</a></li><li><a href="" class="item">Item3</a></li></ul></div><div class="DropDownMenu"><button class="btn dropdownLabel">Item1</button><ul class="itemList isHidden"><li><a href="" class="item isActive">Item1</a></li><li><a href="" class="item">Item2</a></li><li><a href="" class="item">Item3</a></li></ul></div><pre><code class="lang-jade">a.btn(href=&quot;&quot;) BUTTON
-button.btn BUTTON
+<div class="DropDownMenu"><button class="btn"><span class="value">Item1</span><i class="icon">&#9662;</i></button><ul class="itemList isHidden"><li><a href="" class="item isActive">Item1</a></li><li><a href="" class="item"><i class="znicon-circle-plus"></i>Item2</a></li><li><a href="" class="item">Item3</a></li></ul></div><pre><code class="lang-jade">.DropDownMenu
+  button.btn
+    span.value Item1
+    i.icon &amp;#9662;
+  ul.itemList.isHidden
+    li: a.item.isActive(href=&quot;&quot;) Item1
+    li: a.item(href=&quot;&quot;)
+      i.znicon-circle-plus
+      | Item2
+    li: a.item(href=&quot;&quot;) Item3
+</code></pre>
+<h2 id="dropdownmenu-label">DropDownMenu-Label</h2>
+<div class="DropDownMenu"><button class="btn"><span class="label">ItemList</span><span class="value">Item1</span><i class="icon">&#9662;</i></button><ul class="itemList isHidden"><li><a href="" class="item isActive">Item1</a></li><li><a href="" class="item">Item2</a></li><li><a href="" class="item">Item3</a></li></ul></div><pre><code class="lang-jade">.DropDownMenu
+  button.btn
+    span.label ItemList
+    span.value Item1
+    i.icon &amp;#9662;
+  ul.itemList.isHidden
+    li: a.item.isActive(href=&quot;&quot;) Item1
+    li: a.item(href=&quot;&quot;) Item2
+    li: a.item(href=&quot;&quot;) Item3
 </code></pre>
 </div></body></html>

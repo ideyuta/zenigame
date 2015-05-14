@@ -5,8 +5,10 @@
   margin: 6px 4px;
   span + [class^="znicon-"],
   span + [class*=" znicon-"],
+  span + .icon,
   [class^="znicon-"] + span,
-  [class*=" znicon-"] + span {
+  [class*=" znicon-"] + span,
+  .icon + span {
     padding: 0 0 0 8px;
   }
 }

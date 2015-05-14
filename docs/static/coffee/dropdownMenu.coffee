@@ -26,6 +26,6 @@ module.exports = class DropDownMenu
     $el = $(e.target)
     @$item.removeClass 'isActive'
     $el.addClass 'isActive'
-    @$btn.html $el.text()
+    @$btn.find('.value').html $el.text()
     @$itemList.toggleClass 'isHidden'
 

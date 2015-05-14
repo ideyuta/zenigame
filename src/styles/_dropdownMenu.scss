@@ -1,7 +1,18 @@
 .DropDownMenu {
   position: relative;
+  .btn {
+    .label {
+      @include border(0 1px 0 0, solid, $light-gray);
+      padding: 0 16px 0 0;
+      font-weight: 500;
+       + .value {
+        padding: 0 0 0 16px;
+      }
+    }
+  }
+
   .itemList {
-    @include box-shadow(0 1px 3px $extra-light-gray);
+    @include box-shadow(0 6px 24px $light-gray);
     @include border(1px, solid, $extra-light-gray, 2px);
     @include pos(absolute, 0, 0);
     background: $white;
@@ -28,6 +39,11 @@
         &:hover {
           background: $white;
         }
+      }
+      [class^="znicon-"],
+      [class*=" znicon-"],
+      .icon {
+        padding: 0 8px 0 0;
       }
     }
   }

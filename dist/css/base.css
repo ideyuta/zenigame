@@ -603,8 +603,10 @@ Button Mixin
 }
 .btn span + [class^="znicon-"],
 .btn span + [class*=" znicon-"],
+.btn span + .icon,
 .btn [class^="znicon-"] + span,
-.btn [class*=" znicon-"] + span {
+.btn [class*=" znicon-"] + span,
+.btn .icon + span {
   padding: 0 0 0 8px;
 }
 
@@ -684,11 +686,21 @@ Button Mixin
 .DropDownMenu {
   position: relative;
 }
+.DropDownMenu .btn .label {
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 0 1px 0 0;
+  padding: 0 16px 0 0;
+  font-weight: 500;
+}
+.DropDownMenu .btn .label + .value {
+  padding: 0 0 0 16px;
+}
 .DropDownMenu .itemList {
-  -webkit-box-shadow: 0 1px 3px #f2f2f2;
-  -moz-box-shadow: 0 1px 3px #f2f2f2;
-  -ms-box-shadow: 0 1px 3px #f2f2f2;
-  box-shadow: 0 1px 3px #f2f2f2;
+  -webkit-box-shadow: 0 6px 24px #ccc;
+  -moz-box-shadow: 0 6px 24px #ccc;
+  -ms-box-shadow: 0 6px 24px #ccc;
+  box-shadow: 0 6px 24px #ccc;
   border-style: solid;
   border-color: #f2f2f2;
   border-width: 1px;
@@ -727,6 +739,11 @@ Button Mixin
 }
 .DropDownMenu .itemList .item.isActive:hover {
   background: #fff;
+}
+.DropDownMenu .itemList .item [class^="znicon-"],
+.DropDownMenu .itemList .item [class*=" znicon-"],
+.DropDownMenu .itemList .item .icon {
+  padding: 0 8px 0 0;
 }
 
 * {
