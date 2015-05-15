@@ -746,6 +746,71 @@ Button Mixin
   padding: 0 8px 0 0;
 }
 
+.RadioBtn {
+  display: inline-block;
+  margin: 4px 8px;
+}
+.RadioBtn input[type=radio] {
+  display: inline-block;
+  margin-right: 4px;
+}
+.RadioBtn input[type=radio] + label {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+@media (min-width: 0px) {
+  .RadioBtn input[type=radio] {
+    display: none;
+    margin: 0;
+  }
+  .RadioBtn input[type=radio] + label {
+    padding: 0 0 0 24px;
+  }
+  .RadioBtn input[type=radio] + label:before {
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 2px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    content: "";
+    display: block;
+  }
+  .RadioBtn input[type=radio]:checked + label {
+    cursor: default;
+  }
+  .RadioBtn input[type=radio]:checked + label:hover:before {
+    border-color: #ccc;
+    background: #fff;
+  }
+  .RadioBtn input[type=radio]:checked + label:after {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    background: #3ae;
+    content: "";
+    display: block;
+  }
+  .RadioBtn input[type=radio] + label:hover:before {
+    border-color: #3ae;
+  }
+  .RadioBtn input[type=radio] + label:active:before {
+    background: #f9fcfe;
+  }
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
   font-family: "Noto Sans Japanese", Helvetica Neue, Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;

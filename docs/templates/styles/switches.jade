@@ -1,0 +1,41 @@
+- var title = "Switches"
+html
+  head
+    include ../partials/_Head
+      prepend window_title
+        &mdash;#{title}
+  body
+    include ../partials/_GlobalHeader
+    .Contents
+
+      :markdown
+        ##Radio Button
+
+      .RadioBtn
+        input(type="radio", name="radio", checked="checked", id="radio1")
+        label(for="radio1") radio
+      .RadioBtn
+        input(type="radio", name="radio", id="radio2")
+        label(for="radio2") radio
+      .RadioBtn
+        input(type="radio", name="radio", id="radio3")
+        label(for="radio3") radio
+      .RadioBtn
+        input(type="radio", name="radio", id="radio4")
+        label(for="radio4") radio
+
+      :markdown
+        ```jade
+        .RadioBtn
+          input(type="radio", name="radio", checked="checked", id="radio1")
+          label(for="radio1") radio
+        .RadioBtn
+          input(type="radio", name="radio", id="radio2")
+          label(for="radio2") radio
+        .RadioBtn
+          input(type="radio", name="radio", id="radio3")
+          label(for="radio3") radio
+        .RadioBtn
+          input(type="radio", name="radio", id="radio4")
+          label(for="radio4") radio
+        ```
