@@ -874,6 +874,78 @@ Button Mixin
   }
 }
 
+.ToggleBtn {
+  display: inline-block;
+  margin: 4px 8px;
+}
+.ToggleBtn input[type=checkbox] {
+  display: inline-block;
+  margin-right: 4px;
+}
+.ToggleBtn input[type=checkbox] + label {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+@media (min-width: 0px) {
+  .ToggleBtn input[type=checkbox] {
+    display: none;
+    margin: 0;
+  }
+  .ToggleBtn input[type=checkbox] + label {
+    width: 48px;
+    height: 24px;
+  }
+  .ToggleBtn input[type=checkbox] + label:before {
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 2px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44px;
+    height: 20px;
+    background: #fff;
+    content: "";
+    display: block;
+  }
+  .ToggleBtn input[type=checkbox] + label:after {
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 1px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 2px 4px #ccc;
+    -moz-box-shadow: 0 2px 4px #ccc;
+    -ms-box-shadow: 0 2px 4px #ccc;
+    box-shadow: 0 2px 4px #ccc;
+    position: absolute;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    content: "";
+    display: block;
+    margin: 0 0 0 1px;
+  }
+  .ToggleBtn input[type=checkbox]:checked + label:before {
+    background: #3ae;
+    border-color: #3ae;
+  }
+  .ToggleBtn input[type=checkbox]:checked + label:after {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+    border-color: #3ae;
+    right: 1px;
+  }
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
   font-family: "Noto Sans Japanese", Helvetica Neue, Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;

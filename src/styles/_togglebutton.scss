@@ -1,0 +1,55 @@
+.ToggleBtn {
+  display: inline-block;
+  margin: 4px 8px;
+
+  input[type=checkbox] {
+    display: inline-block;
+    margin-right: 4px;
+    & + label {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  // IE8以下に適用しないためのmedia query
+  @media (min-width: 0px) {
+    input[type=checkbox] { 
+      display: none;
+      margin: 0;
+      & + label {
+        @include size(48px, 24px);
+        &:before {
+          @include border(2px, solid, $light-gray, 20px);
+          @include pos(absolute, 0, 0);
+          @include size(44px, 20px);
+          background: $white;
+          content: "";
+          display: block;
+        }
+        &:after {
+          @include border(1px, solid, $light-gray, 50%);
+          @include box-shadow(0 2px 4px $light-gray);
+          @include pos(absolute, 1px);
+          @include size(20px);
+          background: $white;
+          content: "";
+          display: block;
+          margin: 0 0 0 1px;
+        }
+      }
+      &:checked + label {
+        &:before {
+          background: $blue;
+          border-color: $blue;
+        }
+        &:after {
+          @include box-shadow(none);
+          border-color: $blue;
+          right: 1px;
+        }
+      }
+    }
+  }
+
+}
