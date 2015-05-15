@@ -811,6 +811,69 @@ Button Mixin
   }
 }
 
+.CheckBox {
+  display: inline-block;
+  margin: 4px 8px;
+}
+.CheckBox input[type=checkbox] {
+  display: inline-block;
+  margin-right: 4px;
+}
+.CheckBox input[type=checkbox] + label {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+@media (min-width: 0px) {
+  .CheckBox input[type=checkbox] {
+    display: none;
+    margin: 0;
+  }
+  .CheckBox input[type=checkbox] + label {
+    padding: 0 0 0 24px;
+  }
+  .CheckBox input[type=checkbox] + label:before {
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    content: "";
+    display: block;
+  }
+  .CheckBox input[type=checkbox]:checked + label:after {
+    border-style: solid;
+    border-color: #3ae;
+    border-width: 0 0 3px 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 5px;
+    content: "";
+    display: block;
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  .CheckBox input[type=checkbox] + label:hover:before {
+    border-color: #3ae;
+  }
+  .CheckBox input[type=checkbox] + label:active:before {
+    background: #f9fcfe;
+  }
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
   font-family: "Noto Sans Japanese", Helvetica Neue, Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
