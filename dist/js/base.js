@@ -1,20 +1,23 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
-var $, DropDownMenu;
+var $, DropDownMenu, Modal;
 
 $ = require("./../../../bower_components/jquery/dist/jquery.js");
 
 DropDownMenu = require('./dropdownMenu.coffee');
 
+Modal = require('./modal.coffee');
+
 $(function() {
   $('.DropDownMenu').each(function() {
     return new DropDownMenu(this);
   });
+  zn.modal = new Modal;
 });
 
 
 
-},{"./../../../bower_components/jquery/dist/jquery.js":2,"./dropdownMenu.coffee":3}],2:[function(require,module,exports){
+},{"./../../../bower_components/jquery/dist/jquery.js":2,"./dropdownMenu.coffee":3,"./modal.coffee":4}],2:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v1.11.3
  * http://jquery.com/
@@ -10414,6 +10417,72 @@ module.exports = DropDownMenu = (function() {
   };
 
   return DropDownMenu;
+
+})();
+
+
+
+},{"./../../../bower_components/jquery/dist/jquery.js":2}],4:[function(require,module,exports){
+var $, Modal,
+  bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
+$ = require("./../../../bower_components/jquery/dist/jquery.js");
+
+module.exports = Modal = (function() {
+  function Modal() {
+    this.close = bind(this.close, this);
+    this.open = bind(this.open, this);
+    this.onClickCloseBtn = bind(this.onClickCloseBtn, this);
+    this.onClickCancelBtn = bind(this.onClickCancelBtn, this);
+    this.onClickConfirmBtn = bind(this.onClickConfirmBtn, this);
+    this.onClickOpenBtn = bind(this.onClickOpenBtn, this);
+    this.$modal = $('.Modal');
+    this.$wrapper = $('.Wrapper');
+    $('.modalOpenBtn').on('click', this.onClickOpenBtn);
+    $('.modalConfirmBtn').on('click', this.onClickConfirmBtn);
+    $('.modalCancelBtn').on('click', this.onClickCancelBtn);
+    $('.modalCloseBtn').on('click', this.onClickCloseBtn);
+  }
+
+  Modal.prototype.onClickOpenBtn = function() {
+    return this.open();
+  };
+
+  Modal.prototype.onClickConfirmBtn = function() {
+    return this.close();
+  };
+
+  Modal.prototype.onClickCancelBtn = function() {
+    return this.close();
+  };
+
+  Modal.prototype.onClickCloseBtn = function() {
+    return this.close();
+  };
+
+  Modal.prototype.open = function() {
+    this.$modal.addClass('isActive');
+    this.scrollTop = $(window).scrollTop();
+    return this.$wrapper.css({
+      position: "fixed",
+      top: -1 * this.scrollTop
+    });
+  };
+
+  Modal.prototype.close = function() {
+    this.$modal.removeClass('isActive');
+    this.$wrapper.attr({
+      style: ''
+    });
+    $('html').prop({
+      scrollTop: this.scrollTop
+    });
+    return $('body').prop({
+      scrollTop: this.scrollTop
+    });
+  };
+
+  return Modal;
 
 })();
 

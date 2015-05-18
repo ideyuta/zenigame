@@ -1,0 +1,51 @@
+- var title = "Modal"
+html
+  head
+    include ../partials/_Head
+      prepend window_title
+        &mdash;#{title}
+  body
+    .Wrapper
+      include ../partials/_GlobalHeader
+      include ../partials/_Navigation
+      .Contents
+
+        :markdown
+          #Modal
+          Modalはページ内に1つだけ存在できる。
+          innerの中身を必要に応じで変更する。
+
+          ##Modal - Dialog
+
+        button.btn.modalOpenBtn Modal Open
+
+        :markdown
+          ```jade
+          .Wrapper
+            // contents
+          .Modal
+            .backdrop.modalCloseBtn
+            .inner 
+              .dialog
+                h2.title モーダルダイアログウインドウ
+                .content
+                  p モーダルのコンテンツがはいります。ウインドウサイズより大きくなると見切れてしまうため、あまり大量のコンテンツを挿入しないようにしてください。
+
+                .control
+                  button.btn.f.modalCancelBtn キャンセル
+                  button.btn.f.modalConfirmBtn 確認
+  
+          ```
+
+    .Modal
+      .backdrop.modalCloseBtn
+      .inner 
+        .dialog
+          h2.title モーダルダイアログウインドウ
+          .content
+            p モーダルのコンテンツがはいります。ウインドウサイズより大きくなると見切れてしまうため、あまり大量のコンテンツを挿入しないようにしてください。
+
+          .control
+            button.btn.f.modalCancelBtn キャンセル
+            button.btn.f.modalConfirmBtn 確認
+  
