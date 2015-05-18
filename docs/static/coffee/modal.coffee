@@ -5,13 +5,18 @@ module.exports = class Modal
   constructor: ->
     @$modal = $('.Modal')
     @$wrapper = $('.Wrapper')
-    $('.modalOpenBtn').on 'click', @onClickOpenBtn
 
+    @$modal.find('.dialog').css display: 'none'
+    @$modal.find('.page').css display: 'none'
+
+    $('.modalOpenBtn').on 'click', @onClickOpenBtn
     $('.modalConfirmBtn').on 'click', @onClickConfirmBtn
     $('.modalCancelBtn').on 'click', @onClickCancelBtn
     $('.modalCloseBtn').on 'click', @onClickCloseBtn
 
-  onClickOpenBtn: =>
+  onClickOpenBtn: (e) =>
+    @$target = $('.'+$(e.target).data('name'))
+    @$target.css display: 'block'
     @open()
 
   onClickConfirmBtn: =>
@@ -32,6 +37,7 @@ module.exports = class Modal
 
   close: =>
     @$modal.removeClass 'isActive'
+    @$target.css display: 'none'
     @$wrapper.attr style:''
     $('html').prop scrollTop: @scrollTop
     $('body').prop scrollTop: @scrollTop

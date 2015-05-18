@@ -10438,13 +10438,23 @@ module.exports = Modal = (function() {
     this.onClickOpenBtn = bind(this.onClickOpenBtn, this);
     this.$modal = $('.Modal');
     this.$wrapper = $('.Wrapper');
+    this.$modal.find('.dialog').css({
+      display: 'none'
+    });
+    this.$modal.find('.page').css({
+      display: 'none'
+    });
     $('.modalOpenBtn').on('click', this.onClickOpenBtn);
     $('.modalConfirmBtn').on('click', this.onClickConfirmBtn);
     $('.modalCancelBtn').on('click', this.onClickCancelBtn);
     $('.modalCloseBtn').on('click', this.onClickCloseBtn);
   }
 
-  Modal.prototype.onClickOpenBtn = function() {
+  Modal.prototype.onClickOpenBtn = function(e) {
+    this.$target = $('.' + $(e.target).data('name'));
+    this.$target.css({
+      display: 'block'
+    });
     return this.open();
   };
 
@@ -10471,6 +10481,9 @@ module.exports = Modal = (function() {
 
   Modal.prototype.close = function() {
     this.$modal.removeClass('isActive');
+    this.$target.css({
+      display: 'none'
+    });
     this.$wrapper.attr({
       style: ''
     });

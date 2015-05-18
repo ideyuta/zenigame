@@ -17,35 +17,69 @@ html
 
           ##Modal - Dialog
 
-        button.btn.modalOpenBtn Modal Open
+        button.btn.modalOpenBtn(data-name="Dialog") Modal Dialog Open
 
         :markdown
           ```jade
           .Wrapper
             // contents
+            button.btn.modalOpenBtn Modal Dialog Open
           .Modal
             .backdrop.modalCloseBtn
-            .inner 
+            .inner
               .dialog
                 h2.title モーダルダイアログウインドウ
                 .content
                   p モーダルのコンテンツがはいります。ウインドウサイズより大きくなると見切れてしまうため、あまり大量のコンテンツを挿入しないようにしてください。
-
                 .control
                   button.btn.f.modalCancelBtn キャンセル
                   button.btn.f.modalConfirmBtn 確認
-  
           ```
+
+        :markdown
+          ##Modal - Page
+
+        button.btn.modalOpenBtn(data-name="Page") Modal Page Open
+
+        :markdown
+          ```jade
+          .Wrapper
+            // contents
+            button.btn.modalOpenBtn Modal Page Open
+          .Modal
+            .backdrop.modalCloseBtn
+            .inner
+              .page
+                h2.title モーダルページウインドウ
+                .content
+                  p モーダルのコンテンツがはいります。ウインドウサイズに関わらずコンテンツを挿入できます。ウインドウサイズよりもコンテンツ量が長い場合はスクロールします。
+                .control
+                  button.btn.f.modalCancelBtn キャンセル
+                  button.btn.f.modalConfirmBtn 確認
+            ```
 
     .Modal
       .backdrop.modalCloseBtn
       .inner 
+
         .dialog
           h2.title モーダルダイアログウインドウ
           .content
             p モーダルのコンテンツがはいります。ウインドウサイズより大きくなると見切れてしまうため、あまり大量のコンテンツを挿入しないようにしてください。
-
           .control
             button.btn.f.modalCancelBtn キャンセル
             button.btn.f.modalConfirmBtn 確認
-  
+
+        .page
+          h2.title モーダルページウインドウ
+          .content
+            p モーダルのコンテンツがはいります。ウインドウサイズに関わらずコンテンツを挿入できます。ウインドウサイズよりもコンテンツ量が長い場合はスクロールします。※ 以下確認用余白
+            br
+            br
+            br
+            br
+            br
+            br
+          .control
+            button.btn.f.modalCancelBtn キャンセル
+            button.btn.f.modalConfirmBtn 確認

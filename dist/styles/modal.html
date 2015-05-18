@@ -2,18 +2,33 @@
 <p>Modalはページ内に1つだけ存在できる。
 innerの中身を必要に応じで変更する。</p>
 <h2 id="modal-dialog">Modal - Dialog</h2>
-<button class="btn modalOpenBtn">Modal Open</button><pre><code class="lang-jade">.Wrapper
+<button data-name="Dialog" class="btn modalOpenBtn">Modal Dialog Open</button><pre><code class="lang-jade">.Wrapper
   // contents
+  button.btn.modalOpenBtn Modal Dialog Open
 .Modal
   .backdrop.modalCloseBtn
-  .inner 
+  .inner
     .dialog
       h2.title モーダルダイアログウインドウ
       .content
         p モーダルのコンテンツがはいります。ウインドウサイズより大きくなると見切れてしまうため、あまり大量のコンテンツを挿入しないようにしてください。
-
       .control
         button.btn.f.modalCancelBtn キャンセル
         button.btn.f.modalConfirmBtn 確認
 </code></pre>
-</div></div><div class="Modal"><div class="backdrop modalCloseBtn"></div><div class="inner"> <div class="dialog"><h2 class="title">モーダルダイアログウインドウ</h2><div class="content"><p>モーダルのコンテンツがはいります。ウインドウサイズより大きくなると見切れてしまうため、あまり大量のコンテンツを挿入しないようにしてください。</p></div><div class="control"><button class="btn f modalCancelBtn">キャンセル</button><button class="btn f modalConfirmBtn">確認</button></div></div></div></div></body></html>
+<h2 id="modal-page">Modal - Page</h2>
+<button data-name="Page" class="btn modalOpenBtn">Modal Page Open</button><pre><code class="lang-jade">.Wrapper
+  // contents
+  button.btn.modalOpenBtn Modal Page Open
+.Modal
+  .backdrop.modalCloseBtn
+  .inner
+    .page
+      h2.title モーダルページウインドウ
+      .content
+        p モーダルのコンテンツがはいります。ウインドウサイズに関わらずコンテンツを挿入できます。ウインドウサイズよりもコンテンツ量が長い場合はスクロールします。
+      .control
+        button.btn.f.modalCancelBtn キャンセル
+        button.btn.f.modalConfirmBtn 確認
+</code></pre>
+</div></div><div class="Modal"><div class="backdrop modalCloseBtn"></div><div class="inner"> <div class="dialog"><h2 class="title">モーダルダイアログウインドウ</h2><div class="content"><p>モーダルのコンテンツがはいります。ウインドウサイズより大きくなると見切れてしまうため、あまり大量のコンテンツを挿入しないようにしてください。</p></div><div class="control"><button class="btn f modalCancelBtn">キャンセル</button><button class="btn f modalConfirmBtn">確認</button></div></div><div class="page"><h2 class="title">モーダルページウインドウ</h2><div class="content"><p>モーダルのコンテンツがはいります。ウインドウサイズに関わらずコンテンツを挿入できます。ウインドウサイズよりもコンテンツ量が長い場合はスクロールします。※ 以下確認用余白</p><br/><br/><br/><br/><br/><br/></div><div class="control"><button class="btn f modalCancelBtn">キャンセル</button><button class="btn f modalConfirmBtn">確認</button></div></div></div></div></body></html>

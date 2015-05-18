@@ -30,12 +30,19 @@
     background: $white;
     max-width: 640px;
     width: 80%;
-    .content {
-      @include typo($base-font-size - 2px, $light-black, 300, 1.6);
-    }
-    .control {
-      @include border(1px 0 0 0, solid, $extra-light-gray);
-      text-align: right;
-    }
+  }
+  .page {
+    @include clearfix;
+    @include size(100%);
+    @include z(1);
+    background: $white;
+    overflow: auto;
+  }
+  .content {
+    @include typo($base-font-size - 2px, $light-black, 300, 1.6);
+  }
+  .control {
+    @include border(1px 0 0 0, solid, $extra-light-gray);
+    text-align: right;
   }
 }
