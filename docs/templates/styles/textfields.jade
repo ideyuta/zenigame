@@ -1,0 +1,37 @@
+- var title = "Text Fields"
+html
+  head
+    include ../partials/_Head
+      prepend window_title
+        &mdash;#{title}
+  body
+    include ../partials/_GlobalHeader
+    .Contents
+
+      :markdown
+        ##Text Field
+
+      form
+        .TextField
+          p.label 氏名
+          input(type="text", placeholder="銭　亀太郎", maxlength="20", required)
+        .TextField
+          p.label 郵便番号
+          input(type="text", placeholder="000-0000", maxlength="20")
+        .TextField
+          p.label 住所
+          input(type="text", maxlength="20")
+        .TextField
+          p.label 電話番号
+          input(type="text", maxlength="20")
+        input(type="submit", value="submit")
+
+
+
+      :markdown
+        ```jade
+        .RadioBtn
+          input(type="radio", name="radio", checked="checked", id="radio1")
+          label(for="radio1") radio
+        ```
+

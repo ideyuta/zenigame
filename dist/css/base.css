@@ -946,6 +946,38 @@ Button Mixin
   }
 }
 
+.TextField {
+  margin: 8px;
+}
+.TextField .label {
+  font-size: 12px;
+  color: #999;
+  font-weight: 300;
+  line-height: 1em;
+  letter-spacing: 0;
+  margin: 0;
+}
+.TextField input {
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 0 0 1px 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0;
+  width: 100%;
+  height: 39px;
+  padding: 0 2px;
+}
+.TextField input:focus {
+  outline: none;
+}
+.TextField input::-webkit-input-placeholder {
+  color: #ccc;
+  font-weight: 100;
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
   font-family: "Noto Sans Japanese", Helvetica Neue, Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
