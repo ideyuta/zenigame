@@ -15,7 +15,7 @@ module.exports = class Modal
     $('.modalCloseBtn').on 'click', @onClickCloseBtn
 
   onClickOpenBtn: (e) =>
-    @$target = $('.'+$(e.target).data('name'))
+    @$target = $(".#{$(e.target).data('name')}")
     @$target.css display: 'block'
     @open()
 

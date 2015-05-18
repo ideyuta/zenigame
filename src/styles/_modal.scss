@@ -21,6 +21,9 @@
     cursor: pointer;
     z-index: 0; 
   }
+  .inner {
+    @include size(100%);
+  }
   .dialog {
     @include border-radius(2px);
     @include box-shadow(0 8px 24px $dark-gray);

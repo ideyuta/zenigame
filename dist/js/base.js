@@ -10451,7 +10451,7 @@ module.exports = Modal = (function() {
   }
 
   Modal.prototype.onClickOpenBtn = function(e) {
-    this.$target = $('.' + $(e.target).data('name'));
+    this.$target = $("." + ($(e.target).data('name')));
     this.$target.css({
       display: 'block'
     });
