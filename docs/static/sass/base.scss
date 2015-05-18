@@ -57,3 +57,9 @@ html, body {
 //-------------------------------
 // Components
 //-------------------------------
+
+.Grid {
+  [class^="Col-"] {
+    background: $extra-light-gray;
+  }
+}

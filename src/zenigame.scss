@@ -2,11 +2,14 @@
 @import "settings/config";
 @import "settings/normalize";
 
+@import "function/decimal";
+
 @import "mixins/mixin";
 
 @import "styles/buttons";
-@import "styles/dropdownMenu";
-@import "styles/radiobutton";
 @import "styles/checkbox";
+@import "styles/dropdownMenu";
+@import "styles/grid";
+@import "styles/radiobutton";
 @import "styles/togglebutton";
 @import "styles/textfield";
