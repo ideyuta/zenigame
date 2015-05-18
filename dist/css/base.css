@@ -947,7 +947,20 @@ Button Mixin
 }
 
 .TextField {
-  margin: 8px;
+  padding: 8px;
+}
+.TextField.isOK input {
+  border-style: solid;
+  border-color: #3c6;
+  border-width: 0 0 2px 0;
+}
+.TextField.isError .validated {
+  display: block;
+}
+.TextField.isError input {
+  border-style: solid;
+  border-color: #f33;
+  border-width: 0 0 2px 0;
 }
 .TextField .label {
   font-size: 12px;
@@ -976,6 +989,16 @@ Button Mixin
 .TextField input::-webkit-input-placeholder {
   color: #ccc;
   font-weight: 100;
+}
+.TextField .validated {
+  font-size: 10px;
+  color: #f33;
+  font-weight: 700;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  display: none;
+  margin: 0 auto;
+  padding: 4px 0;
 }
 
 * {

@@ -1,5 +1,18 @@
 .TextField {
-  margin: 8px;
+  padding: 8px;
+  &.isOK {
+    input {
+      @include border(0 0 2px 0, solid, $green);
+    }
+  }
+  &.isError {
+    .validated {
+      display: block;
+    }
+    input {
+      @include border(0 0 2px 0, solid, $red);
+    }
+  }
   .label {
     @include typo($base-font-size - 4px, $gray, 300, 1em);
     margin: 0;
@@ -14,5 +27,11 @@
       color: $light-gray;
       font-weight: 100;
     }
+  }
+  .validated {
+    @include typo($base-font-size - 6px, $red, 700, 1.5em);
+    display: none;
+    margin: 0 auto;
+    padding: 4px 0;
   }
 }
