@@ -1679,6 +1679,73 @@ Button Mixin
   }
 }
 
+.Tabs {
+  border-style: solid;
+  border-color: #f2f2f2;
+  border-width: 0 0 1px 0;
+  *zoom: 1;
+  position: relative;
+}
+.Tabs:before, .Tabs:after {
+  content: '';
+  display: table;
+}
+.Tabs:after {
+  clear: both;
+}
+.Tabs .tab {
+  bottom: -1px;
+  float: left;
+  position: relative;
+}
+.Tabs .btn {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+  margin: 0 4px;
+}
+.Tabs .btn.isActive {
+  background: #fff !important;
+  border-bottom-color: #fff;
+  cursor: default;
+}
+.Tabs._Group .tab:first-child .btn {
+  border-width: 1px;
+}
+.Tabs._Group .btn {
+  margin: 0;
+  border-width: 1px 1px 1px 0;
+}
+
+.FlexTabs {
+  display: table;
+  width: 100%;
+}
+.FlexTabs .tab {
+  display: table-cell;
+}
+.FlexTabs .tab:first-child .btn {
+  border-left: 0;
+}
+.FlexTabs .tab .btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+  border-right: 0;
+  display: block;
+  margin: 0;
+}
+.FlexTabs .tab .btn.isActive {
+  background: #fff !important;
+  border-bottom-color: #fff;
+  cursor: default;
+}
+
 .Table {
   margin: 8px;
 }
