@@ -1679,6 +1679,81 @@ Button Mixin
   }
 }
 
+.Table {
+  margin: 8px;
+}
+.Table table {
+  width: 100%;
+  height: auto;
+}
+.Table table caption {
+  font-size: 12px;
+  color: #3ae;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  caption-side: bottom;
+  padding: 12px 0;
+  text-align: left;
+}
+.Table table thead {
+  border-style: solid;
+  border-color: #666;
+  border-width: 2px 0;
+}
+.Table table thead th {
+  font-size: 14px;
+  color: #000;
+  font-weight: 700;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  padding: 12px 8px;
+  text-align: left;
+}
+.Table table tbody td {
+  font-size: 14px;
+  color: #000;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  padding: 12px 8px;
+}
+.Table._Basic table tbody tr {
+  border-style: solid;
+  border-color: #666;
+  border-width: 0 0 1px 0;
+}
+.Table._Basic table tbody td:first-child {
+  font-weight: 700;
+}
+.Table._Row table tbody tr:first-child {
+  border-style: solid;
+  border-color: #333;
+  border-width: 1px 0;
+}
+.Table._Row table tbody tr:first-child td:first-child {
+  border-style: solid;
+  border-color: #333;
+  border-width: 2px 0;
+}
+.Table._Row table tbody td {
+  border-style: solid;
+  border-color: #666;
+  border-width: 0 0 1px 0;
+}
+.Table._Row table tbody td:first-child {
+  border-width: 0 0 2px 0;
+}
+.Table._Clickable table tbody tr {
+  cursor: pointer;
+}
+.Table._Clickable table tbody tr:hover {
+  background: #f2f2f2;
+}
+.Table._Clickable table tbody tr:active {
+  background: #e8e8e8;
+}
+
 .ToggleBtn {
   display: inline-block;
   margin: 4px 8px;
