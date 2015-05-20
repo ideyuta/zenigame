@@ -1,0 +1,85 @@
+- var title = "Pagination"
+html
+  head
+    include ../partials/_Head
+      prepend window_title
+        &mdash;#{title}
+  body
+    include ../partials/_GlobalHeader
+    include ../partials/_Navigation
+    .Contents
+
+      :markdown
+        ##Pagination
+        スマホの場合現在のページの番号とPrev/Nextボタンのみを表示する
+
+      .Pagination
+        a.btn.prev.isDisable(href=""): i.znicon-chevron-left
+        a.btn.isActive(href="") 1
+        a.btn(href="") 2
+        a.btn(href="") 3
+        a.btn.isDisable(href=""): i.znicon-dots-three-horizontal
+        a.btn(href="") 6
+        a.btn.next(href=""): i.znicon-chevron-right
+
+      :markdown
+        ```jade
+        .Pagination
+          a.btn.prev.isDisable(href=""): i.znicon-chevron-left
+          a.btn.isActive(href="") 1
+          a.btn(href="") 2
+          a.btn(href="") 3
+          a.btn.isDisable(href=""): i.znicon-dots-three-horizontal
+          a.btn(href="") 6
+          a.btn.next(href=""): i.znicon-chevron-right
+        ```
+
+
+      :markdown
+        ##Pagination Group
+
+      .Pagination.BtnGroup
+        a.btn.prev.isDisable(href=""): i.znicon-chevron-left
+        a.btn.isActive(href="") 1
+        a.btn(href="") 2
+        a.btn(href="") 3
+        a.btn.isDisable(href=""): i.znicon-dots-three-horizontal
+        a.btn(href="") 6
+        a.btn.next(href=""): i.znicon-chevron-right
+
+      :markdown
+        ```jade
+        .Pagination.BtnGroup
+          a.btn.prev.isDisable(href=""): i.znicon-chevron-left
+          a.btn.isActive(href="") 1
+          a.btn(href="") 2
+          a.btn(href="") 3
+          a.btn.isDisable(href=""): i.znicon-dots-three-horizontal
+          a.btn(href="") 6
+          a.btn.next(href=""): i.znicon-chevron-right
+        ```
+
+
+      :markdown
+        ##Pagination Flat
+
+      .Pagination
+        a.btn.f.prev.isDisable(href=""): i.znicon-chevron-left
+        a.btn.f.isActive(href="") 1
+        a.btn.f(href="") 2
+        a.btn.f(href="") 3
+        a.btn.f.isDisable(href=""): i.znicon-dots-three-horizontal
+        a.btn.f(href="") 6
+        a.btn.f.next(href=""): i.znicon-chevron-right
+
+      :markdown
+        ```jade
+        .Pagination.BtnGroup
+          a.btn.f.prev.isDisable(href=""): i.znicon-chevron-left
+          a.btn.f.isActive(href="") 1
+          a.btn.f(href="") 2
+          a.btn.f(href="") 3
+          a.btn.f.isDisable(href=""): i.znicon-dots-three-horizontal
+          a.btn.f(href="") 6
+          a.btn.f.next(href=""): i.znicon-chevron-right
+        ```

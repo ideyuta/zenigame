@@ -1,0 +1,36 @@
+.Pagination {
+  .btn {
+    &.isActive {
+      @include box-shadow(none);
+      cursor: default;
+      background: $blue !important;
+      border-color: $blue;
+      color: $white;
+    }
+    &.isDisable {
+      @include border(0);
+      @include box-shadow(none);
+      background: transparent !important;
+      cursor: default;
+      &.f {
+        color: $light-gray;
+      }
+      + .btn {
+        border-left-width: 1px;
+      }
+    }
+  }
+}
+
+@include media(phone) {
+  .Pagination {
+    .btn {
+      display: none;
+      &.next,
+      &.prev,
+      &.isActive {
+        display: inline-flex;
+      }
+    }
+  }
+}

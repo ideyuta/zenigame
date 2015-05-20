@@ -43,13 +43,9 @@
   display: inline;
   .btn {
     margin: 0;
-    border: {
-      left: 0;
-    }
+    border-left-width: 0;
     &:first-child {
-      border: {
-        left: 1px;
-      }
+      border-left-width: 1px;
     }
   }
 }

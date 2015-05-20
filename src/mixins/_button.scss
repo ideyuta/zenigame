@@ -9,6 +9,7 @@ Button Mixin
   @include border(1px, solid, $extra-light-gray, 2px);
   padding: $padding;
   display: inline-block;
+  display: inline-flex;
   text-decoration: none !important;
   cursor: pointer;
   &:focus { outline: none; }

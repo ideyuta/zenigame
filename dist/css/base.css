@@ -565,6 +565,7 @@ Button Mixin
   border-radius: 2px;
   padding: 9px 18px;
   display: inline-block;
+  display: inline-flex;
   text-decoration: none !important;
   cursor: pointer;
   font-size: 14px;
@@ -677,10 +678,10 @@ Button Mixin
 }
 .BtnGroup .btn {
   margin: 0;
-  border-left: 0;
+  border-left-width: 0;
 }
 .BtnGroup .btn:first-child {
-  border-left: 1px;
+  border-left-width: 1px;
 }
 
 .CheckBox {
@@ -1614,6 +1615,42 @@ Button Mixin
   text-align: right;
 }
 
+.Pagination .btn.isActive {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+  cursor: default;
+  background: #3ae !important;
+  border-color: #3ae;
+  color: #fff;
+}
+.Pagination .btn.isDisable {
+  border-style: solid;
+  border-color: #f2f2f2;
+  border-width: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+  background: transparent !important;
+  cursor: default;
+}
+.Pagination .btn.isDisable.f {
+  color: #ccc;
+}
+.Pagination .btn.isDisable + .btn {
+  border-left-width: 1px;
+}
+
+@media screen and (max-width: 480px) {
+  .Pagination .btn {
+    display: none;
+  }
+  .Pagination .btn.next, .Pagination .btn.prev, .Pagination .btn.isActive {
+    display: inline-flex;
+  }
+}
 .RadioBtn {
   display: inline-block;
   margin: 4px 8px;
