@@ -1,0 +1,69 @@
+/*
+Error: Undefined variable: "$gray50".
+        on line 3 of /Users/ideyuta/Workspace/zenigame/docs/static/sass/colors.scss
+
+1: 
+2: .gray50 {
+3:   background: $gray50;
+4:   &:after { content: "#{$gray50}"; }
+5: }
+6: .gray100 {
+7:   background: $gray100;
+8:   &:after { content: "#{$gray100}"; }
+
+Backtrace:
+/Users/ideyuta/Workspace/zenigame/docs/static/sass/colors.scss:3
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/tree/root_node.rb:20:in `render'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/engine.rb:268:in `render'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `call'
+/Users/ideyuta/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/Users/ideyuta/.rbenv/versions/2.1.0/bin/compass:23:in `load'
+/Users/ideyuta/.rbenv/versions/2.1.0/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$gray50\".\A         on line 3 of /Users/ideyuta/Workspace/zenigame/docs/static/sass/colors.scss\A \A 1: \A 2: .gray50 {\A 3:   background: $gray50;\A 4:   &:after { content: \"#{$gray50}\"; }\A 5: }\A 6: .gray100 {\A 7:   background: $gray100;\A 8:   &:after { content: \"#{$gray100}\"; }"; }
