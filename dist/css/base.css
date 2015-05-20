@@ -812,7 +812,7 @@ Button Mixin
 }
 .DropDownMenu .btn .label {
   border-style: solid;
-  border-color: #ccc;
+  border-color: #e0e0e0;
   border-width: 0 1px 0 0;
   padding: 0 16px 0 0;
   font-weight: 500;
@@ -821,10 +821,10 @@ Button Mixin
   padding: 0 0 0 16px;
 }
 .DropDownMenu .itemList {
-  -webkit-box-shadow: 0 6px 24px #ccc;
-  -moz-box-shadow: 0 6px 24px #ccc;
-  -ms-box-shadow: 0 6px 24px #ccc;
-  box-shadow: 0 6px 24px #ccc;
+  -webkit-box-shadow: 0 6px 24px #e0e0e0;
+  -moz-box-shadow: 0 6px 24px #e0e0e0;
+  -ms-box-shadow: 0 6px 24px #e0e0e0;
+  box-shadow: 0 6px 24px #e0e0e0;
   border-style: solid;
   border-color: #f2f2f2;
   border-width: 1px;
@@ -845,11 +845,10 @@ Button Mixin
 }
 .DropDownMenu .itemList .item {
   font-size: 14px;
-  color: #999;
+  color: #5c5c5c;
   font-weight: 300;
   line-height: 18px;
   letter-spacing: 0;
-  color: #555;
   display: block;
   padding: 8px 18px;
   text-decoration: none;
@@ -858,7 +857,7 @@ Button Mixin
   background: #f2f2f2;
 }
 .DropDownMenu .itemList .item.isActive {
-  color: #3ae;
+  color: #32b7fa;
   cursor: default;
 }
 .DropDownMenu .itemList .item.isActive:hover {

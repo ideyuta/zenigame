@@ -2,7 +2,7 @@
   position: relative;
   .btn {
     .label {
-      @include border(0 1px 0 0, solid, $light-gray);
+      @include border(0 1px 0 0, solid, $gray200);
       padding: 0 16px 0 0;
       font-weight: 500;
        + .value {
@@ -12,10 +12,10 @@
   }
 
   .itemList {
-    @include box-shadow(0 6px 24px $light-gray);
-    @include border(1px, solid, $extra-light-gray, 2px);
+    @include box-shadow(0 6px 24px $gray200);
+    @include border(1px, solid, $gray100, 2px);
     @include pos(absolute, 0, 0);
-    background: $white;
+    background: #fff;
     margin: 4px;
     padding: 3px 0;
     width: 260px;
@@ -25,19 +25,18 @@
     }
 
     .item {
-      @include typo($base-font-size - 2px, $gray, 300, 18px);
-      color: $extra-dark-gray;
+      @include typo($base-font-size - 2px, $gray700, 300, 18px);
       display: block;
       padding: 8px 18px;
       text-decoration: none;
       &:hover {
-        background: $extra-light-gray;
+        background: $gray100;
       }
       &.isActive {
-        color: $blue;
+        color: $blue500;
         cursor: default;
         &:hover {
-          background: $white;
+          background: #fff;
         }
       }
       [class^="znicon-"],
