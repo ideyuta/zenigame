@@ -1,5 +1,5 @@
 .Tabs {
-  @include border(0 0 1px 0, solid, $extra-light-gray);
+  @include border(0 0 1px 0, solid, $gray100);
   @include clearfix;
   position: relative;
   .tab {
@@ -11,8 +11,8 @@
     @include box-shadow(none);
     margin: 0 4px;
     &.isActive {
-      background: $white !important;
-      border-bottom-color: $white;
+      background: #fff !important;
+      border-bottom-color: #fff;
       cursor: default;
     }
   }
@@ -48,8 +48,8 @@
       display: block;
       margin: 0;
       &.isActive {
-        background: $white !important;
-        border-bottom-color: $white;
+        background: #fff !important;
+        border-bottom-color: #fff;
         cursor: default;
       }
     }
