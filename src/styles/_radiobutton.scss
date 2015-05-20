@@ -20,10 +20,10 @@
       & + label {
         padding: 0 0 0 24px;
         &:before {
-          @include border(2px, solid, $light-gray, 50%);
+          @include border(2px, solid, $gray300, 50%);
           @include pos(absolute, 0, 0);
           @include size(14px);
-          background: $white;
+          background: #fff;
           content: "";
           display: block;
         }
@@ -31,23 +31,23 @@
       &:checked + label {
         cursor: default;
         &:hover:before {
-          border-color: $light-gray;
-          background: $white;
+          border-color: $gray300;
+          background: #fff;
         }
         &:after {
           @include border-radius(50%);
           @include pos(absolute, 5px, 5px);
           @include size(8px);
-          background: $blue;
+          background: $blue500;
           content: "";
           display: block;
         }
       }
       & + label:hover:before {
-        border-color: $blue;
+        border-color: $blue500;
       }
       & + label:active:before {
-        background: $extra-light-blue;
+        background: $blue50;
       }
     }
   }

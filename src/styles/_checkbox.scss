@@ -20,17 +20,17 @@
       & + label {
         padding: 0 0 0 24px;
         &:before {
-          @include border(2px, solid, $light-gray, 2px);
+          @include border(2px, solid, $gray300, 2px);
           @include pos(absolute, 0, 0);
           @include size(14px);
-          background: $white;
+          background: #fff;
           content: "";
           display: block;
         }
       }
       &:checked + label {
         &:after {
-          @include border(0 0 3px 3px, solid, $blue, 3px);
+          @include border(0 0 3px 3px, solid, $blue500, 3px);
           @include pos(absolute, 3px, 3px);
           @include size(10px, 5px);
           content: "";
@@ -41,10 +41,10 @@
         }
       }
       & + label:hover:before {
-        border-color: $blue;
+        border-color: $blue500;
       }
       & + label:active:before {
-        background: $extra-light-blue;
+        background: $blue50;
       }
     }
   }

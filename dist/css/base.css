@@ -783,7 +783,7 @@ Button Mixin
   }
   .CheckBox input[type=checkbox]:checked + label:after {
     border-style: solid;
-    border-color: #3ae;
+    border-color: #32b7fa;
     border-width: 0 0 3px 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -800,10 +800,10 @@ Button Mixin
     -webkit-transform: rotate(-45deg);
   }
   .CheckBox input[type=checkbox] + label:hover:before {
-    border-color: #3ae;
+    border-color: #32b7fa;
   }
   .CheckBox input[type=checkbox] + label:active:before {
-    background: #f9fcfe;
+    background: #edf7fc;
   }
 }
 
@@ -1763,15 +1763,15 @@ Button Mixin
     left: 5px;
     width: 8px;
     height: 8px;
-    background: #3ae;
+    background: #32b7fa;
     content: "";
     display: block;
   }
   .RadioBtn input[type=radio] + label:hover:before {
-    border-color: #3ae;
+    border-color: #32b7fa;
   }
   .RadioBtn input[type=radio] + label:active:before {
-    background: #f9fcfe;
+    background: #edf7fc;
   }
 }
 
@@ -1976,15 +1976,15 @@ Button Mixin
     margin: 0 0 0 1px;
   }
   .ToggleBtn input[type=checkbox]:checked + label:before {
-    background: #3ae;
-    border-color: #3ae;
+    background: #32b7fa;
+    border-color: #32b7fa;
   }
   .ToggleBtn input[type=checkbox]:checked + label:after {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     -ms-box-shadow: none;
     box-shadow: none;
-    border-color: #3ae;
+    border-color: #32b7fa;
     right: 1px;
   }
 }
