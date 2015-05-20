@@ -1994,7 +1994,7 @@ Button Mixin
 }
 .TextField.isOK input {
   border-style: solid;
-  border-color: #3c6;
+  border-color: #00e64d;
   border-width: 0 0 2px 0;
 }
 .TextField.isError .validated {
@@ -2002,12 +2002,12 @@ Button Mixin
 }
 .TextField.isError input {
   border-style: solid;
-  border-color: #f33;
+  border-color: #fc490d;
   border-width: 0 0 2px 0;
 }
 .TextField .label {
   font-size: 12px;
-  color: #999;
+  color: #5c5c5c;
   font-weight: 300;
   line-height: 1em;
   letter-spacing: 0;
@@ -2018,7 +2018,7 @@ Button Mixin
   border-color: #ccc;
   border-width: 0 0 1px 0;
   font-size: 16px;
-  color: #333;
+  color: #212121;
   font-weight: 300;
   line-height: 24px;
   letter-spacing: 0;
@@ -2035,7 +2035,7 @@ Button Mixin
 }
 .TextField .validated {
   font-size: 10px;
-  color: #f33;
+  color: #fc490d;
   font-weight: 700;
   line-height: 1.5em;
   letter-spacing: 0;
