@@ -14,7 +14,7 @@
   .backdrop {
     @include pos(fixed, 0, 0);
     @include size(100%);
-    background: rgba($black, .48);
+    background: rgba(#000, .48);
     background: #000\9;
     filter: alpha(opacity=48); /* IE lt 8 */
     opacity: 1;
@@ -26,11 +26,11 @@
   }
   .dialog {
     @include border-radius(2px);
-    @include box-shadow(0 8px 24px $dark-gray);
+    @include box-shadow(0 8px 24px $gray700);
     @include clearfix;
     @include space(0 24px, 24px auto);
     @include z(1);
-    background: $white;
+    background: #fff;
     max-width: 640px;
     width: 80%;
   }
@@ -38,14 +38,14 @@
     @include clearfix;
     @include size(100%);
     @include z(1);
-    background: $white;
+    background: #fff;
     overflow: auto;
   }
   .content {
-    @include typo($base-font-size - 2px, $light-black, 300, 1.6);
+    @include typo($base-font-size - 2px, $gray900, 300, 1.6);
   }
   .control {
-    @include border(1px 0 0 0, solid, $extra-light-gray);
+    @include border(1px 0 0 0, solid, $gray100);
     text-align: right;
   }
 }

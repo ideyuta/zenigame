@@ -1624,10 +1624,10 @@ Button Mixin
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: 0 8px 24px #666;
-  -moz-box-shadow: 0 8px 24px #666;
-  -ms-box-shadow: 0 8px 24px #666;
-  box-shadow: 0 8px 24px #666;
+  -webkit-box-shadow: 0 8px 24px #5c5c5c;
+  -moz-box-shadow: 0 8px 24px #5c5c5c;
+  -ms-box-shadow: 0 8px 24px #5c5c5c;
+  box-shadow: 0 8px 24px #5c5c5c;
   *zoom: 1;
   padding: 0 24px;
   margin: 24px auto;
@@ -1662,7 +1662,7 @@ Button Mixin
 }
 .Modal .content {
   font-size: 14px;
-  color: #333;
+  color: #212121;
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: 0;
