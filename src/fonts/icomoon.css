@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('/fonts/icomoon.eot?-xtoaql');
-	src:url('/fonts/icomoon.eot?#iefix-xtoaql') format('embedded-opentype'),
-		url('/fonts/icomoon.woff?-xtoaql') format('woff'),
-		url('/fonts/icomoon.ttf?-xtoaql') format('truetype'),
-		url('/fonts/icomoon.svg?-xtoaql#icomoon') format('svg');
+	src:url('/fonts/icomoon.eot?-8qc1vv');
+	src:url('/fonts/icomoon.eot?#iefix-8qc1vv') format('embedded-opentype'),
+		url('/fonts/icomoon.woff?-8qc1vv') format('woff'),
+		url('/fonts/icomoon.ttf?-8qc1vv') format('truetype'),
+		url('/fonts/icomoon.svg?-8qc1vv#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -16,11 +16,111 @@
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
-	line-height: 1;
+	line-height: inherit;
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.znicon-chevron-down:before {
+	content: "\e600";
+}
+
+.znicon-chevron-left:before {
+	content: "\e601";
+}
+
+.znicon-chevron-right:before {
+	content: "\e602";
+}
+
+.znicon-chevron-small-down:before {
+	content: "\e603";
+}
+
+.znicon-chevron-small-left:before {
+	content: "\e604";
+}
+
+.znicon-chevron-small-right:before {
+	content: "\e605";
+}
+
+.znicon-chevron-small-up:before {
+	content: "\e606";
+}
+
+.znicon-chevron-thin-down:before {
+	content: "\e607";
+}
+
+.znicon-chevron-thin-left:before {
+	content: "\e608";
+}
+
+.znicon-chevron-thin-right:before {
+	content: "\e609";
+}
+
+.znicon-chevron-thin-up:before {
+	content: "\e60a";
+}
+
+.znicon-chevron-up:before {
+	content: "\e60b";
+}
+
+.znicon-chevron-with-circle-down:before {
+	content: "\e60c";
+}
+
+.znicon-chevron-with-circle-left:before {
+	content: "\e60d";
+}
+
+.znicon-chevron-with-circle-right:before {
+	content: "\e60e";
+}
+
+.znicon-chevron-with-circle-up:before {
+	content: "\e60f";
+}
+
+.znicon-dots-three-horizontal:before {
+	content: "\e610";
+}
+
+.znicon-dots-three-vertical:before {
+	content: "\e611";
+}
+
+.znicon-credit-card:before {
+	content: "\e612";
+}
+
+.znicon-emoji-happy:before {
+	content: "\e613";
+}
+
+.znicon-emoji-neutral:before {
+	content: "\e614";
+}
+
+.znicon-emoji-sad:before {
+	content: "\e615";
+}
+
+.znicon-help-with-circle:before {
+	content: "\e616";
+}
+
+.znicon-help2:before {
+	content: "\e617";
+}
+
+.znicon-print:before {
+	content: "\e618";
 }
 
 .znicon-eye:before {
@@ -33,14 +133,6 @@
 
 .znicon-mail:before {
 	content: "\e002";
-}
-
-.znicon-toggle:before {
-	content: "\e003";
-}
-
-.znicon-layout:before {
-	content: "\e004";
 }
 
 .znicon-link:before {
@@ -121,10 +213,6 @@
 
 .znicon-heart:before {
 	content: "\e024";
-}
-
-.znicon-paragraph:before {
-	content: "\e025";
 }
 
 .znicon-align-justify:before {
@@ -331,10 +419,6 @@
 	content: "\e076";
 }
 
-.znicon-anchor:before {
-	content: "\e077";
-}
-
 .znicon-globe:before {
 	content: "\e078";
 }
@@ -423,26 +507,6 @@
 	content: "\e099";
 }
 
-.znicon-content-right:before {
-	content: "\e100";
-}
-
-.znicon-content-left:before {
-	content: "\e101";
-}
-
-.znicon-grid:before {
-	content: "\e102";
-}
-
-.znicon-grid-2:before {
-	content: "\e103";
-}
-
-.znicon-columns:before {
-	content: "\e104";
-}
-
 .znicon-loader:before {
 	content: "\e105";
 }
@@ -461,14 +525,6 @@
 
 .znicon-trash:before {
 	content: "\e109";
-}
-
-.znicon-expand:before {
-	content: "\e110";
-}
-
-.znicon-contract:before {
-	content: "\e111";
 }
 
 .znicon-maximize:before {
