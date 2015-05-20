@@ -4,22 +4,22 @@
   table {
     @include size(100%, auto);
     caption {
-      @include typo($base-font-size - 4px, $blue, 300, 1.5em);
+      @include typo($base-font-size - 4px, $blue500, 300, 1.5em);
       caption-side: bottom;
       padding: 12px 0;
       text-align: left;
     }
     thead {
-      @include border(2px 0, solid, $dark-gray);
+      @include border(2px 0, solid, $gray900);
       th {
-        @include typo($base-font-size - 2px, $black, 700, 1.5em);
+        @include typo($base-font-size - 2px, #000, 700, 1.5em);
         padding: 12px 8px;
         text-align: left;
       }
     }
     tbody {
       td {
-        @include typo($base-font-size - 2px, $black, 300, 1.5em);
+        @include typo($base-font-size - 2px, #000, 300, 1.5em);
         padding: 12px 8px;
       }
     }
@@ -30,7 +30,7 @@
     table {
       tbody {
         tr {
-          @include border(0 0 1px 0, solid, $dark-gray);
+          @include border(0 0 1px 0, solid, $gray900);
         }
         td {
           &:first-child {
@@ -46,13 +46,13 @@
     table {
       tbody {
         tr:first-child {
-          @include border(1px 0, solid, $light-black);
+          @include border(1px 0, solid, $gray900);
           td:first-child {
-            @include border(2px 0, solid, $light-black);
+            @include border(2px 0, solid, $gray900);
           }
         }
         td {
-          @include border(0 0 1px 0, solid, $dark-gray);
+          @include border(0 0 1px 0, solid, $gray900);
           &:first-child {
             border-width: 0 0 2px 0;
           }
@@ -68,10 +68,10 @@
         tr {
           cursor: pointer;
           &:hover {
-            background: $extra-light-gray;
+            background: $gray100;
           }
           &:active {
-            background: darken($extra-light-gray, 4%);
+            background: darken($gray100, 4%);
           }
         }
       }
