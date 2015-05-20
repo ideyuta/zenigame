@@ -1680,8 +1680,8 @@ Button Mixin
   -ms-box-shadow: none;
   box-shadow: none;
   cursor: default;
-  background: #3ae !important;
-  border-color: #3ae;
+  background: #32b7fa !important;
+  border-color: #32b7fa;
   color: #fff;
 }
 .Pagination .btn.isDisable {
