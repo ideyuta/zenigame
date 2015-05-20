@@ -629,7 +629,7 @@ Button Mixin
   text-decoration: none !important;
   cursor: pointer;
   font-size: 14px;
-  color: #999;
+  color: #949494;
   font-weight: 300;
   line-height: 18px;
   letter-spacing: 0;
@@ -639,7 +639,7 @@ Button Mixin
   box-shadow: 0 1px 3px #f0f0f0;
   background-color: #fff;
   border-color: #ebebeb;
-  color: #555;
+  color: #5c5c5c;
   margin: 6px 4px;
 }
 .btn:before, .btn:after {

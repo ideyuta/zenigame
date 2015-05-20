@@ -1,7 +1,7 @@
 .btn {
   @include btn(18px);
-  @include typo($base-font-size - 2px, $gray, 300, 18px);
-  @include btn-varient($extra-dark-gray, $white);
+  @include typo($base-font-size - 2px, $gray500, 300, 18px);
+  @include btn-varient($gray700, #fff);
   margin: 6px 4px;
   span + [class^="znicon-"],
   span + [class*=" znicon-"],
