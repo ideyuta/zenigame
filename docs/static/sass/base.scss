@@ -63,3 +63,22 @@ html, body {
     background: $extra-light-gray;
   }
 }
+
+.Colors {
+  @include size(232px, auto);
+  float: left;
+  padding: 16px;
+  ul {
+    padding: 0;
+  }
+  .color {
+    @include size(auto, 48px);
+    line-height: 48px;
+    list-style: none;
+    padding: 0 24px;
+    &:after {
+      float: right;
+    }
+  }
+}
+@import "colors";

@@ -2072,3 +2072,373 @@ html, body {
 .Grid [class^="Col-"] {
   background: #f2f2f2;
 }
+
+.Colors {
+  width: 232px;
+  height: auto;
+  float: left;
+  padding: 16px;
+}
+.Colors ul {
+  padding: 0;
+}
+.Colors .color {
+  width: auto;
+  height: 48px;
+  line-height: 48px;
+  list-style: none;
+  padding: 0 24px;
+}
+.Colors .color:after {
+  float: right;
+}
+
+.gray50 {
+  background: #fafafa;
+}
+.gray50:after {
+  content: "#fafafa";
+}
+
+.gray100 {
+  background: #f2f2f2;
+}
+.gray100:after {
+  content: "#f2f2f2";
+}
+
+.gray200 {
+  background: #e0e0e0;
+}
+.gray200:after {
+  content: "#e0e0e0";
+}
+
+.gray300 {
+  background: #ccc;
+}
+.gray300:after {
+  content: "#ccc";
+}
+
+.gray400 {
+  background: #b0b0b0;
+}
+.gray400:after {
+  content: "#b0b0b0";
+}
+
+.gray500 {
+  background: #949494;
+}
+.gray500:after {
+  content: "#949494";
+}
+
+.gray600 {
+  background: #757575;
+}
+.gray600:after {
+  content: "#757575";
+}
+
+.gray700 {
+  background: #5c5c5c;
+}
+.gray700:after {
+  content: "#5c5c5c";
+}
+
+.gray800 {
+  background: #3d3d3d;
+}
+.gray800:after {
+  content: "#3d3d3d";
+}
+
+.gray900 {
+  background: #212121;
+}
+.gray900:after {
+  content: "#212121";
+}
+
+.red50 {
+  background: #fff4f0;
+}
+.red50:after {
+  content: "#fff4f0";
+}
+
+.red100 {
+  background: #ffe2d9;
+}
+.red100:after {
+  content: "#ffe2d9";
+}
+
+.red200 {
+  background: #ffbca6;
+}
+.red200:after {
+  content: "#ffbca6";
+}
+
+.red300 {
+  background: #ff9673;
+}
+.red300:after {
+  content: "#ff9673";
+}
+
+.red400 {
+  background: #ff7040;
+}
+.red400:after {
+  content: "#ff7040";
+}
+
+.red500 {
+  background: #fc490d;
+}
+.red500:after {
+  content: "#fc490d";
+}
+
+.red600 {
+  background: #e83a00;
+}
+.red600:after {
+  content: "#e83a00";
+}
+
+.red700 {
+  background: #c43100;
+}
+.red700:after {
+  content: "#c43100";
+}
+
+.red800 {
+  background: #a12800;
+}
+.red800:after {
+  content: "#a12800";
+}
+
+.red900 {
+  background: #802000;
+}
+.red900:after {
+  content: "#802000";
+}
+
+.yellow50 {
+  background: #fffaf0;
+}
+.yellow50:after {
+  content: "#fffaf0";
+}
+
+.yellow100 {
+  background: #fff2d9;
+}
+.yellow100:after {
+  content: "#fff2d9";
+}
+
+.yellow200 {
+  background: #fff0a6;
+}
+.yellow200:after {
+  content: "#fff0a6";
+}
+
+.yellow300 {
+  background: #ffe873;
+}
+.yellow300:after {
+  content: "#ffe873";
+}
+
+.yellow400 {
+  background: #ffdf40;
+}
+.yellow400:after {
+  content: "#ffdf40";
+}
+
+.yellow500 {
+  background: #ffd500;
+}
+.yellow500:after {
+  content: "#ffd500";
+}
+
+.yellow600 {
+  background: #ffc400;
+}
+.yellow600:after {
+  content: "#ffc400";
+}
+
+.yellow700 {
+  background: #fcad00;
+}
+.yellow700:after {
+  content: "#fcad00";
+}
+
+.yellow800 {
+  background: #e69100;
+}
+.yellow800:after {
+  content: "#e69100";
+}
+
+.yellow900 {
+  background: #bf7000;
+}
+.yellow900:after {
+  content: "#bf7000";
+}
+
+.green50 {
+  background: #ebfaf0;
+}
+.green50:after {
+  content: "#ebfaf0";
+}
+
+.green100 {
+  background: #d4fae1;
+}
+.green100:after {
+  content: "#d4fae1";
+}
+
+.green200 {
+  background: #96fab7;
+}
+.green200:after {
+  content: "#96fab7";
+}
+
+.green300 {
+  background: #63f794;
+}
+.green300:after {
+  content: "#63f794";
+}
+
+.green400 {
+  background: #30f271;
+}
+.green400:after {
+  content: "#30f271";
+}
+
+.green500 {
+  background: #00e64d;
+}
+.green500:after {
+  content: "#00e64d";
+}
+
+.green600 {
+  background: #00d146;
+}
+.green600:after {
+  content: "#00d146";
+}
+
+.green700 {
+  background: #00b83d;
+}
+.green700:after {
+  content: "#00b83d";
+}
+
+.green800 {
+  background: #009e35;
+}
+.green800:after {
+  content: "#009e35";
+}
+
+.green900 {
+  background: #00852c;
+}
+.green900:after {
+  content: "#00852c";
+}
+
+.blue50 {
+  background: #edf7fc;
+}
+.blue50:after {
+  content: "#edf7fc";
+}
+
+.blue100 {
+  background: #d7f0fc;
+}
+.blue100:after {
+  content: "#d7f0fc";
+}
+
+.blue200 {
+  background: #a4dffc;
+}
+.blue200:after {
+  content: "#a4dffc";
+}
+
+.blue300 {
+  background: #72cefc;
+}
+.blue300:after {
+  content: "#72cefc";
+}
+
+.blue400 {
+  background: #4cc2fc;
+}
+.blue400:after {
+  content: "#4cc2fc";
+}
+
+.blue500 {
+  background: #32b7fa;
+}
+.blue500:after {
+  content: "#32b7fa";
+}
+
+.blue600 {
+  background: #24acf0;
+}
+.blue600:after {
+  content: "#24acf0";
+}
+
+.blue700 {
+  background: #0094de;
+}
+.blue700:after {
+  content: "#0094de";
+}
+
+.blue800 {
+  background: #0081c2;
+}
+.blue800:after {
+  content: "#0081c2";
+}
+
+.blue900 {
+  background: #006da3;
+}
+.blue900:after {
+  content: "#006da3";
+}
