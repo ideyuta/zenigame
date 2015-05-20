@@ -28,26 +28,26 @@ $default-line-height: 1.5;
 // :not(input){ -webkit-user-select: none; }
 html, body {
   @include size(100%, auto, 100%, 100%);
-  @include typo($default-font-size, $light-black, 300, $default-line-height);
-  background: $white;
+  @include typo($default-font-size, $gray900, 300, $default-line-height);
+  background: #fff;
   text-transform: none;
   -webkit-text-size-adjust: 100%;
 }
 
 .link {
-  &:link { color: $blue; }
-  &:visited { color: $blue; }
-  &:hover { color: $dark-blue; }
-  &:active { color: $dark-blue; }
+  &:link { color: $blue500; }
+  &:visited { color: $blue500; }
+  &:hover { color: $blue900; }
+  &:active { color: $blue900; }
 }
 
 .highlight  {
   padding: 16px;
   margin: 8px 0;
-  border: 1px solid $extra-light-gray;
+  border: 1px solid $gray100;
   font-family: 'Inconsolata';
   letter-spacing: 0.04em;
-  background: $dark-white;
+  background: $gray50;
   line-height: 1.4;
   .title {
     font-size: 12px;
@@ -60,7 +60,7 @@ html, body {
 
 .Grid {
   [class^="Col-"] {
-    background: $extra-light-gray;
+    background: $gray100;
   }
 }
 

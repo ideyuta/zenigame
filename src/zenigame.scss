@@ -4,7 +4,16 @@
 
 @import "function/decimal";
 
-@import "mixins/mixin";
+@import "mixins/border";
+@import "mixins/box-shadow";
+@import "mixins/button";
+@import "mixins/clearfix";
+@import "mixins/media-query";
+@import "mixins/opacity";
+@import "mixins/position";
+@import "mixins/size";
+@import "mixins/space";
+@import "mixins/typography";
 
 @import "styles/alert";
 @import "styles/buttons";

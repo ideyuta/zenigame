@@ -544,13 +544,6 @@ th {
 }
 
 /*
-Mixins
-
-
-
-Styleguide 3
-*/
-/*
 Button Mixin
 */
 .Alert {
@@ -2055,7 +2048,7 @@ html, body {
   min-width: 100%;
   min-height: 100%;
   font-size: 13px;
-  color: #333;
+  color: #212121;
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0;
@@ -2065,16 +2058,16 @@ html, body {
 }
 
 .link:link {
-  color: #3ae;
+  color: #32b7fa;
 }
 .link:visited {
-  color: #3ae;
+  color: #32b7fa;
 }
 .link:hover {
-  color: #1080bf;
+  color: #006da3;
 }
 .link:active {
-  color: #1080bf;
+  color: #006da3;
 }
 
 .highlight {
