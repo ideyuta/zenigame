@@ -553,6 +553,44 @@ Styleguide 3
 /*
 Button Mixin
 */
+.Alert {
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 6px 16px #ccc;
+  -moz-box-shadow: 0 6px 16px #ccc;
+  -ms-box-shadow: 0 6px 16px #ccc;
+  box-shadow: 0 6px 16px #ccc;
+  margin: 24px;
+  padding: 16px;
+}
+.Alert p {
+  margin: 0;
+}
+.Alert._Success {
+  background: #ebfaf0;
+  border-color: #74dc97;
+  color: #3c6;
+}
+.Alert._Info {
+  background: #f9fcfe;
+  border-color: #7ec9f4;
+  color: #3ae;
+}
+.Alert._Warning {
+  background: #fff9e9;
+  border-color: #fde299;
+  color: #fde299;
+}
+.Alert._Danger {
+  background: #ff8585;
+  border-color: #f33;
+  color: #f33;
+}
+
 .btn {
   *zoom: 1;
   width: auto;

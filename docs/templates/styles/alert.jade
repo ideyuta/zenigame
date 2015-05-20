@@ -1,0 +1,40 @@
+- var title = "Alert"
+html
+  head
+    include ../partials/_Head
+      prepend window_title
+        &mdash;#{title}
+  body
+    include ../partials/_GlobalHeader
+    include ../partials/_Navigation
+    .Contents
+
+      :markdown
+        ##Alert
+
+      .Alert._Success
+        p アラート
+
+      .Alert._Info
+        p アラート
+
+      .Alert._Warning
+        p アラート
+
+      .Alert._Danger
+        p アラート
+
+      :markdown
+        ```jade
+        .Alert._Success
+          p アラート
+
+        .Alert._Info
+          p アラート
+
+        .Alert._Warning
+          p アラート
+
+        .Alert._Danger
+          p アラート
+        ```
