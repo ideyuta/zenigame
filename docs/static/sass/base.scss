@@ -82,3 +82,24 @@ html, body {
   }
 }
 @import "colors";
+
+.Icons {
+  @include clearfix;
+  max-width: 1000px;
+  li {
+    width: 250px;
+    float: left;
+    p {
+      @include border(1px, solid, $gray300);
+      @include typo(12px, $gray900, 300, 1.5em);
+      padding: 16px;
+      margin: 0;
+      i {
+        @include typo(32px, $gray900, 300, 1.5em);
+      }
+      span {
+        display: block;
+      }
+    }
+  }
+}
