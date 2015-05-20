@@ -1,29 +1,41 @@
 .Alert {
-  @include border(1px, solid, $light-gray, 2px);
-  @include box-shadow(0 6px 16px $light-gray);
   margin: 24px;
   padding: 16px;
   p {
     margin: 0;
   }
   &._Success {
-    background: $extra-light-green;
-    border-color: $light-green;
-    color: $green;
+    @include border(1px, solid, $green300);
+    background: $green200;
+    color: $green900;
   }
   &._Info {
-    background: $extra-light-blue;
-    border-color: $light-blue;
-    color: $blue;
+    @include border(1px, solid, $blue300);
+    background: $blue200;
+    color: $blue900;
   }
   &._Warning {
-    background: $light-yellow;
-    border-color: $yellow;
-    color: $yellow;
+    @include border(1px, solid, $yellow300);
+    background: $yellow200;
+    color: $yellow900;
   }
   &._Danger {
-    background: $light-red;
-    border-color: $red;
-    color: $red;
+    @include border(1px, solid, $red300);
+    background: $red200;
+    color: $red900;
+  }
+  &._Float {
+    &._Success {
+      @include box-shadow(0 6px 24px $green200);
+    }
+    &._Info {
+      @include box-shadow(0 6px 16px $blue100);
+    }
+    &._Warning {
+      @include box-shadow(0 6px 16px $yellow100);
+    }
+    &._Danger {
+      @include box-shadow(0 6px 16px $red100);
+    }
   }
 }

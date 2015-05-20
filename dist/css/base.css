@@ -554,16 +554,6 @@ Styleguide 3
 Button Mixin
 */
 .Alert {
-  border-style: solid;
-  border-color: #ccc;
-  border-width: 1px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  -webkit-box-shadow: 0 6px 16px #ccc;
-  -moz-box-shadow: 0 6px 16px #ccc;
-  -ms-box-shadow: 0 6px 16px #ccc;
-  box-shadow: 0 6px 16px #ccc;
   margin: 24px;
   padding: 16px;
 }
@@ -571,24 +561,56 @@ Button Mixin
   margin: 0;
 }
 .Alert._Success {
-  background: #ebfaf0;
-  border-color: #74dc97;
-  color: #3c6;
+  border-style: solid;
+  border-color: #63f794;
+  border-width: 1px;
+  background: #96fab7;
+  color: #00852c;
 }
 .Alert._Info {
-  background: #f9fcfe;
-  border-color: #7ec9f4;
-  color: #3ae;
+  border-style: solid;
+  border-color: #72cefc;
+  border-width: 1px;
+  background: #a4dffc;
+  color: #006da3;
 }
 .Alert._Warning {
-  background: #fff9e9;
-  border-color: #fde299;
-  color: #fde299;
+  border-style: solid;
+  border-color: #ffe873;
+  border-width: 1px;
+  background: #fff0a6;
+  color: #bf7000;
 }
 .Alert._Danger {
-  background: #ff8585;
-  border-color: #f33;
-  color: #f33;
+  border-style: solid;
+  border-color: #ff9673;
+  border-width: 1px;
+  background: #ffbca6;
+  color: #802000;
+}
+.Alert._Float._Success {
+  -webkit-box-shadow: 0 6px 24px #96fab7;
+  -moz-box-shadow: 0 6px 24px #96fab7;
+  -ms-box-shadow: 0 6px 24px #96fab7;
+  box-shadow: 0 6px 24px #96fab7;
+}
+.Alert._Float._Info {
+  -webkit-box-shadow: 0 6px 16px #d7f0fc;
+  -moz-box-shadow: 0 6px 16px #d7f0fc;
+  -ms-box-shadow: 0 6px 16px #d7f0fc;
+  box-shadow: 0 6px 16px #d7f0fc;
+}
+.Alert._Float._Warning {
+  -webkit-box-shadow: 0 6px 16px #fff2d9;
+  -moz-box-shadow: 0 6px 16px #fff2d9;
+  -ms-box-shadow: 0 6px 16px #fff2d9;
+  box-shadow: 0 6px 16px #fff2d9;
+}
+.Alert._Float._Danger {
+  -webkit-box-shadow: 0 6px 16px #ffe2d9;
+  -moz-box-shadow: 0 6px 16px #ffe2d9;
+  -ms-box-shadow: 0 6px 16px #ffe2d9;
+  box-shadow: 0 6px 16px #ffe2d9;
 }
 
 .btn {

@@ -13,28 +13,47 @@ html
         ##Alert
 
       .Alert._Success
-        p アラート
-
+        p アラート 完了/成功
       .Alert._Info
-        p アラート
-
+        p アラート 情報/通知
       .Alert._Warning
-        p アラート
-
+        p アラート 注意
       .Alert._Danger
-        p アラート
+        p アラート 危険/警告
 
       :markdown
         ```jade
         .Alert._Success
-          p アラート
-
+          p アラート 完了/成功
         .Alert._Info
-          p アラート
-
+          p アラート 情報/通知
         .Alert._Warning
-          p アラート
-
+          p アラート 注意
         .Alert._Danger
-          p アラート
+          p アラート 危険/警告
+        ```
+
+      :markdown
+        ##Alert Float
+        固定表示させる場合はこちらを使う
+
+      .Alert._Float._Success
+        p アラート 完了/成功
+      .Alert._Float._Info
+        p アラート 情報/通知
+      .Alert._Float._Warning
+        p アラート 注意
+      .Alert._Float._Danger
+        p アラート 危険/警告
+
+      :markdown
+        ```jade
+        .Alert._Float._Success
+          p アラート 完了/成功
+        .Alert._Float._Info
+          p アラート 情報/通知
+        .Alert._Float._Warning
+          p アラート 注意
+        .Alert._Float._Danger
+          p アラート 危険/警告
         ```
