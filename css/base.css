@@ -2456,3 +2456,41 @@ html, body {
 .blue900:after {
   content: "#006da3";
 }
+
+.Icons {
+  *zoom: 1;
+  max-width: 1000px;
+}
+.Icons:before, .Icons:after {
+  content: '';
+  display: table;
+}
+.Icons:after {
+  clear: both;
+}
+.Icons li {
+  width: 250px;
+  float: left;
+}
+.Icons li p {
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px;
+  font-size: 12px;
+  color: #212121;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  padding: 16px;
+  margin: 0;
+}
+.Icons li p i {
+  font-size: 32px;
+  color: #212121;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 0;
+}
+.Icons li p span {
+  display: block;
+}
