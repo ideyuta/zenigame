@@ -606,6 +606,36 @@ Button Mixin
   box-shadow: 0 6px 16px #ffe2d9;
 }
 
+.Breadcrumbs ol {
+  *zoom: 1;
+  list-style: none;
+  padding: 0;
+  margin: 8px;
+}
+.Breadcrumbs ol:before, .Breadcrumbs ol:after {
+  content: '';
+  display: table;
+}
+.Breadcrumbs ol:after {
+  clear: both;
+}
+.Breadcrumbs ol li {
+  font-size: 14px;
+  color: #5c5c5c;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  float: left;
+}
+.Breadcrumbs ol li a {
+  text-decoration: none;
+}
+.Breadcrumbs ol li + li:before {
+  color: #ccc;
+  content: "/";
+  padding: 0 8px;
+}
+
 .btn {
   *zoom: 1;
   width: auto;
@@ -2057,16 +2087,16 @@ html, body {
   -webkit-text-size-adjust: 100%;
 }
 
-.link:link {
+a:link {
   color: #32b7fa;
 }
-.link:visited {
-  color: #32b7fa;
+a:visited {
+  color: #0094de;
 }
-.link:hover {
+a:hover {
   color: #006da3;
 }
-.link:active {
+a:active {
   color: #006da3;
 }
 
