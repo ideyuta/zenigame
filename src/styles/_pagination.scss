@@ -1,5 +1,6 @@
 .Pagination {
   .btn {
+    display: inline-flex;
     &.isActive {
       @include box-shadow(none);
       cursor: default;
