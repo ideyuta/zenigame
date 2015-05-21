@@ -1,17 +1,27 @@
 - var title = "Text Fields"
-html
-  head
-    include ../partials/_Head
-      prepend window_title
-        &mdash;#{title}
-  body
-    include ../partials/_GlobalHeader
-    include ../partials/_Navigation
-    .Contents
+include ../_base
+  prepend contents
 
-      :markdown
-        ##Text Field
+    :markdown
+      ##Text Field
 
+    .TextField
+      p.label 氏名
+      input(type="text", placeholder="銭　亀太郎", maxlength="20", required)
+      p.validated この項目は必須です。
+    .TextField.isError
+      p.label 郵便番号
+      input(type="text", placeholder="000-0000", maxlength="20", required)
+      p.validated この項目は必須です。
+    .TextField.isOK
+      p.label 住所
+      input(type="text", maxlength="20")
+    .TextField
+      p.label 電話番号
+      input(type="text", maxlength="20")
+
+    :markdown
+      ```jade
       .TextField
         p.label 氏名
         input(type="text", placeholder="銭　亀太郎", maxlength="20", required)
@@ -23,22 +33,4 @@ html
       .TextField.isOK
         p.label 住所
         input(type="text", maxlength="20")
-      .TextField
-        p.label 電話番号
-        input(type="text", maxlength="20")
-
-      :markdown
-        ```jade
-        .TextField
-          p.label 氏名
-          input(type="text", placeholder="銭　亀太郎", maxlength="20", required)
-          p.validated この項目は必須です。
-        .TextField.isError
-          p.label 郵便番号
-          input(type="text", placeholder="000-0000", maxlength="20", required)
-          p.validated この項目は必須です。
-        .TextField.isOK
-          p.label 住所
-          input(type="text", maxlength="20")
-        ```
-
+      ```

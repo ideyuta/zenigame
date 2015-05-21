@@ -13,6 +13,9 @@ $(function() {
     return new DropDownMenu(this);
   });
   zn.modal = new Modal;
+  $('.navBtn').on('click', function() {
+    return $('.Navigation').toggleClass('isActive');
+  });
 });
 
 

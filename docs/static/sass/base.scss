@@ -7,7 +7,6 @@
 $img-path: '/static/img';
 $theme-color: #369;
 $default-view-width: 1165px;
-$default-font-size: 13px;
 $default-line-height: 1.5;
 
 @import "../../../src/zenigame";
@@ -28,7 +27,7 @@ $default-line-height: 1.5;
 // :not(input){ -webkit-user-select: none; }
 html, body {
   @include size(100%, auto, 100%, 100%);
-  @include typo($default-font-size, $gray900, 300, $default-line-height);
+  @include typo($base-font-size, $gray900, 300, $default-line-height);
   background: #fff;
   text-transform: none;
   -webkit-text-size-adjust: 100%;
@@ -41,26 +40,80 @@ a {
   &:active { color: $blue900; }
 }
 
-.highlight  {
-  padding: 16px;
-  margin: 8px 0;
-  border: 1px solid $gray100;
-  font-family: 'Inconsolata';
-  letter-spacing: 0.04em;
-  background: $gray50;
-  line-height: 1.4;
-  .title {
-    font-size: 12px;
-  }
-}
 
 //-------------------------------
 // Components
 //-------------------------------
 
-.Grid {
+.GlobalHeader {
+  @include clearfix;
+  position: relative;
+  .symbol {
+    @include size(100%, 72px);
+    padding: 24px 0;
+    text-align: center;
+  }
+  .navBtn {
+    @include pos(absolute, 128px, null, null, 8px);
+    visibility: hidden;
+  }
+  .pageTitle {
+    padding: 48px;
+    h1 {
+      margin: 0;
+      a {
+        color: #000;
+        text-decoration: none;
+        &:hover { color: $gray700; }
+      }
+      span {
+        font-weight: 200;
+        padding: 0 0 0 8px;
+      }
+    }
+  }
+}
+
+.Grid._Preview {
   [class^="Col-"] {
     background: $gray100;
+  }
+}
+
+.Grid._Wrap {
+  max-width: $default-view-width;
+  margin: 0 48px;
+}
+
+@include media(phone) {
+  .GlobalHeader {
+    .navBtn {
+      visibility: visible;
+    }
+    .pageTitle {
+      padding: 16px;
+      h1 {
+        span {
+          display: block;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .Navigation {
+    @include border(0 0 1px 0, solid, $gray100);
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .3s;
+    transition: max-height .3s;
+    &.isActive {
+      max-height: 500px;
+    }
+  }
+ 
+  .Grid._Wrap {
+    margin: 0 16px;
   }
 }
 
@@ -85,12 +138,13 @@ a {
 
 .Icons {
   @include clearfix;
-  max-width: 1000px;
+  padding: 0;
   li {
     width: 250px;
     float: left;
+    padding: 8px;
     p {
-      @include border(1px, solid, $gray300);
+      @include border(1px, solid, $gray100);
       @include typo(12px, $gray900, 300, 1.5em);
       padding: 16px;
       margin: 0;
@@ -102,4 +156,12 @@ a {
       }
     }
   }
+}
+
+pre {
+  @include border(1px, solid, $gray100, 8px);
+  @include typo(12px, $gray700, 300, 1.7em);
+  font-family: 'Inconsolata';
+  background: $gray50;
+  padding: 24px;
 }

@@ -1,85 +1,79 @@
 - var title = "Modal"
-html
-  head
-    include ../partials/_Head
-      prepend window_title
-        &mdash;#{title}
-  body
-    .Wrapper
-      include ../partials/_GlobalHeader
-      include ../partials/_Navigation
-      .Contents
+include ../_base
+  prepend contents
 
-        :markdown
-          #Modal
-          Modalはページ内に1つだけ存在できる。
-          innerの中身を必要に応じで変更する。
+    .Contents
 
-          ##Modal - Dialog
+      :markdown
+        #Modal
+        Modalはページ内に1つだけ存在できる。
+        innerの中身を必要に応じで変更する。
 
-        button.btn.modalOpenBtn(data-name="dialog") Modal Dialog Open
+        ##Modal - Dialog
 
-        :markdown
-          ```jade
-          .Wrapper
-            // contents
-            button.btn.modalOpenBtn Modal Dialog Open
-          .Modal
-            .backdrop.modalCloseBtn
-            .inner
-              .dialog
-                h2.title モーダルダイアログウインドウ
-                .content
-                  p モーダルのコンテンツがはいります。ウインドウサイズより大きくなると見切れてしまうため、あまり大量のコンテンツを挿入しないようにしてください。
-                .control
-                  button.btn.f.modalCancelBtn キャンセル
-                  button.btn.f.modalConfirmBtn 確認
+      button.btn.modalOpenBtn(data-name="dialog") Modal Dialog Open
+
+      :markdown
+        ```jade
+        .Wrapper
+          // contents
+          button.btn.modalOpenBtn Modal Dialog Open
+        .Modal
+          .backdrop.modalCloseBtn
+          .inner
+            .dialog
+              h2.title モーダルダイアログウインドウ
+              .content
+                p モーダルのコンテンツがはいります。ウインドウサイズより大きくなると見切れてしまうため、あまり大量のコンテンツを挿入しないようにしてください。
+              .control
+                button.btn.f.modalCancelBtn キャンセル
+                button.btn.f.modalConfirmBtn 確認
+        ```
+
+      :markdown
+        ##Modal - Page
+
+      button.btn.modalOpenBtn(data-name="page") Modal Page Open
+
+      :markdown
+        ```jade
+        .Wrapper
+          // contents
+          button.btn.modalOpenBtn Modal Page Open
+        .Modal
+          .backdrop.modalCloseBtn
+          .inner
+            .page
+              h2.title モーダルページウインドウ
+              .content
+                p モーダルのコンテンツがはいります。ウインドウサイズに関わらずコンテンツを挿入できます。ウインドウサイズよりもコンテンツ量が長い場合はスクロールします。
+              .control
+                button.btn.f.modalCancelBtn キャンセル
+                button.btn.f.modalConfirmBtn 確認
           ```
 
-        :markdown
-          ##Modal - Page
+  .Modal
+    .backdrop.modalCloseBtn
+    .inner 
 
-        button.btn.modalOpenBtn(data-name="page") Modal Page Open
+      .dialog
+        h2.title モーダルダイアログウインドウ
+        .content
+          p モーダルのコンテンツがはいります。ウインドウサイズより大きくなると見切れてしまうため、あまり大量のコンテンツを挿入しないようにしてください。
+        .control
+          button.btn.f.modalCancelBtn キャンセル
+          button.btn.f.modalConfirmBtn 確認
 
-        :markdown
-          ```jade
-          .Wrapper
-            // contents
-            button.btn.modalOpenBtn Modal Page Open
-          .Modal
-            .backdrop.modalCloseBtn
-            .inner
-              .page
-                h2.title モーダルページウインドウ
-                .content
-                  p モーダルのコンテンツがはいります。ウインドウサイズに関わらずコンテンツを挿入できます。ウインドウサイズよりもコンテンツ量が長い場合はスクロールします。
-                .control
-                  button.btn.f.modalCancelBtn キャンセル
-                  button.btn.f.modalConfirmBtn 確認
-            ```
-
-    .Modal
-      .backdrop.modalCloseBtn
-      .inner 
-
-        .dialog
-          h2.title モーダルダイアログウインドウ
-          .content
-            p モーダルのコンテンツがはいります。ウインドウサイズより大きくなると見切れてしまうため、あまり大量のコンテンツを挿入しないようにしてください。
-          .control
-            button.btn.f.modalCancelBtn キャンセル
-            button.btn.f.modalConfirmBtn 確認
-
-        .page
-          h2.title モーダルページウインドウ
-          .content
-            p モーダルのコンテンツがはいります。ウインドウサイズに関わらずコンテンツを挿入できます。ウインドウサイズよりもコンテンツ量が長い場合はスクロールします。※ 以下確認用余白
-            br
-            br
-            br
-            br
-            br
-            br
-          .control
-            button.btn.f.modalCancelBtn キャンセル
-            button.btn.f.modalConfirmBtn 確認
+      .page
+        h2.title モーダルページウインドウ
+        .content
+          p モーダルのコンテンツがはいります。ウインドウサイズに関わらずコンテンツを挿入できます。ウインドウサイズよりもコンテンツ量が長い場合はスクロールします。※ 以下確認用余白
+          br
+          br
+          br
+          br
+          br
+          br
+        .control
+          button.btn.f.modalCancelBtn キャンセル
+          button.btn.f.modalConfirmBtn 確認

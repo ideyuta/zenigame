@@ -1,28 +1,21 @@
 - var title = "Breadcrumbs"
-html
-  head
-    include ../partials/_Head
-      prepend window_title
-        &mdash;#{title}
-  body
-    include ../partials/_GlobalHeader
-    include ../partials/_Navigation
-    .Contents
+include ../_base
+  prepend contents
 
-      :markdown
-        ##Breadcrumbs
+    :markdown
+      ##Breadcrumbs
 
+    .Breadcrumbs
+      ol
+        li: a(href="") bread
+        li: a(href="") flour
+        li wheat
+
+    :markdown
+      ```jade
       .Breadcrumbs
         ol
           li: a(href="") bread
           li: a(href="") flour
           li wheat
-
-      :markdown
-        ```jade
-        .Breadcrumbs
-          ol
-            li: a(href="") bread
-            li: a(href="") flour
-            li wheat
-        ```
+      ```

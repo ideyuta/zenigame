@@ -1,0 +1,14 @@
+html
+  head
+    include partials/_Head
+      prepend window_title
+        if title
+          &mdash;#{title}
+  body
+    .Wrapper
+      include partials/_GlobalHeader
+      .Grid._Wrap
+        .Col-3of12
+          include partials/_Navigation
+        .Col-9of12
+          block contents

@@ -1,9 +1,13 @@
 .GlobalHeader
-  h1
-    | zenigame
-    if title
-      &mdash;#{title}
-  ul
-    li: a(href="settings.html") settings
-    li: a(href="styles.html") styles
-    li: a(href="mixins.html") mixins
+  .symbol
+    a(href="/")
+      img(src="/img/kame.png", width="72")
+  .pageTitle
+    h1
+      a(href="/")
+        | zenigame
+        if title
+          span #{title}
+  .navBtn
+    button.btn.f.lg
+      i.znicon-menu
