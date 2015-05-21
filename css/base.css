@@ -858,6 +858,7 @@ Button Mixin
   top: 0;
   left: 0;
   background: #fff;
+  list-style: none;
   margin: 4px;
   padding: 3px 0;
   width: 260px;
