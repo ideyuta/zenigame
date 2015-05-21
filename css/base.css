@@ -648,7 +648,6 @@ Button Mixin
   border-radius: 2px;
   padding: 9px 18px;
   display: inline-block;
-  display: inline-flex;
   text-decoration: none !important;
   cursor: pointer;
   font-size: 14px;
@@ -1698,6 +1697,9 @@ Button Mixin
   text-align: right;
 }
 
+.Pagination .btn {
+  display: inline-flex;
+}
 .Pagination .btn.isActive {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -2113,9 +2115,10 @@ a:active {
   clear: both;
 }
 .GlobalHeader .symbol {
-  width: 100%;
+  width: auto;
   height: 72px;
-  padding: 24px 0;
+  float: right;
+  padding: 40px 24px;
   text-align: center;
 }
 .GlobalHeader .navBtn {
@@ -2152,6 +2155,11 @@ a:active {
 }
 
 @media screen and (max-width: 480px) {
+  .GlobalHeader .symbol {
+    float: none;
+    padding: 24px 0;
+    width: 100%;
+  }
   .GlobalHeader .navBtn {
     visibility: visible;
   }
