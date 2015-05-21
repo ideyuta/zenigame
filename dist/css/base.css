@@ -1699,6 +1699,7 @@ Button Mixin
 
 .Pagination .btn {
   display: inline-flex;
+  display: -webkit-inline-flex;
 }
 .Pagination .btn.isActive {
   -webkit-box-shadow: none;
@@ -1733,7 +1734,9 @@ Button Mixin
     display: none;
   }
   .Pagination .btn.next, .Pagination .btn.prev, .Pagination .btn.isActive {
+    display: inline-block;
     display: inline-flex;
+    display: -webkit-inline-flex;
   }
 }
 .RadioBtn {
