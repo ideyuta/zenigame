@@ -1,7 +1,7 @@
 // Border
 //
 
-@mixin border($width: 1px, $style: solid, $color: $extra-light-gray, $radius:null) {
+@mixin border($width: 1px, $style: solid, $color: $gray100, $radius: null) {
   border-style: $style;
   border-color: $color;
   border-width: $width;

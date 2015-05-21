@@ -1,0 +1,34 @@
+<html><head><meta charset="utf=8"/><meta content="ideyuta" name="author"/><meta content="IE=Edge" http-equiv="X-UA-Compatible"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" name="viewport"/><meta content="website" property="og:type"/><meta content="Zenigame" property="og:title"/><meta content="http://ideyuta.com/zenigame/" property="og:url"/><meta content="" property="og:image"/><meta content="" property="og:description"/><title>zenigame&mdash;Modal</title><link rel="stylesheet" href="/css/base.css"/><link rel="stylesheet" href="/fonts/icomoon.css"/><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Inconsolata"/><link href="http://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" type="text/css"/><script>var zn = {};</script><script src="/js/base.js"></script></head><body><div class="Wrapper"><div class="GlobalHeader"><div class="symbol"><a href="/"><img src="/img/kame.png" width="72"/></a></div><div class="pageTitle"><h1><a href="/">zenigame<span>Modal</span></a></h1></div><div class="navBtn"><button class="btn f lg"><i class="znicon-menu"></i></button></div></div><div class="Grid _Wrap"><div class="Col-3of12"><div class="Navigation"><h2>Components</h2><ul><li><a href="/styles/alert.html">Alert</a></li><li><a href="/styles/breadcrumbs.html">Breadcrumbs</a></li><li><a href="/styles/button.html">Buttons</a></li><li><a href="/styles/color.html">Color</a></li><li><a href="/styles/dropdownMenu.html">DropDownMenu</a></li><li><a href="/styles/grid.html">Grid</a></li><li><a href="/styles/icons.html">Icons</a></li><li><a href="/styles/modal.html">Modal</a></li><li><a href="/styles/pagination.html">Pagination</a></li><li><a href="/styles/switches.html">Switches</a></li><li><a href="/styles/tabs.html">Tabs</a></li><li><a href="/styles/table.html">Table</a></li><li><a href="/styles/textfields.html">TextFields</a></li></ul></div></div><div class="Col-9of12"><div class="Contents"><h1 id="modal">Modal</h1>
+<p>Modalはページ内に1つだけ存在できる。
+innerの中身を必要に応じで変更する。</p>
+<h2 id="modal-dialog">Modal - Dialog</h2>
+<button data-name="dialog" class="btn modalOpenBtn">Modal Dialog Open</button><pre><code class="lang-jade">.Wrapper
+  // contents
+  button.btn.modalOpenBtn Modal Dialog Open
+.Modal
+  .backdrop.modalCloseBtn
+  .inner
+    .dialog
+      h2.title モーダルダイアログウインドウ
+      .content
+        p モーダルのコンテンツがはいります。ウインドウサイズより大きくなると見切れてしまうため、あまり大量のコンテンツを挿入しないようにしてください。
+      .control
+        button.btn.f.modalCancelBtn キャンセル
+        button.btn.f.modalConfirmBtn 確認
+</code></pre>
+<h2 id="modal-page">Modal - Page</h2>
+<button data-name="page" class="btn modalOpenBtn">Modal Page Open</button><pre><code class="lang-jade">.Wrapper
+  // contents
+  button.btn.modalOpenBtn Modal Page Open
+.Modal
+  .backdrop.modalCloseBtn
+  .inner
+    .page
+      h2.title モーダルページウインドウ
+      .content
+        p モーダルのコンテンツがはいります。ウインドウサイズに関わらずコンテンツを挿入できます。ウインドウサイズよりもコンテンツ量が長い場合はスクロールします。
+      .control
+        button.btn.f.modalCancelBtn キャンセル
+        button.btn.f.modalConfirmBtn 確認
+</code></pre>
+</div><div class="Modal"><div class="backdrop modalCloseBtn"></div><div class="inner"> <div class="dialog"><h2 class="title">モーダルダイアログウインドウ</h2><div class="content"><p>モーダルのコンテンツがはいります。ウインドウサイズより大きくなると見切れてしまうため、あまり大量のコンテンツを挿入しないようにしてください。</p></div><div class="control"><button class="btn f modalCancelBtn">キャンセル</button><button class="btn f modalConfirmBtn">確認</button></div></div><div class="page"><h2 class="title">モーダルページウインドウ</h2><div class="content"><p>モーダルのコンテンツがはいります。ウインドウサイズに関わらずコンテンツを挿入できます。ウインドウサイズよりもコンテンツ量が長い場合はスクロールします。※ 以下確認用余白</p><br/><br/><br/><br/><br/><br/></div><div class="control"><button class="btn f modalCancelBtn">キャンセル</button><button class="btn f modalConfirmBtn">確認</button></div></div></div></div></div></div></div></body></html>

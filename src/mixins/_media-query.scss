@@ -11,37 +11,14 @@
 // Referense:
 //   http://screensiz.es/phone
 
-
-$bp-phone: 480px;
-$bp-tablet: 768px;
-$bp-pc: 900px;
-
 @mixin media($media-width) {
-  @if $test == false {
-    @if $media-width == phone {
-      @media only screen and (max-device-width: $bp-phone), 
-      only screen and (max-device-width: $bp-phone) and (-o-min-device-pixel-ratio: 2/1), 
-      only screen and (max-device-width: $bp-tablet) and (-webkit-min-device-pixel-ratio: 2), 
-      only screen and (min-device-pixel-ratio: 2) {
-        @content;
-      }
-    }
-    @else if $media-width == tablet {
-      @media only screen and (max-device-width: $bp-tablet) { @content; }
-    }
-    @else if $media-width == pc {
-      @media only screen and (min-device-width: $bp-pc) { @content; }
-    }
-
-  } @else {
-    @if $media-width == phone {
-      @media only screen and (max-width: $bp-phone) { @content; }
-    }
-    @else if $media-width == tablet {
-      @media only screen and (max-width: $bp-tablet) { @content; }
-    }
-    @else if $media-width == pc {
-      @media only screen and (min-width: $bp-pc) { @content; }
-    }
+  @if $media-width == phone {
+    @media screen and (max-width: $bp-phone) { @content; }
+  }
+  @else if $media-width == tablet {
+    @media screen and (max-width: $bp-tablet) { @content; }
+  }
+  @else if $media-width == pc {
+    @media screen and (max-width: $bp-pc) { @content; }
   }
 }

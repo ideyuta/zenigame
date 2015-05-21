@@ -1,0 +1,79 @@
+- var title = "Tabs"
+include ../_base
+  prepend contents
+
+    :markdown
+      ##Tabs
+
+    .Tabs
+      .tab: a.btn.isActive(href="") Tab
+      .tab: a.btn(href="") Tab
+      .tab: a.btn(href="") Tab
+      .tab: a.btn(href="") Tab
+
+    :markdown
+      ```jade
+      .Tabs
+        .tab: a.btn.isActive(href="") Tab
+        .tab: a.btn(href="") Tab
+        .tab: a.btn(href="") Tab
+        .tab: a.btn(href="") Tab
+      ```
+
+
+    :markdown
+      ##Tabs Size
+      ボタンサイズを変更すればリサイズできる
+
+    .Tabs
+      .tab: a.btn.md.isActive(href="") Tab
+      .tab: a.btn.md(href="") Tab
+      .tab: a.btn.md(href="") Tab
+      .tab: a.btn.md(href="") Tab
+
+    :markdown
+      ```jade
+      .Tabs
+        .tab: a.btn.md.isActive(href="") Tab
+        .tab: a.btn.md(href="") Tab
+        .tab: a.btn.md(href="") Tab
+        .tab: a.btn.md(href="") Tab
+      ```
+
+
+    :markdown
+      ##Tabs Group
+
+    .Tabs._Group
+      .tab: a.btn(href="") Tab
+      .tab: a.btn(href="") Tab
+      .tab: a.btn.isActive(href="") Tab
+      .tab: a.btn(href="") Tab
+
+    :markdown
+      ```jade
+      .Tabs._Group
+        .tab: a.btn(href="") Tab
+        .tab: a.btn(href="") Tab
+        .tab: a.btn.isActive(href="") Tab
+        .tab: a.btn(href="") Tab
+      ```
+
+
+    :markdown
+      ##FlexTabs
+
+    .FlexTabs
+      .tab: a.btn(href="") Tab
+      .tab: a.btn.isActive(href="") Tab
+      .tab: a.btn(href="") Tab
+      .tab: a.btn(href="") Tab
+
+    :markdown
+      ```jade
+      .FlexTabs
+        .tab: a.btn(href="") Tab
+        .tab: a.btn.isActive(href="") Tab
+        .tab: a.btn(href="") Tab
+        .tab: a.btn(href="") Tab
+      ```

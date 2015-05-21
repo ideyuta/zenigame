@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+//-------------------------------
+// Settings
+//-------------------------------
+
+$img-path: '/static/img';
+$theme-color: #369;
+$default-view-width: 1165px;
+$default-line-height: 1.5;
+
+@import "../../../src/zenigame";
+
+//-------------------------------
+// Base
+//-------------------------------
+
+* {
+  // リンク要素タップ時に色変更しない
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  // iOS でリンク長押ししてもポップアップメニューを出さない
+  // -webkit-touch-callout: none;
+  font-family:'Noto Sans Japanese', $font;
+}
+
+// input以外選択できないようにする
+// :not(input){ -webkit-user-select: none; }
+html, body {
+  @include size(100%, auto, 100%, 100%);
+  @include typo($base-font-size, $gray900, 300, $default-line-height);
+  background: #fff;
+  text-transform: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  &:link { color: $blue500; }
+  &:visited { color: $blue700; }
+  &:hover { color: $blue900; }
+  &:active { color: $blue900; }
+}
+
+
+//-------------------------------
+// Components
+//-------------------------------
+
+.GlobalHeader {
+  @include clearfix;
+  position: relative;
+  .symbol {
+    @include size(auto, 72px);
+    float: right;
+    padding: 40px 24px;
+    text-align: center;
+  }
+  .navBtn {
+    @include pos(absolute, 128px, null, null, 8px);
+    visibility: hidden;
+  }
+  .pageTitle {
+    padding: 48px;
+    h1 {
+      margin: 0;
+      a {
+        color: #000;
+        text-decoration: none;
+        &:hover { color: $gray700; }
+      }
+      span {
+        font-weight: 200;
+        padding: 0 0 0 8px;
+      }
+    }
+  }
+}
+
+.Grid._Preview {
+  [class^="Col-"] {
+    background: $gray100;
+  }
+}
+
+.Grid._Wrap {
+  max-width: $default-view-width;
+  margin: 0 48px;
+}
+
+@include media(phone) {
+  .GlobalHeader {
+    .symbol {
+      float: none;
+      padding: 24px 0;
+      width: 100%;
+    }
+    .navBtn {
+      visibility: visible;
+    }
+    .pageTitle {
+      padding: 16px;
+      h1 {
+        span {
+          display: block;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .Navigation {
+    @include border(0 0 1px 0, solid, $gray100);
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .3s;
+    transition: max-height .3s;
+    &.isActive {
+      max-height: 500px;
+    }
+  }
+ 
+  .Grid._Wrap {
+    margin: 0 16px;
+  }
+}
+
+.Colors {
+  @include size(232px, auto);
+  float: left;
+  padding: 16px;
+  ul {
+    padding: 0;
+  }
+  .color {
+    @include size(auto, 48px);
+    line-height: 48px;
+    list-style: none;
+    padding: 0 24px;
+    &:after {
+      float: right;
+    }
+  }
+}
+@import "colors";
+
+.Icons {
+  @include clearfix;
+  padding: 0;
+  li {
+    width: 250px;
+    float: left;
+    padding: 8px;
+    p {
+      @include border(1px, solid, $gray100);
+      @include typo(12px, $gray900, 300, 1.5em);
+      padding: 16px;
+      margin: 0;
+      i {
+        @include typo(32px, $gray900, 300, 1.5em);
+      }
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+pre {
+  @include border(1px, solid, $gray100, 8px);
+  @include typo(12px, $gray700, 300, 1.7em);
+  font-family: 'Inconsolata';
+  background: $gray50;
+  padding: 24px;
+}

@@ -1,0 +1,37 @@
+.TextField {
+  padding: 8px;
+  &.isOK {
+    input {
+      @include border(0 0 2px 0, solid, $green500);
+    }
+  }
+  &.isError {
+    .validated {
+      display: block;
+    }
+    input {
+      @include border(0 0 2px 0, solid, $red500);
+    }
+  }
+  .label {
+    @include typo($base-font-size - 4px, $gray700, 300, 1em);
+    margin: 0;
+  }
+  input {
+    @include border(0 0 1px 0, solid, $gray300);
+    @include typo($base-font-size, $gray900, 300, 24px);
+    @include size(100%, 39px);
+    padding: 0 2px;
+    &:focus { outline: none; }
+    &::-webkit-input-placeholder {
+      color: $gray300;
+      font-weight: 100;
+    }
+  }
+  .validated {
+    @include typo($base-font-size - 6px, $red500, 700, 1.5em);
+    display: none;
+    margin: 0 auto;
+    padding: 4px 0;
+  }
+}

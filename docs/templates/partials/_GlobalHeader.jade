@@ -1,0 +1,13 @@
+.GlobalHeader
+  .symbol
+    a(href="/")
+      img(src="/img/kame.png", width="72")
+  .pageTitle
+    h1
+      a(href="/")
+        | zenigame
+        if title
+          span #{title}
+  .navBtn
+    button.btn.f.lg
+      i.znicon-menu

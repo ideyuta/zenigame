@@ -1,8 +1,0 @@
-// Modals 
-
-@mixin modal($z: 9000) {
-  @include size(100%);
-  @include pos(absolute, 0, 0);
-  z-index: $z;
-  display: none;
-}

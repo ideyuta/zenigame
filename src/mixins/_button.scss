@@ -1,35 +1,39 @@
-// Button 
+/*
+Button Mixin
+*/
 
-@mixin btn($width, $height, $padding: null, $radius: $default-radius) {
-  @include size($width, $height);
-  @include border-radius($radius);
-  display: inline-block;
+
+@mixin btn($height, $padding: $height/2 $height) {
+  @include clearfix;
+  @include size(auto);
+  @include border(1px, solid, $gray100, 2px);
   padding: $padding;
+  display: inline-block;
   text-decoration: none !important;
-  text-align: center;
+  cursor: pointer;
+  &:focus { outline: none; }
 }
 
 @mixin btn-varient($color, $background-color) {
-  @include btn-gradient($background-color);
-  border-color: darken($background-color, 15%);
+  @include box-shadow(0 1px 3px darken($background-color, 6%));
+  background-color: $background-color;
+  border-color: darken($background-color, 8%);
   color: $color;
+  &:hover { background: darken($background-color, 3%) !important; }
   &:active {
-    background: darken($background-color, 5%);
+    @include box-shadow(none);
+    background: darken($background-color, 6%) !important;
   }
 }
 
-@mixin btn-gradient ($start-color) {
-  $end-color: darken($start-color, 5%);
+@mixin btn-gradient ($start-color, $end-color: darken($start-color, 2%)) {
   background: $start-color;
   background: -moz-linear-gradient(top, $start-color, $end-color);
   background: -webkit-gradient(linear, left top, left bottom, from($start-color), to($end-color));
-  @include media(pc) {
-    &:hover { background: darken($start-color, 6%); }
-  }
+  &:hover { background: darken($start-color, 3%); }
 }
 
-@mixin btn-resize($height, $font-size, $padding) {
-  height: $height;
+@mixin btn-resize($height, $font-size, $padding: $height/2 $height) {
   line-height: $height;
   padding: $padding;
   font-size: $font-size;

@@ -1,0 +1,95 @@
+- var title = "Button"
+include ../_base
+  prepend contents
+
+    :markdown
+      ##Button
+
+    a.btn(href="") BUTTON
+    button.btn BUTTON
+
+    :markdown
+      ```jade
+      a.btn(href="") BUTTON
+      button.btn BUTTON
+      ```
+
+    :markdown
+      ##Flat Button
+
+    a.btn.f(href="") BUTTON
+    button.btn.f BUTTON
+
+    :markdown
+      ```jade
+      a.btn.f(href="") BUTTON
+      button.btn.f BUTTON
+      ```
+
+    :markdown
+      ##Round Button
+
+    a.btn.r(href="") BUTTON
+    button.btn.r BUTTON
+
+    :markdown
+      ```jade
+      a.btn.r(href="") BUTTON
+      button.btn.r BUTTON
+      ```
+
+    :markdown
+      ##Button + Icon
+
+    a.btn(href="")
+      span BUTTON
+      i.znicon-open
+    button.btn.r
+      i.znicon-check
+      span BUTTON
+
+    :markdown
+      ```jade
+      a.btn(href="")
+        span BUTTON
+        i.znicon-open
+      button.btn.r
+        i.znicon-check
+        span BUTTON
+      ```
+
+    :markdown
+      ##Button Size
+
+    button.btn.lg BUTTON
+    button.btn.md BUTTON
+    button.btn BUTTON
+    button.btn.sm BUTTON
+    button.btn.xs BUTTON
+
+    :markdown
+      ```jade
+      button.btn.lg BUTTON
+      button.btn.md BUTTON
+      button.btn BUTTON
+      button.btn.sm BUTTON
+      button.btn.xs BUTTON
+      ```
+
+    :markdown
+      ##Button Group
+
+    .BtnGroup
+      button.btn BUTTON
+      button.btn BUTTON
+      button.btn BUTTON
+      button.btn BUTTON
+
+    :markdown
+      ```jade
+      .BtnGroup
+        button.btn BUTTON
+        button.btn BUTTON
+        button.btn BUTTON
+        button.btn BUTTON
+      ```

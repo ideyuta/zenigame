@@ -1,0 +1,21 @@
+- var title = "Breadcrumbs"
+include ../_base
+  prepend contents
+
+    :markdown
+      ##Breadcrumbs
+
+    .Breadcrumbs
+      ol
+        li: a(href="") bread
+        li: a(href="") flour
+        li wheat
+
+    :markdown
+      ```jade
+      .Breadcrumbs
+        ol
+          li: a(href="") bread
+          li: a(href="") flour
+          li wheat
+      ```

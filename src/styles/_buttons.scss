@@ -1,0 +1,51 @@
+.btn {
+  @include btn(18px);
+  @include typo($base-font-size - 2px, $gray500, 300, 18px);
+  @include btn-varient($gray700, #fff);
+  margin: 6px 4px;
+  span + [class^="znicon-"],
+  span + [class*=" znicon-"],
+  span + .icon,
+  [class^="znicon-"] + span,
+  [class*=" znicon-"] + span,
+  .icon + span {
+    padding: 0 0 0 8px;
+  }
+}
+
+.btn.f {
+  @include box-shadow(none);
+  background-color: transparent;
+  border: 0;
+}
+
+.btn.r {
+  @include border-radius(18px);
+  &.lg { @include border-radius(32px); }
+  &.md { @include border-radius(24px); }
+  &.sm { @include border-radius(14px); }
+  &.xs { @include border-radius(10px); }
+}
+
+
+.btn {
+  &.lg { @include btn-resize(32px, $base-font-size + 4px); }
+  &.md { @include btn-resize(24px, $base-font-size + 2px); }
+  &.sm { @include btn-resize(14px, $base-font-size - 4px); }
+  &.xs { @include btn-resize(10px, $base-font-size - 6px); }
+}
+
+// TODO desableちゃんとする
+.btn.is-disable { @include opacity(.4); }
+
+
+.BtnGroup {
+  display: inline;
+  .btn {
+    margin: 0;
+    border-left-width: 0;
+    &:first-child {
+      border-left-width: 1px;
+    }
+  }
+}

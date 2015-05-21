@@ -1,0 +1,40 @@
+.Pagination {
+  .btn {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    &.isActive {
+      @include box-shadow(none);
+      cursor: default;
+      background: $blue500 !important;
+      border-color: $blue500;
+      color: #fff;
+    }
+    &.isDisable {
+      @include border(0);
+      @include box-shadow(none);
+      background: transparent !important;
+      cursor: default;
+      &.f {
+        color: $gray300;
+      }
+      + .btn {
+        border-left-width: 1px;
+      }
+    }
+  }
+}
+
+@include media(phone) {
+  .Pagination {
+    .btn {
+      display: none;
+      &.next,
+      &.prev,
+      &.isActive {
+        display: inline-block;
+        display: inline-flex;
+        display: -webkit-inline-flex;
+      }
+    }
+  }
+}

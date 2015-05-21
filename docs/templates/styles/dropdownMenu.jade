@@ -1,0 +1,57 @@
+- var title = "DropDownMenu"
+include ../_base
+  prepend contents
+
+    :markdown
+      ##DropDownMenu
+
+    .DropDownMenu
+      button.btn
+        span.value Item1
+        i.znicon-chevron-down
+      ul.itemList.isHidden
+        li: a.item.isActive(href="") Item1
+        li: a.item(href="")
+          i.znicon-circle-plus
+          | Item2
+        li: a.item(href="") Item3
+
+    :markdown
+      ```jade
+      .DropDownMenu
+        button.btn
+          span.value Item1
+          i.znicon-chevron-down
+        ul.itemList.isHidden
+          li: a.item.isActive(href="") Item1
+          li: a.item(href="")
+            i.znicon-circle-plus
+            | Item2
+          li: a.item(href="") Item3
+      ```
+
+    :markdown
+      ##DropDownMenu-Label
+
+    .DropDownMenu
+      button.btn
+        span.label ItemList
+        span.value Item1
+        i.znicon-chevron-down
+      ul.itemList.isHidden
+        li: a.item.isActive(href="") Item1
+        li: a.item(href="") Item2
+        li: a.item(href="") Item3
+
+    :markdown
+      ```jade
+      .DropDownMenu
+        button.btn
+          span.label ItemList
+          span.value Item1
+          i.znicon-chevron-down
+        ul.itemList.isHidden
+          li: a.item.isActive(href="") Item1
+          li: a.item(href="") Item2
+          li: a.item(href="") Item3
+      ```

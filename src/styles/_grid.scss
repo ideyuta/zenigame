@@ -1,0 +1,36 @@
+// Ref: https://github.com/grahammiller/ResponsiveGridSystem
+
+$margin: 1.2%;
+
+.Grid {
+  @include clearfix;
+  [class^="Col-"] {
+    float: left;
+    margin: 1% 0 1% $margin;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+@for $p from 2 through 12 {
+  $colw: (100% - $margin * ($p - 1)) / $p;
+  @for $n from 1 through $p {
+    $w: $colw * $n + $margin * ($n - 1);
+    @if $n == $p { $w: 100%; }
+    .Col-#{$n}of#{$p} {
+      width: decimal-floor($w, 2);
+    }
+    @include media(phone) {
+      .Col-#{$n}of#{$p} { width: 100%; }
+    }
+  }
+}
+
+@include media(phone) {
+  .Grid {
+    [class^="Col-"] {
+      margin: 1% 0;
+    }
+  }
+}

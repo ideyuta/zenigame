@@ -1,0 +1,41 @@
+.Alert {
+  margin: 24px;
+  padding: 16px;
+  p {
+    margin: 0;
+  }
+  &._Success {
+    @include border(1px, solid, $green300);
+    background: $green200;
+    color: $green900;
+  }
+  &._Info {
+    @include border(1px, solid, $blue300);
+    background: $blue200;
+    color: $blue900;
+  }
+  &._Warning {
+    @include border(1px, solid, $yellow300);
+    background: $yellow200;
+    color: $yellow900;
+  }
+  &._Danger {
+    @include border(1px, solid, $red300);
+    background: $red200;
+    color: $red900;
+  }
+  &._Float {
+    &._Success {
+      @include box-shadow(0 6px 24px $green200);
+    }
+    &._Info {
+      @include box-shadow(0 6px 16px $blue100);
+    }
+    &._Warning {
+      @include box-shadow(0 6px 16px $yellow100);
+    }
+    &._Danger {
+      @include box-shadow(0 6px 16px $red100);
+    }
+  }
+}

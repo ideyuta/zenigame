@@ -1,0 +1,57 @@
+.Tabs {
+  @include border(0 0 1px 0, solid, $gray100);
+  @include clearfix;
+  position: relative;
+  .tab {
+    bottom: -1px;
+    float: left;
+    position: relative;
+  }
+  .btn {
+    @include box-shadow(none);
+    margin: 0 4px;
+    &.isActive {
+      background: #fff !important;
+      border-bottom-color: #fff;
+      cursor: default;
+    }
+  }
+
+  &._Group {
+    .tab:first-child {
+      .btn {
+        border-width: 1px;
+      }
+    }
+    .btn {
+      margin: 0;
+      border-width: 1px 1px 1px 0;
+    }
+  }
+}
+
+
+.FlexTabs {
+  display: table;
+  width: 100%;
+  .tab {
+    display: table-cell;
+    &:first-child {
+      .btn {
+        border-left: 0;
+      }
+    }
+    .btn {
+      @include border-radius(0);
+      @include box-shadow(none);
+      border-right: 0;
+      display: block;
+      margin: 0;
+      &.isActive {
+        background: #fff !important;
+        border-bottom-color: #fff;
+        cursor: default;
+      }
+    }
+  }
+}
