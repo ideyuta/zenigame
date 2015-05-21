@@ -16,6 +16,7 @@
     @include border(1px, solid, $gray100, 2px);
     @include pos(absolute, 0, 0);
     background: #fff;
+    list-style: none;
     margin: 4px;
     padding: 3px 0;
     width: 260px;
