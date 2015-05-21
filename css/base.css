@@ -2077,7 +2077,7 @@ html, body {
   height: auto;
   min-width: 100%;
   min-height: 100%;
-  font-size: 13px;
+  font-size: 16px;
   color: #212121;
   font-weight: 300;
   line-height: 1.5;
@@ -2100,23 +2100,85 @@ a:active {
   color: #006da3;
 }
 
-.highlight {
-  padding: 16px;
-  margin: 8px 0;
-  border: 1px solid #f2f2f2;
-  font-family: 'Inconsolata';
-  letter-spacing: 0.04em;
-  background: #fafafa;
-  line-height: 1.4;
+.GlobalHeader {
+  *zoom: 1;
+  position: relative;
 }
-.highlight .title {
-  font-size: 12px;
+.GlobalHeader:before, .GlobalHeader:after {
+  content: '';
+  display: table;
+}
+.GlobalHeader:after {
+  clear: both;
+}
+.GlobalHeader .symbol {
+  width: 100%;
+  height: 72px;
+  padding: 24px 0;
+  text-align: center;
+}
+.GlobalHeader .navBtn {
+  position: absolute;
+  top: 128px;
+  right: 8px;
+  visibility: hidden;
+}
+.GlobalHeader .pageTitle {
+  padding: 48px;
+}
+.GlobalHeader .pageTitle h1 {
+  margin: 0;
+}
+.GlobalHeader .pageTitle h1 a {
+  color: #000;
+  text-decoration: none;
+}
+.GlobalHeader .pageTitle h1 a:hover {
+  color: #5c5c5c;
+}
+.GlobalHeader .pageTitle h1 span {
+  font-weight: 200;
+  padding: 0 0 0 8px;
 }
 
-.Grid [class^="Col-"] {
+.Grid._Preview [class^="Col-"] {
   background: #f2f2f2;
 }
 
+.Grid._Wrap {
+  max-width: 1165px;
+  margin: 0 48px;
+}
+
+@media screen and (max-width: 480px) {
+  .GlobalHeader .navBtn {
+    visibility: visible;
+  }
+  .GlobalHeader .pageTitle {
+    padding: 16px;
+  }
+  .GlobalHeader .pageTitle h1 span {
+    display: block;
+    padding: 0;
+  }
+
+  .Navigation {
+    border-style: solid;
+    border-color: #f2f2f2;
+    border-width: 0 0 1px 0;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .3s;
+    transition: max-height .3s;
+  }
+  .Navigation.isActive {
+    max-height: 500px;
+  }
+
+  .Grid._Wrap {
+    margin: 0 16px;
+  }
+}
 .Colors {
   width: 232px;
   height: auto;
@@ -2489,7 +2551,7 @@ a:active {
 
 .Icons {
   *zoom: 1;
-  max-width: 1000px;
+  padding: 0;
 }
 .Icons:before, .Icons:after {
   content: '';
@@ -2501,10 +2563,11 @@ a:active {
 .Icons li {
   width: 250px;
   float: left;
+  padding: 8px;
 }
 .Icons li p {
   border-style: solid;
-  border-color: #ccc;
+  border-color: #f2f2f2;
   border-width: 1px;
   font-size: 12px;
   color: #212121;
@@ -2523,4 +2586,21 @@ a:active {
 }
 .Icons li p span {
   display: block;
+}
+
+pre {
+  border-style: solid;
+  border-color: #f2f2f2;
+  border-width: 1px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #5c5c5c;
+  font-weight: 300;
+  line-height: 1.7em;
+  letter-spacing: 0;
+  font-family: 'Inconsolata';
+  background: #fafafa;
+  padding: 24px;
 }
