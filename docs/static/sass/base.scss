@@ -34,9 +34,9 @@ html, body {
   -webkit-text-size-adjust: 100%;
 }
 
-.link {
+a {
   &:link { color: $blue500; }
-  &:visited { color: $blue500; }
+  &:visited { color: $blue700; }
   &:hover { color: $blue900; }
   &:active { color: $blue900; }
 }
