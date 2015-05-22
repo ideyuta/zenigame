@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "",
   "author": "ideyuta",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ideyuta/zenigame.git"
+  },  
   "browserify": {
     "transform": [
       "coffeeify",
