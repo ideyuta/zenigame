@@ -3,7 +3,7 @@ machine:
 
 dependencies:
   pre:
-    - npm install
+    - npm install -g gulp
     - bower install
 
 test:
