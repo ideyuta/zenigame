@@ -1,0 +1,18 @@
+machine:
+  timezone: Asia/Tokyo
+
+dependencies:
+  pre:
+    - npm install
+    - bower install
+
+test:
+  override:
+    - echo 'test'
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - gulp build
+      - git subtree push --prefix dist/ origin gh-pages
