@@ -1,10 +1,10 @@
 .GlobalHeader
   .symbol
-    a(href="/")
-      img(src="/img/kame.png", width="72")
+    a(href="#{path}")
+      img(src="#{path}img/kame.png", width="72")
   .pageTitle
     h1
-      a(href="/")
+      a(href="#{path}")
         | zenigame
         if title
           span #{title}
