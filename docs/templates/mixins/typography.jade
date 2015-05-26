@@ -1,0 +1,42 @@
+- var title = "Mixin - Typography"
+- var path  = "../"
+include ../_base
+  prepend contents
+
+    :markdown
+      ## Typo
+      文字の指定を簡略化するショートカットMixin。
+
+      ```
+      @include typo(size, color, weight, line-height, space);
+      ```
+      #### 引数
+    .Table._Basic
+      table
+        caption 表 typo Mixinのarguments
+        thead
+          tr
+            th Arguments
+            th Default Value
+            th Required
+        tbody
+          tr
+            td size
+            td
+            td Required
+          tr
+            td color
+            td $default-text-color
+            td
+          tr
+            td weight
+            td 300
+            td
+          tr
+            td line-height
+            td $default-line-height
+            td
+          tr
+            td space
+            td 0
+            td
