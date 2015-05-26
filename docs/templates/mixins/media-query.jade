@@ -1,0 +1,89 @@
+- var title = "Mixin - Media Query"
+- var path  = "../"
+include ../_base
+  prepend contents
+
+    :markdown
+      ## Overview
+      Media Queryに関係するMixinは3つあります。
+    .Table._Basic
+      table
+        caption 表 メディアクエリに関係するMixin
+        tbody
+          tr
+            td media
+            td メディアタイプでmedia-queryを指定する
+          tr
+            td min-screen
+            td min-widthでmedia-queryを指定する
+          tr
+            td max-screen
+            td max-widthでmedia-queryを指定する
+
+
+    :markdown
+      ## media
+      phone、tablet、pcの3つのタイプから選んでmedia-queryを指定します。それぞれブレイクポイントはconfigで設定している変数で指定されています。
+      ```
+      @include media(type);
+      ```
+      #### オプション
+    .Table._Basic
+      table
+        caption 表 media Mixinのarguments
+        thead
+          tr
+            th Option
+            th Default Value
+            th Input
+            th Required
+        tbody
+          tr
+            td type
+            td
+            td phone/tablet/pc
+            td Required
+
+
+    :markdown
+      ## min-screen
+      min-widthを指定してmedia-queryを指定します。指定した横幅よりもウインドウサイズが大きい場合にスタイルが適用されます。
+      ```
+      @include min-screen(width);
+      ```
+      #### オプション
+    .Table._Basic
+      table
+        caption 表 min-screen Mixinのarguments
+        thead
+          tr
+            th Option
+            th Default Value
+            th Required
+        tbody
+          tr
+            td width
+            td
+             td Required
+
+
+    :markdown
+      ## max-screen
+      max-widthを指定してmedia-queryを指定します。指定した横幅よりもウインドウサイズが小さい場合にスタイルが適用されます。
+      ```
+      @include max-screen(width);
+      ```
+      #### オプション
+    .Table._Basic
+      table
+        caption 表 max-screen Mixinのarguments
+        thead
+          tr
+            th Option
+            th Default Value
+            th Required
+        tbody
+          tr
+            td width
+            td
+            td Required
