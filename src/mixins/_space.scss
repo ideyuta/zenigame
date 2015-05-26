@@ -1,8 +1,0 @@
-// Space 
-//
-// Margin & Padding Shortcut
-
-@mixin space($_padding:null, $_margin:null) {
-  padding: $_padding;
-  margin: $_margin;
-}

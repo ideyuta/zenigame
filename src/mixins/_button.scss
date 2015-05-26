@@ -1,9 +1,10 @@
 @mixin btn($height, $padding: $height/2 $height) {
   @include clearfix;
   @include size(auto);
-  @include space($padding, 6px 4px);
   cursor: pointer;
   display: inline-block;
+  margin: 6px 4px;
+  padding: $padding;
   text-decoration: none !important;
   &:focus {
     outline: none;

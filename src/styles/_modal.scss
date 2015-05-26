@@ -28,10 +28,11 @@
     @include border-radius(2px);
     @include box-shadow(0 8px 24px $gray700);
     @include clearfix;
-    @include space(0 24px, 24px auto);
     @include z(1);
     background: #fff;
+    margin: 24px auto;
     max-width: 640px;
+    padding: 0 24px;
     width: 80%;
   }
   .page {
