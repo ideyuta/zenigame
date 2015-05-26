@@ -1,0 +1,74 @@
+- var title = "Mixin - Border"
+- var path  = "../"
+include ../_base
+  prepend contents
+
+    :markdown
+      ## Overview
+      borderの指定を簡略化するショートカットMixin。
+    .Table._Basic
+      table
+        caption 表 ボーダー指定のためのShortcut Mixin
+        tbody
+          tr
+            td border
+            td border/border-radiusを一気に指定できる
+          tr
+            td border-radius
+            td border-radiusのvender prefix付きプロパティの指定を簡略化
+
+
+    :markdown
+      ## border
+      ボーダースタイルを追加します。
+      ```
+      @include border(width, style, color, radius);
+      ```
+      #### オプション
+    .Table._Basic
+      table
+        caption 表 border Mixinのarguments
+        thead
+          tr
+            th Option
+            th Default Value
+            th Required
+        tbody
+          tr
+            td width
+            td 1px
+            td
+          tr
+            td style
+            td solid
+            td
+          tr
+            td color
+            td $gray100
+            td
+          tr
+            td radius
+            td null
+            td
+
+
+    :markdown
+      ## border-radius
+      角丸スタイルを追加します。
+      ```
+      @include border-radius(radius);
+      ```
+      #### オプション
+    .Table._Basic
+      table
+        caption 表 border-radius Mixinのarguments
+        thead
+          tr
+            th Option
+            th Default Value
+            th Required
+        tbody
+          tr
+            td radius
+            td $base-radius
+            td
