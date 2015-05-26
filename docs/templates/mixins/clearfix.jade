@@ -1,0 +1,12 @@
+- var title = "Mixin - Clearfix"
+- var path  = "../"
+include ../_base
+  prepend contents
+
+    :markdown
+      ## Clearfix
+      clearfixを適用させるMixin。IE6/7の大幅な崩れを軽減するためにIE6以上に対応。
+
+      ```
+      @include clearfix();
+      ```
