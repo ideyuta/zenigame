@@ -1,24 +1,22 @@
-// Media Query
-//
-// Break Point:
-//   SmartPhone: 480px
-//   Tablet: 768px
-//
-// Test:
-//   PCブラウザでのテスト表示を行う際に、Emulaterを起動することが困難な場合に
-//   ウインドウサイズで可変するよう変更する
-//
-// Referense:
-//   http://screensiz.es/phone
-
-@mixin media($media-width) {
-  @if $media-width == phone {
+@mixin media($media) {
+  @if $media == phone {
+    // bp-phoneよりも小さい場合のみ
     @media screen and (max-width: $bp-phone) { @content; }
   }
-  @else if $media-width == tablet {
-    @media screen and (max-width: $bp-tablet) { @content; }
+  @else if $media == tablet {
+    // bp-phoneよりも大きくbp-tabletよりも小さい場合のみ
+    @media screen and (min-width: $bp-phone) and (max-width: $bp-tablet) { @content; }
   }
-  @else if $media-width == pc {
-    @media screen and (max-width: $bp-pc) { @content; }
+  @else if $media == pc {
+    // bp-tabletよりも大きい場合のみ
+    @media screen and (min-width: $bp-tablet) { @content; }
   }
+}
+
+@mixin min-screen($width) {
+  @media screen and (min-width: $width) { @content; }
+}
+
+@mixin max-screen($width) {
+  @media screen and (max-width: $width) { @content; }
 }
