@@ -1,0 +1,81 @@
+- var title = "Mixin - Position"
+- var path  = "../"
+include ../_base
+  prepend contents
+
+    :markdown
+      ## Overview
+      ポジションの指定を簡略化するショートカットMixin。
+    .Table._Basic
+      table
+        caption 表 ポジションの指定のためのShortcut Mixin
+        tbody
+          tr
+            td pos
+            td ポジションおよび位置、z-indexを指定する
+          tr
+            td z
+            td z-indexの値を指定する
+
+    :markdown
+      ## pos
+      ポジションに関係するプロパティの指定を簡略化します。
+      ```
+      @include pos(position, top, left, bottom, right, z);
+      ```
+      #### 引数
+    .Table._Basic
+      table
+        caption 表 pos Mixinのarguments
+        thead
+          tr
+            th Arguments
+            th Default Value
+            th Required
+        tbody
+          tr
+            td position
+            td
+            td Required
+          tr
+            td top
+            td null
+            td
+          tr
+            td left
+            td null
+            td
+          tr
+            td bottom
+            td null
+            td
+          tr
+            td right
+            td null
+            td
+          tr
+            td z
+            td null
+            td
+
+
+    :markdown
+      ## z
+      z-indexのみ指定する場合の記述を簡略化します。positionはrelative指定。
+      ```
+      @include z(z);
+      ```
+      #### 引数
+    .Table._Basic
+      table
+        caption 表 z Mixinのarguments
+        thead
+          tr
+            th Arguments
+            th Default Value
+            th Required
+        tbody
+          tr
+            td z
+            td
+            td Required
