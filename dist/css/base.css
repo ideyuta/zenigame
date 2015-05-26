@@ -2779,7 +2779,7 @@ a:active {
     transition: max-height .3s;
   }
   .Navigation.isActive {
-    max-height: 500px;
+    max-height: 800px;
   }
 
   .Grid._Wrap {
