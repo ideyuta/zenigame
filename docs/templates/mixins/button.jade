@@ -1,0 +1,174 @@
+- var title = "Mixin - Button"
+- var path  = "../"
+include ../_base
+  prepend contents
+
+    :markdown
+      ## Overview
+      ボタンに関係するMixinは4つあります。
+    .Table._Basic
+      table
+        caption 表 ボタンに関係するMixin
+        tbody
+          tr
+            td btn
+            td 基本的なボタンスタイルを定義する
+          tr
+            td btn-varient
+            td ボタンの背景、枠線、影の色を指定する
+          tr
+            td btn-gradient
+            td ボタンの背景色をグラデーションにする
+          tr
+            td btn-resize
+            td ボタンのサイズを変更する
+
+
+    :markdown
+      ## btn
+      ボタンスタイルを作成するための基本的なスタイルを追加します。
+      ```
+      @include btn(height, padding);
+      ```
+      #### オプション
+    .Table._Basic
+      table
+        caption 表 btn Mixinのarguments
+        thead
+          tr
+            th Option
+            th Default Value
+            th Required
+        tbody
+          tr
+            td height
+            td
+            td Required
+          tr
+            td padding
+            td height/2 height
+            td
+    :markdown
+      #### 注意
+      ボタンスタイルを作成するには、 [btn-varient]()と[typo]()を合わせて追加する必要があります。
+      #### 例
+    .button.btn Ex Button
+    :markdown
+      ```
+      .btn {
+        @include btn(18px);
+        @include btn-varient(#fff, $gray200, $gray100, $gray200);
+        @include typo($base-font-size - 2px, $gray700, 300, 18px);
+      }
+      ```
+
+
+    :markdown
+      ## btn-varient
+      ボタンの背景、枠線、影の色を指定します。
+      ```
+      @include btn-varient(background-color, border-color, background-hover-color, background-active-color);
+      ```
+      #### オプション
+    .Table._Basic
+      table
+        caption 表 btn-varient Mixinのarguments
+        thead
+          tr
+            th Option
+            th Default Value
+            th Required
+        tbody
+          tr
+            td background-color
+            td
+            td Required
+          tr
+            td border-color
+            td darken($background-color, 9%)
+            td
+          tr
+            td background-hover-color
+            td darken($background-color, 3%)
+            td
+          tr
+            td background-active-color
+            td darken($background-color, 6%)
+            td
+
+
+    :markdown
+      ## btn-gradient  
+      ボタンの背景色をグラデーションで指定します。ボタンのグラデーションは縦（上から下）のみ行えます。   
+      [btn-varient]()で基本となる色指定をした後にグラデーションの指定をしてください。
+      ```
+      @include btn-gradient(start-color, end-color);
+      ```
+      #### オプション
+    .Table._Basic
+      table
+        caption 表 btn-gradient Mixinのarguments
+        thead
+          tr
+            th Option
+            th Default Value
+            th Required
+        tbody
+          tr
+            td start-color
+            td
+            td Required
+          tr
+            td end-color
+            td
+            td Required
+    :markdown
+      ####例
+    button.btn._ex Ex Button
+    :markdown
+      ```
+      .btn._ex {
+        @include btn-varient($blue500, $blue700, $blue700, $blue800);
+        @include btn-gradient($blue500, $blue700);
+        color: #fff;
+      }
+      ```
+
+
+    :markdown
+      ##btn-resize
+      ボタンサイズを変更します。
+      ```
+      @include btn-resize(height, font-size, padding);
+      ```
+      #### オプション
+    .Table._Basic
+      table
+        caption 表 btn-resize Mixinのarguments
+        thead
+          tr
+            th Option
+            th Default Value
+            th Required
+        tbody
+          tr
+            td height
+            td
+            td Required
+          tr
+            td font-size
+            td
+            td Required
+          tr
+            td pdding
+            td height/2 height
+            td
+    :markdown
+      ####例
+    button.btn._exlg Ex Button
+    :markdown
+      ```
+      .btn._exlg {
+        @include btn-resize(50px, 20px);
+      }
+      ```

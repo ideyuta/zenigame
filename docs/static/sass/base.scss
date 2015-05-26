@@ -180,3 +180,13 @@ pre {
   background: $gray50;
   padding: 24px;
 }
+
+.btn._ex {
+  @include btn-varient($blue500, $blue700, $blue700, $blue800);
+  @include btn-gradient($blue500, $blue700);
+  color: #fff;
+}
+
+.btn._exlg {
+  @include btn-resize(50px, 20px);
+}
