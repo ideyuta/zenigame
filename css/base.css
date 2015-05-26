@@ -543,9 +543,6 @@ th {
   padding: 0;
 }
 
-/*
-Button Mixin
-*/
 .Alert {
   margin: 24px;
   padding: 16px;
@@ -640,29 +637,27 @@ Button Mixin
   *zoom: 1;
   width: auto;
   height: auto;
+  padding: 9px 18px;
+  margin: 6px 4px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none !important;
   border-style: solid;
-  border-color: #f2f2f2;
+  border-color: #e0e0e0;
   border-width: 1px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  padding: 9px 18px;
-  display: inline-block;
-  text-decoration: none !important;
-  cursor: pointer;
+  -webkit-box-shadow: 0 1px 3px #f2f2f2;
+  -moz-box-shadow: 0 1px 3px #f2f2f2;
+  -ms-box-shadow: 0 1px 3px #f2f2f2;
+  box-shadow: 0 1px 3px #f2f2f2;
+  background-color: #fff;
   font-size: 14px;
-  color: #949494;
+  color: #5c5c5c;
   font-weight: 300;
   line-height: 18px;
   letter-spacing: 0;
-  -webkit-box-shadow: 0 1px 3px #f0f0f0;
-  -moz-box-shadow: 0 1px 3px #f0f0f0;
-  -ms-box-shadow: 0 1px 3px #f0f0f0;
-  box-shadow: 0 1px 3px #f0f0f0;
-  background-color: #fff;
-  border-color: #ebebeb;
-  color: #5c5c5c;
-  margin: 6px 4px;
 }
 .btn:before, .btn:after {
   content: '';
@@ -674,16 +669,6 @@ Button Mixin
 .btn:focus {
   outline: none;
 }
-.btn:hover {
-  background: #f7f7f7 !important;
-}
-.btn:active {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  box-shadow: none;
-  background: #f0f0f0 !important;
-}
 .btn span + [class^="znicon-"],
 .btn span + [class*=" znicon-"],
 .btn span + .icon,
@@ -691,6 +676,16 @@ Button Mixin
 .btn [class*=" znicon-"] + span,
 .btn .icon + span {
   padding: 0 0 0 8px;
+}
+.btn:hover {
+  background: #f2f2f2 !important;
+}
+.btn:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+  background: #e0e0e0 !important;
 }
 
 .btn.f {
@@ -729,24 +724,24 @@ Button Mixin
 }
 
 .btn.lg {
+  font-size: 20px;
   line-height: 32px;
   padding: 16px 32px;
-  font-size: 20px;
 }
 .btn.md {
+  font-size: 18px;
   line-height: 24px;
   padding: 12px 24px;
-  font-size: 18px;
 }
 .btn.sm {
+  font-size: 12px;
   line-height: 14px;
   padding: 7px 14px;
-  font-size: 12px;
 }
 .btn.xs {
+  font-size: 10px;
   line-height: 10px;
   padding: 5px 10px;
-  font-size: 10px;
 }
 
 .btn.is-disable {
@@ -3215,4 +3210,39 @@ pre {
   font-family: 'Inconsolata';
   background: #fafafa;
   padding: 24px;
+}
+
+.btn._ex {
+  border-style: solid;
+  border-color: #0094de;
+  border-width: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 3px #0094de;
+  -moz-box-shadow: 0 1px 3px #0094de;
+  -ms-box-shadow: 0 1px 3px #0094de;
+  box-shadow: 0 1px 3px #0094de;
+  background-color: #32b7fa;
+  background: #32b7fa;
+  background: linear-gradient(to bottom, #32b7fa, #0094de);
+  background: -moz-linear-gradient(top, #32b7fa, #0094de);
+  background: -webkit-gradient(linear, left top, left bottom, from(#32b7fa), to(#0094de));
+  color: #fff;
+}
+.btn._ex:hover {
+  background: #0094de !important;
+}
+.btn._ex:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+  background: #0081c2 !important;
+}
+
+.btn._exlg {
+  font-size: 20px;
+  line-height: 50px;
+  padding: 25px 50px;
 }
