@@ -1,0 +1,28 @@
+- var title = "Mixin - Opacity"
+- var path  = "../"
+include ../_base
+  prepend contents
+
+    :markdown
+      ## Opacity
+      透明度のクロスブラウザ対応を簡略化するMixin。
+
+      ```
+      @include opacity(opacity);
+      ```
+      #### 引数
+    .Table._Basic
+      table
+        caption 表 opacity Mixinのarguments
+        thead
+          tr
+            th Arguments
+            th Default Value
+            th Input
+            th Required
+        tbody
+          tr
+            td opacity
+            td
+            td 0.0~1.0
+            td Required
