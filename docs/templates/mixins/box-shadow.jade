@@ -1,0 +1,28 @@
+- var title = "Mixin - Box Shadow"
+- var path  = "../"
+include ../_base
+  prepend contents
+
+    :markdown
+      ## Box Shadow
+      box-shadowのクロスブラウザ対応を簡略化するMixin。
+
+      ```
+      @include box-shadow(box-shadow);
+      ```
+      #### 引数
+    .Table._Basic
+      table
+        caption 表 box-shadow Mixinのarguments
+        thead
+          tr
+            th Arguments
+            th Default Value
+            th Input
+            th Required
+        tbody
+          tr
+            td box-shadow
+            td
+            td 通常のbox-shadowのプロパティ
+            td Required
