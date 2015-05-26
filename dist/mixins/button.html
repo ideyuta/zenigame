@@ -3,8 +3,8 @@
 <div class="Table _Basic"><table><caption>表 ボタンに関係するMixin</caption><tbody><tr><td>btn</td><td>基本的なボタンスタイルを定義する</td></tr><tr><td>btn-varient</td><td>ボタンの背景、枠線、影の色を指定する</td></tr><tr><td>btn-gradient</td><td>ボタンの背景色をグラデーションにする</td></tr><tr><td>btn-resize</td><td>ボタンのサイズを変更する</td></tr></tbody></table></div><h2 id="btn">btn</h2>
 <p>ボタンスタイルを作成するための基本的なスタイルを追加します。</p>
 <pre><code>@include btn(height, padding);
-</code></pre><h4 id="-">オプション</h4>
-<div class="Table _Basic"><table><caption>表 btn Mixinのarguments</caption><thead><tr><th>Option</th><th>Default Value</th><th>Required</th></tr></thead><tbody><tr><td>height</td><td></td><td>Required</td></tr><tr><td>padding</td><td>height/2 height</td><td></td></tr></tbody></table></div><h4 id="-">注意</h4>
+</code></pre><h4 id="-">引数</h4>
+<div class="Table _Basic"><table><caption>表 btn Mixinのarguments</caption><thead><tr><th>Arguments</th><th>Default Value</th><th>Required</th></tr></thead><tbody><tr><td>height</td><td></td><td>Required</td></tr><tr><td>padding</td><td>height/2 height</td><td></td></tr></tbody></table></div><h4 id="-">注意</h4>
 <p>ボタンスタイルを作成するには、 <a href="">btn-varient</a>と<a href="">typo</a>を合わせて追加する必要があります。</p>
 <h4 id="-">例</h4>
 <div class="button btn">Ex Button</div><pre><code>.btn {
@@ -15,12 +15,12 @@
 </code></pre><h2 id="btn-varient">btn-varient</h2>
 <p>ボタンの背景、枠線、影の色を指定します。</p>
 <pre><code>@include btn-varient(background-color, border-color, background-hover-color, background-active-color);
-</code></pre><h4 id="-">オプション</h4>
-<div class="Table _Basic"><table><caption>表 btn-varient Mixinのarguments</caption><thead><tr><th>Option</th><th>Default Value</th><th>Required</th></tr></thead><tbody><tr><td>background-color</td><td></td><td>Required</td></tr><tr><td>border-color</td><td>darken($background-color, 9%)</td><td></td></tr><tr><td>background-hover-color</td><td>darken($background-color, 3%)</td><td></td></tr><tr><td>background-active-color</td><td>darken($background-color, 6%)</td><td></td></tr></tbody></table></div><h2 id="btn-gradient">btn-gradient</h2>
+</code></pre><h4 id="-">引数</h4>
+<div class="Table _Basic"><table><caption>表 btn-varient Mixinのarguments</caption><thead><tr><th>Arguments</th><th>Default Value</th><th>Required</th></tr></thead><tbody><tr><td>background-color</td><td></td><td>Required</td></tr><tr><td>border-color</td><td>darken($background-color, 9%)</td><td></td></tr><tr><td>background-hover-color</td><td>darken($background-color, 3%)</td><td></td></tr><tr><td>background-active-color</td><td>darken($background-color, 6%)</td><td></td></tr></tbody></table></div><h2 id="btn-gradient">btn-gradient</h2>
 <p>ボタンの背景色をグラデーションで指定します。ボタンのグラデーションは縦（上から下）のみ行えます。<br><a href="">btn-varient</a>で基本となる色指定をした後にグラデーションの指定をしてください。</p>
 <pre><code>@include btn-gradient(start-color, end-color);
-</code></pre><h4 id="-">オプション</h4>
-<div class="Table _Basic"><table><caption>表 btn-gradient Mixinのarguments</caption><thead><tr><th>Option</th><th>Default Value</th><th>Required</th></tr></thead><tbody><tr><td>start-color</td><td></td><td>Required</td></tr><tr><td>end-color</td><td></td><td>Required</td></tr></tbody></table></div><h4 id="-">例</h4>
+</code></pre><h4 id="-">引数</h4>
+<div class="Table _Basic"><table><caption>表 btn-gradient Mixinのarguments</caption><thead><tr><th>Arguments</th><th>Default Value</th><th>Required</th></tr></thead><tbody><tr><td>start-color</td><td></td><td>Required</td></tr><tr><td>end-color</td><td></td><td>Required</td></tr></tbody></table></div><h4 id="-">例</h4>
 <button class="btn _ex">Ex Button</button><pre><code>.btn._ex {
   @include btn-varient($blue500, $blue700, $blue700, $blue800);
   @include btn-gradient($blue500, $blue700);
@@ -29,8 +29,8 @@
 </code></pre><h2 id="btn-resize">btn-resize</h2>
 <p>ボタンサイズを変更します。</p>
 <pre><code>@include btn-resize(height, font-size, padding);
-</code></pre><h4 id="-">オプション</h4>
-<div class="Table _Basic"><table><caption>表 btn-resize Mixinのarguments</caption><thead><tr><th>Option</th><th>Default Value</th><th>Required</th></tr></thead><tbody><tr><td>height</td><td></td><td>Required</td></tr><tr><td>font-size</td><td></td><td>Required</td></tr><tr><td>pdding</td><td>height/2 height</td><td></td></tr></tbody></table></div><h4 id="-">例</h4>
+</code></pre><h4 id="-">引数</h4>
+<div class="Table _Basic"><table><caption>表 btn-resize Mixinのarguments</caption><thead><tr><th>Arguments</th><th>Default Value</th><th>Required</th></tr></thead><tbody><tr><td>height</td><td></td><td>Required</td></tr><tr><td>font-size</td><td></td><td>Required</td></tr><tr><td>pdding</td><td>height/2 height</td><td></td></tr></tbody></table></div><h4 id="-">例</h4>
 <button class="btn _exlg">Ex Button</button><pre><code>.btn._exlg {
   @include btn-resize(50px, 20px);
 }
