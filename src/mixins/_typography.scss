@@ -1,32 +1,12 @@
-// Typography
-
-@mixin typo($size: $default-font-size,
+@mixin typo($size,
            $color: $default-text-color,
-          $weight: normal,
+          $weight: 300,
      $line-height: $default-line-height,
            $space: 0)
 {
-  font-size: $size;
   color: $color;
+  font-size: $size;
   font-weight: $weight;
   line-height: $line-height;
   letter-spacing: $space;
 }
-
-
-@mixin typo_display2 {
-  @include typo(56px, $light-black, 300, $default-line-height - 0.2);
-  letter-spacing: -3px;
-}
-
-@mixin typo_display1 {
-  @include typo(34px, $light-black, 300, $default-line-height - 0.1);
-  letter-spacing: -1px;
-}
-@mixin typo_headline ($color:$light-black) { @include typo(24px, $color, 300, $default-line-height); }
-@mixin typo_title ($color:$light-black) { @include typo(20px, $color, 300, $default-line-height); }
-@mixin typo_subtitle ($color:$dark-gray) { @include typo($default-font-size + 4px, $color, 300, $default-line-height); }
-@mixin typo_body2 ($color:$dark-gray) { @include typo($default-font-size + 2px, $color, 300, $default-line-height); }
-@mixin typo_body1 ($color:$dark-gray) { @include typo($default-font-size, $color, 300, $default-line-height); }
-@mixin typo_caption ($color:$gray) { @include typo(12px, $color, 300, $default-line-height); }
-@mixin typo_minimum ($color:$dark-gray) { @include typo(10px, $color, 300, $default-line-height); }
