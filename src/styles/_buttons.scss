@@ -1,7 +1,7 @@
 .btn {
   @include btn(18px);
   @include btn-varient(#fff, $gray200, $gray100, $gray200);
-  @include typo($base-font-size - 2px, $gray700, 300, 18px);
+  @include typo($default-font-size - 2px, $gray700, 300, 18px);
 }
 
 
@@ -22,10 +22,10 @@
 
 
 .btn {
-  &.lg { @include btn-resize(32px, $base-font-size + 4px); }
-  &.md { @include btn-resize(24px, $base-font-size + 2px); }
-  &.sm { @include btn-resize(14px, $base-font-size - 4px); }
-  &.xs { @include btn-resize(10px, $base-font-size - 6px); }
+  &.lg { @include btn-resize(32px, $default-font-size + 4px); }
+  &.md { @include btn-resize(24px, $default-font-size + 2px); }
+  &.sm { @include btn-resize(14px, $default-font-size - 4px); }
+  &.xs { @include btn-resize(10px, $default-font-size - 6px); }
 }
 
 // TODO desableちゃんとする

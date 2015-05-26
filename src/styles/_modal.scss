@@ -42,7 +42,7 @@
     overflow: auto;
   }
   .content {
-    @include typo($base-font-size - 2px, $gray900, 300, 1.6);
+    @include typo($default-font-size - 2px, $gray900, 300, 1.6);
   }
   .control {
     @include border(1px 0 0 0, solid, $gray100);

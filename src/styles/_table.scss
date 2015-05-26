@@ -4,7 +4,7 @@
   table {
     @include size(100%, auto);
     caption {
-      @include typo($base-font-size - 4px, $blue500, 300, 1.5em);
+      @include typo($default-font-size - 4px, $blue500, 300, 1.5em);
       caption-side: bottom;
       padding: 12px 0;
       text-align: left;
@@ -12,14 +12,14 @@
     thead {
       @include border(2px 0, solid, $gray900);
       th {
-        @include typo($base-font-size - 2px, #000, 700, 1.5em);
+        @include typo($default-font-size - 2px, #000, 700, 1.5em);
         padding: 12px 8px;
         text-align: left;
       }
     }
     tbody {
       td {
-        @include typo($base-font-size - 2px, #000, 300, 1.5em);
+        @include typo($default-font-size - 2px, #000, 300, 1.5em);
         padding: 12px 8px;
       }
     }

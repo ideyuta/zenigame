@@ -26,7 +26,7 @@
     }
 
     .item {
-      @include typo($base-font-size - 2px, $gray700, 300, 18px);
+      @include typo($default-font-size - 2px, $gray700, 300, 18px);
       display: block;
       padding: 8px 18px;
       text-decoration: none;

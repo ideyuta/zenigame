@@ -5,7 +5,7 @@
     padding: 0;
     margin: 8px;
     li {
-      @include typo($base-font-size - 2px, $gray700, 300, 1.5em);
+      @include typo($default-font-size - 2px, $gray700, 300, 1.5em);
       float: left;
       a {
         text-decoration: none;
