@@ -1,23 +1,16 @@
 .btn {
   @include btn(18px);
-  @include typo($base-font-size - 2px, $gray500, 300, 18px);
-  @include btn-varient($gray700, #fff);
-  margin: 6px 4px;
-  span + [class^="znicon-"],
-  span + [class*=" znicon-"],
-  span + .icon,
-  [class^="znicon-"] + span,
-  [class*=" znicon-"] + span,
-  .icon + span {
-    padding: 0 0 0 8px;
-  }
+  @include btn-varient(#fff, $gray200, $gray100, $gray200);
+  @include typo($base-font-size - 2px, $gray700, 300, 18px);
 }
+
 
 .btn.f {
   @include box-shadow(none);
   background-color: transparent;
   border: 0;
 }
+
 
 .btn.r {
   @include border-radius(18px);

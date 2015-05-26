@@ -1,40 +1,50 @@
-/*
-Button Mixin
-*/
-
-
 @mixin btn($height, $padding: $height/2 $height) {
   @include clearfix;
   @include size(auto);
-  @include border(1px, solid, $gray100, 2px);
-  padding: $padding;
+  @include space($padding, 6px 4px);
+  cursor: pointer;
   display: inline-block;
   text-decoration: none !important;
-  cursor: pointer;
-  &:focus { outline: none; }
-}
-
-@mixin btn-varient($color, $background-color) {
-  @include box-shadow(0 1px 3px darken($background-color, 6%));
-  background-color: $background-color;
-  border-color: darken($background-color, 8%);
-  color: $color;
-  &:hover { background: darken($background-color, 3%) !important; }
-  &:active {
-    @include box-shadow(none);
-    background: darken($background-color, 6%) !important;
+  &:focus {
+    outline: none;
+  }
+  span + [class^="znicon-"],
+  span + [class*=" znicon-"],
+  span + .icon,
+  [class^="znicon-"] + span,
+  [class*=" znicon-"] + span,
+  .icon + span {
+    padding: 0 0 0 8px;
   }
 }
 
-@mixin btn-gradient ($start-color, $end-color: darken($start-color, 2%)) {
+@mixin btn-varient(
+$background-color,
+$border-color: darken($background-color, 9%),
+$background-hover-color: darken($background-color, 3%),
+$background-active-color: darken($background-color, 6%)
+) {
+  @include border(1px, solid, $border-color, 2px);
+  @include box-shadow(0 1px 3px $background-hover-color);
+  background-color: $background-color;
+  &:hover {
+    background: $background-hover-color!important;
+  }
+  &:active {
+    @include box-shadow(none);
+    background: $background-active-color !important;
+  }
+}
+
+@mixin btn-gradient ($start-color, $end-color: darken($start-color, 4%)) {
   background: $start-color;
+  background: linear-gradient(top, $start-color, $end-color);
   background: -moz-linear-gradient(top, $start-color, $end-color);
   background: -webkit-gradient(linear, left top, left bottom, from($start-color), to($end-color));
-  &:hover { background: darken($start-color, 3%); }
 }
 
 @mixin btn-resize($height, $font-size, $padding: $height/2 $height) {
+  font-size: $font-size;
   line-height: $height;
   padding: $padding;
-  font-size: $font-size;
 }
