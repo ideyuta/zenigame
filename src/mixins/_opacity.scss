@@ -1,10 +1,6 @@
-// Opacity
-
 @mixin opacity($opacity) {
   $opacity-ie: $opacity * 100;
   opacity: $opacity;
-  // IE
   filter: alpha(opacity=$opacity-ie);
-  // Firefox
   -moz-filter: 'alpha( opacity=#{$opacity-ie})';
 }
