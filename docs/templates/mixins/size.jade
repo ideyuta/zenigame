@@ -1,0 +1,46 @@
+- var title = "Mixin - Size"
+- var path  = "../"
+include ../_base
+  prepend contents
+
+    :markdown
+      ## Overview
+      縦横のサイズ指定を簡略化するショートカットMixin。片方だけ指定する場合は使用しない。widthのみ指定した場合、正方形指定となる。
+    .Table._Basic
+      table
+        caption 表 サイズ指定のためのShortcut Mixin
+        tbody
+          tr
+            td size
+            td width/heightを指定
+          tr
+            td minsize
+            td min-width/min-heightを指定
+          tr
+            td maxsize
+            td max-width/max-heightを指定
+
+    :markdown
+      ```
+      @include size(width, height);
+      @include minsize(width, height);
+      @include maxsize(width, height);
+      ```
+      #### 引数
+    .Table._Basic
+      table
+        caption 表 size/minsize/maxsize Mixinのarguments
+        thead
+          tr
+            th Arguments
+            th Default Value
+            th Required
+        tbody
+          tr
+            td width
+            td
+            td Required
+          tr
+            td height
+            td width
+            td
