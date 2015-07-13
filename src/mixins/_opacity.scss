@@ -1,6 +1,0 @@
-@mixin opacity($opacity) {
-  $opacity-ie: $opacity * 100;
-  opacity: $opacity;
-  filter: alpha(opacity=$opacity-ie);
-  -moz-filter: 'alpha( opacity=#{$opacity-ie})';
-}

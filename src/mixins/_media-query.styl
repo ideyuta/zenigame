@@ -1,0 +1,19 @@
+media($media)
+  if $media == phone
+    /* bp-phoneよりも小さい場合のみ */
+    @media screen and (max-width: $bp-phone)
+      {block}
+  else if $media == tablet
+    /* bp-phoneよりも大きくbp-tabletよりも小さい場合のみ */
+    @media screen and (min-width: $bp-phone) and (max-width: $bp-tablet)
+      {block}
+  else if $media == pc
+    /* bp-tabletよりも大きい場合のみ */
+    @media screen and (min-width: $bp-tablet)
+      {block}
+min-screen($width)
+  @media screen and (min-width: $width)
+    {block}
+max-screen($width)
+  @media screen and (max-width: $width)
+    {block}

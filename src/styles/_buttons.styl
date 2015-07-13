@@ -1,0 +1,39 @@
+.btn
+  btn(18px)
+  btn-varient(#fff, $gray200, $gray100, $gray200)
+  typo($default-font-size - 2px, $gray700, 300, 18px)
+.btn.f
+  box-shadow(none)
+  background-color: transparent
+  border: 0
+.btn.r
+  border-radius(18px)
+  &.lg
+    border-radius(32px)
+  &.md
+    border-radius(24px)
+  &.sm
+    border-radius(14px)
+  &.xs
+    border-radius(10px)
+.btn
+  &.lg
+    btn-resize(32px, $default-font-size + 4px)
+  &.md
+    btn-resize(24px, $default-font-size + 2px)
+  &.sm
+    btn-resize(14px, $default-font-size - 4px)
+  &.xs
+    btn-resize(10px, $default-font-size - 6px)
+
+/* TODO desableちゃんとする */
+.btn.is-disable
+  opacity(0.4)
+
+.BtnGroup
+  display: inline
+  .btn
+    margin: 0
+    border-left-width: 0
+    &:first-child
+      border-left-width: 1px
