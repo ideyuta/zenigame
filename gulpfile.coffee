@@ -8,6 +8,7 @@ gutil = require 'gulp-util'
 del = require 'del'
 exec = require('child_process').exec
 jade = require 'gulp-jade'
+ghPages = require 'gulp-gh-pages'
 mainBowerFiles = require 'main-bower-files'
 runSequence = require 'run-sequence'
 source = require 'vinyl-source-stream'
@@ -142,6 +143,13 @@ gulp.task 'server', ->
   browserSync
     server:
       baseDir: dirs.dist
+
+
+# gh-pagesへデプロイ
+gulp.task 'deploy', ->
+  gulp.src 'dist/**/*'
+  .pipe ghPages()
+
 
 # ファイル監視とライブリロード
 gulp.task 'watch', ->
