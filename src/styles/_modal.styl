@@ -1,0 +1,43 @@
+.Wrapper.isFixed
+  position: fixed
+  width: 100%
+.Modal
+  pos(fixed, 0, 0)
+  size(100%)
+  z-index: 6000000
+  display: none
+  &.isActive
+    display: block
+  .backdrop
+    pos(fixed, 0, 0)
+    size(100%)
+    background: rgba(#000, 0.48)
+    background: #000 \9
+    filter: unquote('alpha(opacity = 48)')
+    /* IE lt 8 */
+    opacity: 1
+    cursor: pointer
+    z-index: 0
+  .inner
+    size(100%)
+  .dialog
+    border-radius(2px)
+    box-shadow(0 8px 24px $gray700)
+    clearfix()
+    z(1)
+    background: #fff
+    margin: 24px auto
+    max-width: 640px
+    padding: 0 24px
+    width: 80%
+  .page
+    clearfix()
+    size(100%)
+    z(1)
+    background: #fff
+    overflow: auto
+  .content
+    typo($default-font-size - 2px, $gray900, 300, 1.6)
+  .control
+    border(1px 0 0 0, solid, $gray100)
+    text-align: right

@@ -1,0 +1,39 @@
+.CheckBox
+  display: inline-block
+  margin: 4px 8px
+  input[type=checkbox]
+    display: inline-block
+    margin-right: 4px
+    & + label
+      typo(16px, $gray900, 300, 16px)
+      cursor: pointer
+      display: inline-block
+      position: relative
+  /* IE8以下に適用しないためのmedia query */
+  @media (min-width: 0px)
+    input[type=checkbox]
+      display: none
+      margin: 0
+      & + label
+        padding: 0 0 0 24px
+        &:before
+          border(2px, solid, $gray300, 2px)
+          pos(absolute, 0, 0)
+          size(14px)
+          background: #fff
+          content: ""
+          display: block
+      &:checked + label
+        &:after
+          border(0 0 3px 3px, solid, $blue500, 3px)
+          pos(absolute, 3px, 3px)
+          size(10px, 5px)
+          content: ""
+          display: block
+          transform: rotate(-45deg)
+          -ms-transform: rotate(-45deg)
+          -webkit-transform: rotate(-45deg)
+      & + label:hover:before
+        border-color: $blue500
+      & + label:active:before
+        background: $blue50

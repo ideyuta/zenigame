@@ -1,0 +1,29 @@
+.Pagination
+  .btn
+    display: inline-flex
+    display: -webkit-inline-flex
+    &.isActive
+      box-shadow(none)
+      cursor: default
+      background: $blue500 !important
+      border-color: $blue500
+      color: #fff
+    &.isDisable
+      border(0)
+      box-shadow(none)
+      background: transparent !important
+      cursor: default
+      &.f
+        color: $gray300
+      + .btn
+        border-left-width: 1px
++media(phone)
+  .Pagination
+    .btn
+      display: none
+      &.next,
+      &.prev,
+      &.isActive
+        display: inline-block
+        display: inline-flex
+        display: -webkit-inline-flex

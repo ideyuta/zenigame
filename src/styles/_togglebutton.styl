@@ -1,0 +1,41 @@
+.ToggleBtn
+  display: inline-block
+  margin: 4px 8px
+  input[type=checkbox]
+    display: inline-block
+    margin-right: 4px
+    & + label
+      cursor: pointer
+      display: inline-block
+      position: relative
+  /* IE8以下に適用しないためのmedia query */
+  @media (min-width: 0px)
+    input[type=checkbox]
+      display: none
+      margin: 0
+      & + label
+        size(48px, 24px)
+        &:before
+          border(2px, solid, $gray300, 20px)
+          pos(absolute, 0, 0)
+          size(44px, 20px)
+          background: #fff
+          content: ""
+          display: block
+        &:after
+          border(1px, solid, $gray300, 50%)
+          box-shadow(0 2px 4px $gray300)
+          pos(absolute, 1px)
+          size(20px)
+          background: #fff
+          content: ""
+          display: block
+          margin: 0 0 0 1px
+      &:checked + label
+        &:before
+          background: $blue500
+          border-color: $blue500
+        &:after
+          box-shadow(none)
+          border-color: $blue500
+          right: 1px

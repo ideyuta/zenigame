@@ -1,0 +1,147 @@
+@charset "UTF-8"
+
+//-------------------------------
+// Settings
+//-------------------------------
+
+@import '../../../src/zenigame'
+
+//-------------------------------
+// Base
+//-------------------------------
+
+*
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  font-family: "Noto Sans Japanese", $font
+
+html, body
+  size(100%, auto)
+  minsize(100%, 100%)
+  typo($default-font-size, $gray900, 300, $default-line-height)
+  background: #fff
+  text-transform: none
+  -webkit-text-size-adjust: 100%
+
+@font-face
+  font-family: 'icomoon'
+  src: url("../fonts/icomoon.eot?-8qc1vv")
+  src: url("../fonts/icomoon.eot?#iefix-8qc1vv") format("embedded-opentype"), url("../fonts/icomoon.woff?-8qc1vv") format("woff"), url("../fonts/icomoon.ttf?-8qc1vv") format("truetype"), url("../fonts/icomoon.svg?-8qc1vv#icomoon") format("svg")
+  font-weight: normal
+  font-style: normal
+
+a
+  &:link
+    color: $blue500
+  &:visited
+    color: $blue700
+  &:hover
+    color: $blue900
+  &:active
+    color: $blue900
+
+//-------------------------------
+// Components
+//-------------------------------
+
+.GlobalHeader
+  clearfix()
+  position: relative
+  .symbol
+    size(auto, 72px)
+    float: right
+    padding: 40px 24px
+    text-align: center
+  .navBtn
+    pos(absolute, 128px, null, null, 8px)
+    visibility: hidden
+  .pageTitle
+    padding: 48px
+    h1
+      margin: 0
+      a
+        color: #000
+        text-decoration: none
+        &:hover
+          color: $gray700
+      span
+        font-weight: 200
+        padding: 0 0 0 8px
+
+.Grid._Preview
+  [class^="Col-"]
+    background: $gray100
+.Grid._Wrap
+  max-width: $default-view-width
+  margin: 0 48px
+
++media(phone)
+  .GlobalHeader
+    .symbol
+      float: none
+      padding: 24px 0
+      width: 100%
+    .navBtn
+      visibility: visible
+    .pageTitle
+      padding: 16px
+      h1
+        span
+          display: block
+          padding: 0
+
+  .Navigation
+    border(0 0 1px 0, solid, $gray100)
+    max-height: 0
+    overflow: hidden
+    -webkit-transition: max-height .3s
+    transition: max-height .3s
+    &.isActive
+      max-height: 800px
+ 
+  .Grid._Wrap
+    margin: 0 16px
+
+.Colors
+  size(232px, auto)
+  float: left
+  padding: 16px
+  ul
+    padding: 0
+  .color
+    size(auto, 48px)
+    line-height: 48px
+    list-style: none
+    padding: 0 24px
+    &:after
+      float: right
+
+@import '_colors'
+
+.Icons
+  clearfix()
+  padding: 0
+  li
+    width: 250px
+    float: left
+    padding: 8px
+    p
+      border(1px, solid, $gray100)
+      typo(12px, $gray900, 300, 1.5em)
+      padding: 16px
+      margin: 0
+      i
+        typo(32px, $gray900, 300, 1.5em)
+      span
+        display: block
+pre
+  border(1px, solid, $gray100, 8px)
+  typo(12px, $gray700, 300, 1.7em)
+  font-family: 'Inconsolata'
+  background: $gray50
+  padding: 24px
+.btn._ex
+  btn-varient($blue500, $blue700, $blue700, $blue800)
+  btn-gradient($blue500, $blue700)
+  color: #fff
+.btn._exlg
+  btn-resize(50px, 20px)

@@ -1,620 +1,472 @@
-// @font-face {
-// 	font-family: 'icomoon';
-// 	src:url('/fonts/icomoon.eot?-8qc1vv');
-// 	src:url('/fonts/icomoon.eot?#iefix-8qc1vv') format('embedded-opentype'),
-// 		url('/fonts/icomoon.woff?-8qc1vv') format('woff'),
-// 		url('/fonts/icomoon.ttf?-8qc1vv') format('truetype'),
-// 		url('/fonts/icomoon.svg?-8qc1vv#icomoon') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
+@font-face {
+  font-family: 'icomoon';
+  src:url('fonts/icomoon.eot?w5wxhp');
+  src:url('fonts/icomoon.eot?#iefixw5wxhp') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?w5wxhp') format('truetype'),
+    url('fonts/icomoon.woff?w5wxhp') format('woff'),
+    url('fonts/icomoon.svg?w5wxhp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 [class^="znicon-"], [class*=" znicon-"] {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: inherit;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .znicon-chevron-down:before {
-	content: "\e600";
+  content: "\e600";
 }
-
 .znicon-chevron-left:before {
-	content: "\e601";
+  content: "\e601";
 }
-
 .znicon-chevron-right:before {
-	content: "\e602";
+  content: "\e602";
 }
-
 .znicon-chevron-small-down:before {
-	content: "\e603";
+  content: "\e603";
 }
-
 .znicon-chevron-small-left:before {
-	content: "\e604";
+  content: "\e604";
 }
-
 .znicon-chevron-small-right:before {
-	content: "\e605";
+  content: "\e605";
 }
-
 .znicon-chevron-small-up:before {
-	content: "\e606";
+  content: "\e606";
 }
-
 .znicon-chevron-thin-down:before {
-	content: "\e607";
+  content: "\e607";
 }
-
 .znicon-chevron-thin-left:before {
-	content: "\e608";
+  content: "\e608";
 }
-
 .znicon-chevron-thin-right:before {
-	content: "\e609";
+  content: "\e609";
 }
-
 .znicon-chevron-thin-up:before {
-	content: "\e60a";
+  content: "\e60a";
 }
-
 .znicon-chevron-up:before {
-	content: "\e60b";
+  content: "\e60b";
 }
-
 .znicon-chevron-with-circle-down:before {
-	content: "\e60c";
+  content: "\e60c";
 }
-
 .znicon-chevron-with-circle-left:before {
-	content: "\e60d";
+  content: "\e60d";
 }
-
 .znicon-chevron-with-circle-right:before {
-	content: "\e60e";
+  content: "\e60e";
 }
-
 .znicon-chevron-with-circle-up:before {
-	content: "\e60f";
+  content: "\e60f";
 }
-
 .znicon-dots-three-horizontal:before {
-	content: "\e610";
+  content: "\e610";
 }
-
 .znicon-dots-three-vertical:before {
-	content: "\e611";
+  content: "\e611";
 }
-
 .znicon-credit-card:before {
-	content: "\e612";
+  content: "\e612";
 }
-
 .znicon-emoji-happy:before {
-	content: "\e613";
+  content: "\e613";
 }
-
 .znicon-emoji-neutral:before {
-	content: "\e614";
+  content: "\e614";
 }
-
 .znicon-emoji-sad:before {
-	content: "\e615";
+  content: "\e615";
 }
-
 .znicon-help-with-circle:before {
-	content: "\e616";
+  content: "\e616";
 }
-
 .znicon-help2:before {
-	content: "\e617";
+  content: "\e617";
 }
-
 .znicon-print:before {
-	content: "\e618";
+  content: "\e618";
 }
-
 .znicon-facebook:before {
-	content: "\e619";
+  content: "\e619";
 }
-
 .znicon-github:before {
-	content: "\e61a";
+  content: "\e61a";
 }
-
 .znicon-twitter:before {
-	content: "\e61b";
+  content: "\e61b";
 }
-
 .znicon-eye:before {
-	content: "\e000";
+  content: "\e000";
 }
-
 .znicon-paper-clip:before {
-	content: "\e001";
+  content: "\e001";
 }
-
 .znicon-mail:before {
-	content: "\e002";
+  content: "\e002";
 }
-
 .znicon-link:before {
-	content: "\e005";
+  content: "\e005";
 }
-
 .znicon-bell:before {
-	content: "\e006";
+  content: "\e006";
 }
-
 .znicon-lock:before {
-	content: "\e007";
+  content: "\e007";
 }
-
 .znicon-unlock:before {
-	content: "\e008";
+  content: "\e008";
 }
-
 .znicon-ribbon:before {
-	content: "\e009";
+  content: "\e009";
 }
-
 .znicon-image:before {
-	content: "\e010";
+  content: "\e010";
 }
-
 .znicon-signal:before {
-	content: "\e011";
+  content: "\e011";
 }
-
 .znicon-target:before {
-	content: "\e012";
+  content: "\e012";
 }
-
 .znicon-clipboard:before {
-	content: "\e013";
+  content: "\e013";
 }
-
 .znicon-clock:before {
-	content: "\e014";
+  content: "\e014";
 }
-
 .znicon-watch:before {
-	content: "\e015";
+  content: "\e015";
 }
-
 .znicon-air-play:before {
-	content: "\e016";
+  content: "\e016";
 }
-
 .znicon-camera:before {
-	content: "\e017";
+  content: "\e017";
 }
-
 .znicon-video:before {
-	content: "\e018";
+  content: "\e018";
 }
-
 .znicon-disc:before {
-	content: "\e019";
+  content: "\e019";
 }
-
 .znicon-printer:before {
-	content: "\e020";
+  content: "\e020";
 }
-
 .znicon-monitor:before {
-	content: "\e021";
+  content: "\e021";
 }
-
 .znicon-server:before {
-	content: "\e022";
+  content: "\e022";
 }
-
 .znicon-cog:before {
-	content: "\e023";
+  content: "\e023";
 }
-
 .znicon-heart:before {
-	content: "\e024";
+  content: "\e024";
 }
-
 .znicon-align-justify:before {
-	content: "\e026";
+  content: "\e026";
 }
-
 .znicon-align-left:before {
-	content: "\e027";
+  content: "\e027";
 }
-
 .znicon-align-center:before {
-	content: "\e028";
+  content: "\e028";
 }
-
 .znicon-align-right:before {
-	content: "\e029";
+  content: "\e029";
 }
-
 .znicon-book:before {
-	content: "\e030";
+  content: "\e030";
 }
-
 .znicon-layers:before {
-	content: "\e031";
+  content: "\e031";
 }
-
 .znicon-stack:before {
-	content: "\e032";
+  content: "\e032";
 }
-
 .znicon-stack-2:before {
-	content: "\e033";
+  content: "\e033";
 }
-
 .znicon-paper:before {
-	content: "\e034";
+  content: "\e034";
 }
-
 .znicon-paper-stack:before {
-	content: "\e035";
+  content: "\e035";
 }
-
 .znicon-search:before {
-	content: "\e036";
+  content: "\e036";
 }
-
 .znicon-zoom-in:before {
-	content: "\e037";
+  content: "\e037";
 }
-
 .znicon-zoom-out:before {
-	content: "\e038";
+  content: "\e038";
 }
-
 .znicon-reply:before {
-	content: "\e039";
+  content: "\e039";
 }
-
 .znicon-circle-plus:before {
-	content: "\e040";
+  content: "\e040";
 }
-
 .znicon-circle-minus:before {
-	content: "\e041";
+  content: "\e041";
 }
-
 .znicon-circle-check:before {
-	content: "\e042";
+  content: "\e042";
 }
-
 .znicon-circle-cross:before {
-	content: "\e043";
+  content: "\e043";
 }
-
 .znicon-square-plus:before {
-	content: "\e044";
+  content: "\e044";
 }
-
 .znicon-square-minus:before {
-	content: "\e045";
+  content: "\e045";
 }
-
 .znicon-square-check:before {
-	content: "\e046";
+  content: "\e046";
 }
-
 .znicon-square-cross:before {
-	content: "\e047";
+  content: "\e047";
 }
-
 .znicon-microphone:before {
-	content: "\e048";
+  content: "\e048";
 }
-
 .znicon-record:before {
-	content: "\e049";
+  content: "\e049";
 }
-
 .znicon-skip-back:before {
-	content: "\e050";
+  content: "\e050";
 }
-
 .znicon-rewind:before {
-	content: "\e051";
+  content: "\e051";
 }
-
 .znicon-play:before {
-	content: "\e052";
+  content: "\e052";
 }
-
 .znicon-pause:before {
-	content: "\e053";
+  content: "\e053";
 }
-
 .znicon-stop:before {
-	content: "\e054";
+  content: "\e054";
 }
-
 .znicon-fast-forward:before {
-	content: "\e055";
+  content: "\e055";
 }
-
 .znicon-skip-forward:before {
-	content: "\e056";
+  content: "\e056";
 }
-
 .znicon-shuffle:before {
-	content: "\e057";
+  content: "\e057";
 }
-
 .znicon-repeat:before {
-	content: "\e058";
+  content: "\e058";
 }
-
 .znicon-folder:before {
-	content: "\e059";
+  content: "\e059";
 }
-
 .znicon-umbrella:before {
-	content: "\e060";
+  content: "\e060";
 }
-
 .znicon-moon:before {
-	content: "\e061";
+  content: "\e061";
 }
-
 .znicon-thermometer:before {
-	content: "\e062";
+  content: "\e062";
 }
-
 .znicon-drop:before {
-	content: "\e063";
+  content: "\e063";
 }
-
 .znicon-sun:before {
-	content: "\e064";
+  content: "\e064";
 }
-
 .znicon-cloud:before {
-	content: "\e065";
+  content: "\e065";
 }
-
 .znicon-cloud-upload:before {
-	content: "\e066";
+  content: "\e066";
 }
-
 .znicon-cloud-download:before {
-	content: "\e067";
+  content: "\e067";
 }
-
 .znicon-upload:before {
-	content: "\e068";
+  content: "\e068";
 }
-
 .znicon-download:before {
-	content: "\e069";
+  content: "\e069";
 }
-
 .znicon-location:before {
-	content: "\e070";
+  content: "\e070";
 }
-
 .znicon-location-2:before {
-	content: "\e071";
+  content: "\e071";
 }
-
 .znicon-map:before {
-	content: "\e072";
+  content: "\e072";
 }
-
 .znicon-battery:before {
-	content: "\e073";
+  content: "\e073";
 }
-
 .znicon-head:before {
-	content: "\e074";
+  content: "\e074";
 }
-
 .znicon-briefcase:before {
-	content: "\e075";
+  content: "\e075";
 }
-
 .znicon-speech-bubble:before {
-	content: "\e076";
+  content: "\e076";
 }
-
 .znicon-globe:before {
-	content: "\e078";
+  content: "\e078";
 }
-
 .znicon-box:before {
-	content: "\e079";
+  content: "\e079";
 }
-
 .znicon-reload:before {
-	content: "\e080";
+  content: "\e080";
 }
-
 .znicon-share:before {
-	content: "\e081";
+  content: "\e081";
 }
-
 .znicon-marquee:before {
-	content: "\e082";
+  content: "\e082";
 }
-
 .znicon-marquee-plus:before {
-	content: "\e083";
+  content: "\e083";
 }
-
 .znicon-marquee-minus:before {
-	content: "\e084";
+  content: "\e084";
 }
-
 .znicon-tag:before {
-	content: "\e085";
+  content: "\e085";
 }
-
 .znicon-power:before {
-	content: "\e086";
+  content: "\e086";
 }
-
 .znicon-command:before {
-	content: "\e087";
+  content: "\e087";
 }
-
 .znicon-alt:before {
-	content: "\e088";
+  content: "\e088";
 }
-
 .znicon-esc:before {
-	content: "\e089";
+  content: "\e089";
 }
-
 .znicon-bar-graph:before {
-	content: "\e090";
+  content: "\e090";
 }
-
 .znicon-bar-graph-2:before {
-	content: "\e091";
+  content: "\e091";
 }
-
 .znicon-pie-graph:before {
-	content: "\e092";
+  content: "\e092";
 }
-
 .znicon-star:before {
-	content: "\e093";
+  content: "\e093";
 }
-
 .znicon-arrow-left:before {
-	content: "\e094";
+  content: "\e094";
 }
-
 .znicon-arrow-right:before {
-	content: "\e095";
+  content: "\e095";
 }
-
 .znicon-arrow-up:before {
-	content: "\e096";
+  content: "\e096";
 }
-
 .znicon-arrow-down:before {
-	content: "\e097";
+  content: "\e097";
 }
-
 .znicon-volume:before {
-	content: "\e098";
+  content: "\e098";
 }
-
 .znicon-mute:before {
-	content: "\e099";
+  content: "\e099";
 }
-
 .znicon-loader:before {
-	content: "\e105";
+  content: "\e105";
 }
-
 .znicon-bag:before {
-	content: "\e106";
+  content: "\e106";
 }
-
 .znicon-ban:before {
-	content: "\e107";
+  content: "\e107";
 }
-
 .znicon-flag:before {
-	content: "\e108";
+  content: "\e108";
 }
-
 .znicon-trash:before {
-	content: "\e109";
+  content: "\e109";
 }
-
 .znicon-maximize:before {
-	content: "\e112";
+  content: "\e112";
 }
-
 .znicon-minimize:before {
-	content: "\e113";
+  content: "\e113";
 }
-
 .znicon-plus:before {
-	content: "\e114";
+  content: "\e114";
 }
-
 .znicon-minus:before {
-	content: "\e115";
+  content: "\e115";
 }
-
 .znicon-check:before {
-	content: "\e116";
+  content: "\e116";
 }
-
 .znicon-cross:before {
-	content: "\e117";
+  content: "\e117";
 }
-
 .znicon-move:before {
-	content: "\e118";
+  content: "\e118";
 }
-
 .znicon-delete:before {
-	content: "\e119";
+  content: "\e119";
 }
-
 .znicon-menu:before {
-	content: "\e120";
+  content: "\e120";
 }
-
 .znicon-archive:before {
-	content: "\e121";
+  content: "\e121";
 }
-
 .znicon-inbox:before {
-	content: "\e122";
+  content: "\e122";
 }
-
 .znicon-outbox:before {
-	content: "\e123";
+  content: "\e123";
 }
-
 .znicon-file:before {
-	content: "\e124";
+  content: "\e124";
 }
-
 .znicon-file-add:before {
-	content: "\e125";
+  content: "\e125";
 }
-
 .znicon-file-subtract:before {
-	content: "\e126";
+  content: "\e126";
 }
-
 .znicon-help:before {
-	content: "\e127";
+  content: "\e127";
 }
-
 .znicon-open:before {
-	content: "\e128";
+  content: "\e128";
 }
-
 .znicon-ellipsis:before {
-	content: "\e129";
+  content: "\e129";
 }
-
 .znicon-qrcode:before {
-	content: "\e938";
+  content: "\e938";
 }
-
 .znicon-lock2:before {
-	content: "\e61c";
+  content: "\e61c";
 }

@@ -1,0 +1,47 @@
+.Table
+  margin: 8px
+  table
+    size(100%, auto)
+    caption
+      typo($default-font-size - 4px, $blue500, 300, 1.5em)
+      caption-side: bottom
+      padding: 12px 0
+      text-align: left
+    thead
+      border(2px 0, solid, $gray900)
+      th
+        typo($default-font-size - 2px, #000, 700, 1.5em)
+        padding: 12px 8px
+        text-align: left
+    tbody
+      td
+        typo($default-font-size - 2px, #000, 300, 1.5em)
+        padding: 12px 8px
+  &._Basic
+    table
+      tbody
+        tr
+          border(0 0 1px 0, solid, $gray900)
+        td
+          &:first-child
+            font-weight: 700
+  &._Row
+    table
+      tbody
+        tr:first-child
+          border(1px 0, solid, $gray900)
+          td:first-child
+            border(2px 0, solid, $gray900)
+        td
+          border(0 0 1px 0, solid, $gray900)
+          &:first-child
+            border-width: 0 0 2px 0
+  &._Clickable
+    table
+      tbody
+        tr
+          cursor: pointer
+          &:hover
+            background: $gray100
+          &:active
+            background: darken($gray100, 4%)
