@@ -20,7 +20,7 @@ paths =
   jade: ["#{dirs.src}/templates/**/!(_)*.jade"]
   coffee: ["#{dirs.src}/static/coffee/**/*.coffee"]
   browserify: ["#{dirs.src}/static/coffee/base.coffee"]
-  sass: ["#{dirs.src}/static/sass/**/*.scss"]
+  stylus: ["#{dirs.src}/static/stylus/**/!(_)*.styl"]
   image: ["#{dirs.src}/static/img/**/*.{png,jpg,gif}"]
   font: ["./src/fonts/*"]
 
@@ -70,15 +70,14 @@ gulp.task 'image', ->
 # CSS
 ###
 
-# SCSS -> CSS 変換
-gulp.task 'sass', ->
-  gulp.src paths.sass
+# Stylus -> CSS 変換
+gulp.task 'stylus', ->
+  gulp.src paths.stylus
     .pipe plumberWithNotify()
     #.pipe $.cached()
     .pipe $.using()
-    .pipe $.compass
-      css: "#{dirs.dist}/css"
-      sass: "#{dirs.src}/static/sass"
+    .pipe $.stylus
+      'include css': true
     .pipe $.size()
     .pipe gulp.dest "#{dirs.dist}/css/"
 
@@ -92,7 +91,8 @@ gulp.task 'optimizeCSS', ->
 
 # CSS 生成・圧縮
 gulp.task 'prodCSS', (cb) ->
-  runSequence 'sass', 'optimizeCSS', cb
+  runSequence 'stylus', 'optimizeCSS', cb
+
 
 
 ###
@@ -147,7 +147,7 @@ gulp.task 'server', ->
 gulp.task 'watch', ->
   gulp.watch paths.jade, ['jade', browserSync.reload]
   gulp.watch paths.browserify, ['js', browserSync.reload]
-  gulp.watch paths.sass, ['sass', browserSync.reload]
+  gulp.watch paths.stylus, ['stylus', browserSync.reload]
   gulp.watch paths.image, ['image', browserSync.reload]
 
 
