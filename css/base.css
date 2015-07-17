@@ -636,7 +636,8 @@ th {
   border-left-width: 1px;
 }
 .CheckBox {
-  display: inline-block;
+  display: block;
+  height: 18px;
   margin: 4px 8px;
 /* IE8以下に適用しないためのmedia query */
 }
@@ -2013,7 +2014,8 @@ th {
   }
 }
 .RadioBtn {
-  display: inline-block;
+  display: block;
+  height: 18px;
   margin: 4px 8px;
 /* IE8以下に適用しないためのmedia query */
 }
