@@ -2325,13 +2325,28 @@ th {
   border-style: solid;
   border-width: 0 0 2px 0;
 }
+.TextField.isActive input {
+  border-color: #32b7fa;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+}
+.TextField.isActive textarea {
+  border-color: #32b7fa;
+  border-style: solid;
+  border-width: 2px;
+}
 .TextField .label {
   color: #5c5c5c;
   font-size: 12px;
   font-weight: 300;
-  line-height: 1em;
+  line-height: 1.5em;
   letter-spacing: 0;
+  letter-spacing: 0.12em;
   margin: 0;
+}
+.TextField .label._lg {
+  font-size: 16px;
+  padding: 8px 0;
 }
 .TextField input {
   border-color: #ccc;
@@ -2351,15 +2366,41 @@ th {
 }
 .TextField input::-webkit-input-placeholder {
   color: #ccc;
+  font-weight: 300;
+}
+.TextField input.box {
+  border-width: 1px;
+  margin: 4px 0;
+  padding: 0 8px;
+}
+.TextField textarea {
+  border-color: #e0e0e0;
+  border-style: solid;
+  border-width: 1px;
+  color: #212121;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0;
+  width: 100%;
+  height: 300px;
+  padding: 4px;
+}
+.TextField textarea:focus {
+  outline: none;
+}
+.TextField textarea::-webkit-input-placeholder {
+  color: #ccc;
   font-weight: 100;
 }
 .TextField .validated {
   color: #fc490d;
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.5em;
   letter-spacing: 0;
   display: none;
+  letter-spacing: 0.04em;
   margin: 0 auto;
   padding: 4px 0;
 }
