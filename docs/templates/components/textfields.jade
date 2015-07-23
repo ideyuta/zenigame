@@ -4,7 +4,7 @@ include ../_base
   prepend contents
 
     :markdown
-      ##Text Field
+      ##Text Field Line
 
     .TextField.isActive
       p.label 氏名
@@ -34,4 +34,18 @@ include ../_base
       .TextField.isOK
         p.label 住所
         input(type="text", maxlength="20")
+      ```
+
+    :markdown
+      ##Text Field Area
+
+    .TextField
+      p.label._lg 氏名
+      textarea(required)
+
+    :markdown
+      ```jade
+      .TextField
+        p.label._lg 氏名
+        textarea(required)
       ```

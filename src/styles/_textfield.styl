@@ -11,9 +11,15 @@
   &.isActive
     input
       border(0 0 2px 0, solid, $blue500)
+    textarea
+      border(2px, solid, $blue500)
   .label
-    typo($default-font-size - 4px, $gray700, 300, 1em)
+    typo($default-font-size - 4px, $gray700, 300, 1.5em)
+    letter-spacing: 0.12em
     margin: 0
+    &._lg
+      font-size: $default-font-size
+      padding: 8px 0
   input
     border(0 0 1px 0, solid, $gray300)
     typo($default-font-size, $gray900, 300, 24px)
@@ -23,9 +29,20 @@
       outline: none
     &::-webkit-input-placeholder
       color: $gray300
+      font-weight: 300
+  textarea
+    border(1px, solid, $gray200)
+    typo($default-font-size, $gray900, 300, 24px)
+    size(100%, 300px)
+    padding: 4px
+    &:focus
+      outline: none
+    &::-webkit-input-placeholder
+      color: $gray300
       font-weight: 100
   .validated
-    typo($default-font-size - 6px, $red500, 700, 1.5em)
+    typo($default-font-size - 6px, $red500, 400, 1.5em)
     display: none
+    letter-spacing: 0.04em
     margin: 0 auto
     padding: 4px 0
