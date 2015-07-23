@@ -23,7 +23,7 @@ include ../_base
 
     :markdown
       ```jade
-      .TextField
+      .TextField.isActive
         p.label 氏名
         input(type="text", placeholder="銭　亀太郎", maxlength="20", required)
         p.validated この項目は必須です。
@@ -35,6 +35,44 @@ include ../_base
         p.label 住所
         input(type="text", maxlength="20")
       ```
+
+
+    :markdown
+      ##Text Field Line Box
+
+    .TextField.isActive
+      p.label 氏名
+      input.box(type="text", placeholder="銭　亀太郎", maxlength="20", required)
+      p.validated この項目は必須です。
+    .TextField.isError
+      p.label 郵便番号
+      input.box(type="text", placeholder="000-0000", maxlength="20", required)
+      p.validated この項目は必須です。
+    .TextField.isOK
+      p.label 住所
+      input.box(type="text", maxlength="20")
+    .TextField
+      p.label 電話番号
+      input.box(type="text", maxlength="20")
+
+    :markdown
+      ```jade
+      .TextField.isActive
+        p.label 氏名
+        input.box(type="text", placeholder="銭　亀太郎", maxlength="20", required)
+        p.validated この項目は必須です。
+      .TextField.isError
+        p.label 郵便番号
+        input.box(type="text", placeholder="000-0000", maxlength="20", required)
+        p.validated この項目は必須です。
+      .TextField.isOK
+        p.label 住所
+        input.box(type="text", maxlength="20")
+      .TextField
+        p.label 電話番号
+        input.box(type="text", maxlength="20")
+      ```
+
 
     :markdown
       ##Text Field Area

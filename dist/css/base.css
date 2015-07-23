@@ -2368,6 +2368,11 @@ th {
   color: #ccc;
   font-weight: 300;
 }
+.TextField input.box {
+  border-width: 1px;
+  margin: 4px 0;
+  padding: 0 8px;
+}
 .TextField textarea {
   border-color: #e0e0e0;
   border-style: solid;
