@@ -2325,6 +2325,11 @@ th {
   border-style: solid;
   border-width: 0 0 2px 0;
 }
+.TextField.isActive input {
+  border-color: #32b7fa;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+}
 .TextField .label {
   color: #5c5c5c;
   font-size: 12px;
