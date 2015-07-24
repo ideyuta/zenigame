@@ -8,11 +8,6 @@
       display: block
     input
       border(0 0 2px 0, solid, $red500)
-  &.isActive
-    input
-      border(0 0 2px 0, solid, $blue500)
-    textarea
-      border(2px, solid, $blue500)
   .label
     typo($default-font-size - 4px, $gray700, 300, 1.5em)
     letter-spacing: 0.12em
@@ -26,6 +21,7 @@
     size(100%, 39px)
     padding: 0 2px
     &:focus
+      border(0 0 2px 0, solid, $blue500)
       outline: none
     &::-webkit-input-placeholder
       color: $gray300
@@ -40,6 +36,7 @@
     size(100%, 300px)
     padding: 4px
     &:focus
+      border(2px, solid, $blue500)
       outline: none
     &::-webkit-input-placeholder
       color: $gray300
