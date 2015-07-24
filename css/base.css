@@ -2325,16 +2325,6 @@ th {
   border-style: solid;
   border-width: 0 0 2px 0;
 }
-.TextField.isActive input {
-  border-color: #32b7fa;
-  border-style: solid;
-  border-width: 0 0 2px 0;
-}
-.TextField.isActive textarea {
-  border-color: #32b7fa;
-  border-style: solid;
-  border-width: 2px;
-}
 .TextField .label {
   color: #5c5c5c;
   font-size: 12px;
@@ -2362,6 +2352,9 @@ th {
   padding: 0 2px;
 }
 .TextField input:focus {
+  border-color: #32b7fa;
+  border-style: solid;
+  border-width: 0 0 2px 0;
   outline: none;
 }
 .TextField input::-webkit-input-placeholder {
@@ -2387,6 +2380,9 @@ th {
   padding: 4px;
 }
 .TextField textarea:focus {
+  border-color: #32b7fa;
+  border-style: solid;
+  border-width: 2px;
   outline: none;
 }
 .TextField textarea::-webkit-input-placeholder {
