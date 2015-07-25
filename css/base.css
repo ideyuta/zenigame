@@ -2203,6 +2203,15 @@ th {
 .Table._Basic table tbody td:first-child {
   font-weight: 700;
 }
+.Table._Box table thead th,
+.Table._Box table tbody td {
+  border-color: #212121;
+  border-style: solid;
+  border-width: 1px;
+}
+.Table._Box table tbody td:first-child {
+  font-weight: 700;
+}
 .Table._Row table tbody tr:first-child {
   border-color: #212121;
   border-style: solid;

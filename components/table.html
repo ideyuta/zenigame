@@ -17,10 +17,29 @@
         td td
         td td
 </code></pre>
-<h2 id="table-row">Table Row</h2>
-<div class="Table _Row"><table><caption>表2 Row Table</caption><tbody><tr><td>1</td><td>tdtdtdtdtdtdtdtdtdtdt</td></tr><tr><td>2</td><td>td</td></tr></tbody></table></div><pre><code class="lang-jade">.Table._Row
+<h2 id="table-box">Table Box</h2>
+<div class="Table _Box"><table><caption>表1 Box Table</caption><thead><tr><th>#</th><th>thththththththththth</th><th>th</th></tr></thead><tbody><tr><td>1</td><td>td</td><td>td</td></tr><tr><td>2</td><td>td</td><td>td</td></tr></tbody></table></div><pre><code class="lang-jade">.Table._Box
   table
-    caption 表2 Row Table
+    caption 表2 Box Table
+    thead
+      tr
+        th #
+        th thththththththththth
+        th th
+    tbody
+      tr
+        td 1
+        td td
+        td td
+      tr
+        td 2
+        td td
+        td td
+</code></pre>
+<h2 id="table-row">Table Row</h2>
+<div class="Table _Row"><table><caption>表3 Row Table</caption><tbody><tr><td>1</td><td>tdtdtdtdtdtdtdtdtdtdt</td></tr><tr><td>2</td><td>td</td></tr></tbody></table></div><pre><code class="lang-jade">.Table._Row
+  table
+    caption 表3 Row Table
     tbody
       tr
         td 1
@@ -30,9 +49,9 @@
         td td
 </code></pre>
 <h2 id="table-clickable">Table Clickable</h2>
-<div class="Table _Basic _Clickable"><table><caption>表3 Basic Clickable Table</caption><thead><tr><th>#</th><th>thththththththththth</th></tr></thead><tbody><tr><td>1</td><td>tdtdtdtdtdtdtdtdtdtdt</td></tr><tr><td>2</td><td>td</td></tr></tbody></table></div><pre><code class="lang-jade">.Table._Basic._Clickable
+<div class="Table _Basic _Clickable"><table><caption>表4 Basic Clickable Table</caption><thead><tr><th>#</th><th>thththththththththth</th></tr></thead><tbody><tr><td>1</td><td>tdtdtdtdtdtdtdtdtdtdt</td></tr><tr><td>2</td><td>td</td></tr></tbody></table></div><pre><code class="lang-jade">.Table._Basic._Clickable
   table
-    caption 表3 Basic Clickable Table
+    caption 表4 Basic Clickable Table
     thead
       tr
         th #
