@@ -42,7 +42,50 @@ include ../_base
             tr
               td 2
               td td
-              td td 
+              td td
+      ```
+
+    :markdown
+      ##Table Box
+
+    .Table._Box
+      table
+        caption 表1 Box Table
+        thead
+          tr
+            th #
+            th thththththththththth
+            th th
+        tbody
+          tr
+            td 1
+            td td
+            td td
+          tr
+            td 2
+            td td
+            td td
+
+
+    :markdown
+      ```jade
+      .Table._Box
+        table
+          caption 表2 Box Table
+          thead
+            tr
+              th #
+              th thththththththththth
+              th th
+          tbody
+            tr
+              td 1
+              td td
+              td td
+            tr
+              td 2
+              td td
+              td td
       ```
 
 
@@ -51,7 +94,7 @@ include ../_base
 
     .Table._Row
       table
-        caption 表2 Row Table
+        caption 表3 Row Table
         tbody
           tr
             td 1
@@ -64,7 +107,7 @@ include ../_base
       ```jade
       .Table._Row
         table
-          caption 表2 Row Table
+          caption 表3 Row Table
           tbody
             tr
               td 1
@@ -80,7 +123,7 @@ include ../_base
 
     .Table._Basic._Clickable
       table
-        caption 表3 Basic Clickable Table
+        caption 表4 Basic Clickable Table
         thead
           tr
             th #
@@ -97,7 +140,7 @@ include ../_base
       ```jade
       .Table._Basic._Clickable
         table
-          caption 表3 Basic Clickable Table
+          caption 表4 Basic Clickable Table
           thead
             tr
               th #
