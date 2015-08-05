@@ -2318,9 +2318,6 @@ th {
     right: 1px;
   }
 }
-.TextField {
-  padding: 8px;
-}
 .TextField.isOK input {
   border-color: #00e64d;
   border-style: solid;
@@ -2336,12 +2333,11 @@ th {
 }
 .TextField .label {
   color: #5c5c5c;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 300;
   line-height: 1.5em;
   letter-spacing: 0;
-  letter-spacing: 0.12em;
-  margin: 0;
+  margin: 4px 0;
 }
 .TextField .label._lg {
   font-size: 16px;
@@ -2372,7 +2368,6 @@ th {
 }
 .TextField input.box {
   border-width: 1px;
-  margin: 4px 0;
   padding: 0 8px;
 }
 .TextField textarea {
@@ -2400,12 +2395,11 @@ th {
 }
 .TextField .validated {
   color: #fc490d;
-  font-size: 10px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 300;
   line-height: 1.5em;
   letter-spacing: 0;
   display: none;
-  letter-spacing: 0.04em;
   margin: 0 auto;
   padding: 4px 0;
 }

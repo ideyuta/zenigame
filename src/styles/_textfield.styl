@@ -1,5 +1,4 @@
 .TextField
-  padding: 8px
   &.isOK
     input
       border(0 0 2px 0, solid, $green500)
@@ -9,9 +8,8 @@
     input
       border(0 0 2px 0, solid, $red500)
   .label
-    typo($default-font-size - 4px, $gray700, 300, 1.5em)
-    letter-spacing: 0.12em
-    margin: 0
+    typo($default-font-size - 3px, $gray700, 300, 1.5em)
+    margin: 4px 0
     &._lg
       font-size: $default-font-size
       padding: 8px 0
@@ -28,7 +26,6 @@
       font-weight: 300
     &.box
       border-width: 1px
-      margin: 4px 0
       padding: 0 8px
   textarea
     border(1px, solid, $gray200)
@@ -42,8 +39,7 @@
       color: $gray300
       font-weight: 100
   .validated
-    typo($default-font-size - 6px, $red500, 400, 1.5em)
+    typo($default-font-size - 4px, $red500, 300, 1.5em)
     display: none
-    letter-spacing: 0.04em
     margin: 0 auto
     padding: 4px 0
