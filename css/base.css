@@ -2321,7 +2321,7 @@ th {
 .TextField.isOK input {
   border-color: #00e64d;
   border-style: solid;
-  border-width: 0 0 2px 0;
+  border-width: 0 0 1px 0;
 }
 .TextField.isError .validated {
   display: block;
@@ -2329,7 +2329,7 @@ th {
 .TextField.isError input {
   border-color: #fc490d;
   border-style: solid;
-  border-width: 0 0 2px 0;
+  border-width: 0 0 1px 0;
 }
 .TextField .label {
   color: #5c5c5c;
@@ -2344,7 +2344,7 @@ th {
   padding: 8px 0;
 }
 .TextField input {
-  border-color: #ccc;
+  border-color: #949494;
   border-style: solid;
   border-width: 0 0 1px 0;
   color: #212121;
@@ -2359,7 +2359,7 @@ th {
 .TextField input:focus {
   border-color: #32b7fa;
   border-style: solid;
-  border-width: 0 0 2px 0;
+  border-width: 0 0 1px 0;
   outline: none;
 }
 .TextField input::-webkit-input-placeholder {
@@ -2371,7 +2371,7 @@ th {
   padding: 0 8px;
 }
 .TextField textarea {
-  border-color: #e0e0e0;
+  border-color: #949494;
   border-style: solid;
   border-width: 1px;
   color: #212121;
@@ -2386,7 +2386,7 @@ th {
 .TextField textarea:focus {
   border-color: #32b7fa;
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   outline: none;
 }
 .TextField textarea::-webkit-input-placeholder {
