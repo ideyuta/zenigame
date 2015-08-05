@@ -1,12 +1,12 @@
 .TextField
   &.isOK
     input
-      border(0 0 2px 0, solid, $green500)
+      border(0 0 1px 0, solid, $green500)
   &.isError
     .validated
       display: block
     input
-      border(0 0 2px 0, solid, $red500)
+      border(0 0 1px 0, solid, $red500)
   .label
     typo($default-font-size - 3px, $gray700, 300, 1.5em)
     margin: 4px 0
@@ -14,12 +14,12 @@
       font-size: $default-font-size
       padding: 8px 0
   input
-    border(0 0 1px 0, solid, $gray300)
+    border(0 0 1px 0, solid, $gray500)
     typo($default-font-size, $gray900, 300, 24px)
     size(100%, 39px)
     padding: 0 2px
     &:focus
-      border(0 0 2px 0, solid, $blue500)
+      border(0 0 1px 0, solid, $blue500)
       outline: none
     &::-webkit-input-placeholder
       color: $gray300
@@ -28,12 +28,12 @@
       border-width: 1px
       padding: 0 8px
   textarea
-    border(1px, solid, $gray200)
+    border(1px, solid, $gray500)
     typo($default-font-size, $gray900, 300, 24px)
     size(100%, 300px)
     padding: 4px
     &:focus
-      border(2px, solid, $blue500)
+      border(1px, solid, $blue500)
       outline: none
     &::-webkit-input-placeholder
       color: $gray300
