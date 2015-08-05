@@ -649,7 +649,7 @@ th {
   color: #212121;
   font-size: 16px;
   font-weight: 300;
-  line-height: 16px;
+  line-height: 18px;
   letter-spacing: 0;
   cursor: pointer;
   display: inline-block;
@@ -661,12 +661,12 @@ th {
     margin: 0;
   }
   .CheckBox input[type=checkbox] + label {
-    padding: 0 0 0 24px;
+    padding: 0 0 0 28px;
   }
   .CheckBox input[type=checkbox] + label:before {
-    border-color: #ccc;
+    border-color: #757575;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 2px;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -676,8 +676,8 @@ th {
     bottom: ;
     left: 0;
     z-index: ;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     background: #fff;
     content: "";
     display: block;
@@ -2027,7 +2027,7 @@ th {
   color: #212121;
   font-size: 16px;
   font-weight: 300;
-  line-height: 16px;
+  line-height: 18px;
   letter-spacing: 0;
   cursor: pointer;
   display: inline-block;
@@ -2039,12 +2039,12 @@ th {
     margin: 0;
   }
   .RadioBtn input[type=radio] + label {
-    padding: 0 0 0 24px;
+    padding: 0 0 0 28px;
   }
   .RadioBtn input[type=radio] + label:before {
-    border-color: #ccc;
+    border-color: #757575;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -2054,8 +2054,8 @@ th {
     bottom: ;
     left: 0;
     z-index: ;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     background: #fff;
     content: "";
     display: block;
