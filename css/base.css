@@ -2168,9 +2168,6 @@ th {
   border-bottom-color: #fff;
   cursor: default;
 }
-.Table {
-  margin: 8px;
-}
 .Table table {
   width: 100%;
   height: auto;
