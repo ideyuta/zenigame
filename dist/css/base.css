@@ -1426,17 +1426,17 @@ th {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.znicon-arrow-down-bold:before {
-  content: "\e61d";
+.znicon-arrow-right-bold:before {
+  content: "\e620";
 }
 .znicon-arrow-left-bold:before {
-  content: "\e61e";
+  content: "\e621";
 }
-.znicon-arrow-right-bold:before {
-  content: "\e61f";
+.znicon-arrow-down-bold:before {
+  content: "\e622";
 }
 .znicon-arrow-up-bold:before {
-  content: "\e620";
+  content: "\e623";
 }
 .znicon-chevron-down:before {
   content: "\e600";
@@ -1521,6 +1521,15 @@ th {
 }
 .znicon-twitter:before {
   content: "\e61b";
+}
+.znicon-charge:before {
+  content: "\e61e";
+}
+.znicon-protect:before {
+  content: "\e61f";
+}
+.znicon-home:before {
+  content: "\e61d";
 }
 .znicon-eye:before {
   content: "\e000";
