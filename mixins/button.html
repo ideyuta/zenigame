@@ -20,17 +20,17 @@
 <p>ボタンの背景色をグラデーションで指定します。ボタンのグラデーションは縦（上から下）のみ行えます。<br><a href="">btn-varient</a>で基本となる色指定をした後にグラデーションの指定をしてください。</p>
 <pre><code>@include btn-gradient(start-color, end-color);
 </code></pre><h4 id="-">引数</h4>
-<div class="Table _Basic"><table><caption>表 btn-gradient Mixinのarguments</caption><thead><tr><th>Arguments</th><th>Default Value</th><th>Required</th></tr></thead><tbody><tr><td>start-color</td><td></td><td>Required</td></tr><tr><td>end-color</td><td></td><td>Required</td></tr></tbody></table></div><h4 id="-">例</h4>
+<div class="Table _Basic"><table><caption>表 btn-gradient Mixinのarguments</caption><thead><tr><th>Arguments</th><th>Default Value</th><th>Required</th></tr></thead><tbody><tr><td>start-color</td><td></td><td>Required</td></tr><tr><td>end-color</td><td></td><td>Required</td></tr></tbody></table></div><p>####例</p>
 <button class="btn _ex">Ex Button</button><pre><code>.btn._ex {
   @include btn-varient($blue500, $blue700, $blue700, $blue800);
   @include btn-gradient($blue500, $blue700);
   color: #fff;
 }
-</code></pre><h2 id="btn-resize">btn-resize</h2>
-<p>ボタンサイズを変更します。</p>
+</code></pre><p>##btn-resize
+ボタンサイズを変更します。</p>
 <pre><code>@include btn-resize(height, font-size, padding);
 </code></pre><h4 id="-">引数</h4>
-<div class="Table _Basic"><table><caption>表 btn-resize Mixinのarguments</caption><thead><tr><th>Arguments</th><th>Default Value</th><th>Required</th></tr></thead><tbody><tr><td>height</td><td></td><td>Required</td></tr><tr><td>font-size</td><td></td><td>Required</td></tr><tr><td>pdding</td><td>height/2 height</td><td></td></tr></tbody></table></div><h4 id="-">例</h4>
+<div class="Table _Basic"><table><caption>表 btn-resize Mixinのarguments</caption><thead><tr><th>Arguments</th><th>Default Value</th><th>Required</th></tr></thead><tbody><tr><td>height</td><td></td><td>Required</td></tr><tr><td>font-size</td><td></td><td>Required</td></tr><tr><td>pdding</td><td>height/2 height</td><td></td></tr></tbody></table></div><p>####例</p>
 <button class="btn _exlg">Ex Button</button><pre><code>.btn._exlg {
   @include btn-resize(50px, 20px);
 }
