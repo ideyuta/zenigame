@@ -1,4 +1,5 @@
 zenigame
 ========
 
-Hyper Sass Framework
+zenigame is CSS Framework.
+Under development.
