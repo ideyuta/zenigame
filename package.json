@@ -16,6 +16,7 @@
       "debowerify"
     ]
   },
+  "main": "src/zenigame.styl",
   "dependencies": {
     "imagesloaded": "^3.1.8",
     "marked": "^0.3.3",
