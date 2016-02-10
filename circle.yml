@@ -1,11 +1,6 @@
 machine:
   timezone: Asia/Tokyo
 
-dependencies:
-  pre:
-    - npm install -g gulp
-    - bower install
-
 test:
   override:
     - echo 'test'
@@ -16,5 +11,3 @@ deployment:
     commands:
       - git config --global user.email "ide.yuta@gmail.com"
       - git config --global user.name "Yuta Ide"
-      - gulp build
-      - gulp deploy

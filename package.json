@@ -1,56 +1,27 @@
 {
   "name": "zenigame",
-  "version": "0.0.2",
   "description": "zenigame is CSS Framework.",
-  "author": "ideyuta",
+  "version": "0.0.2",
+  "author": "ideyuta <ide.yuta@gmail.com>",
+  "dependencies": {
+    "normalize.css": "^3.0.3"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "stylus": "^0.53.0"
+  },
+  "keywords": [
+    "css",
+    "stylus"
+  ],
+  "main": "zenigame.styl",
   "repository": {
     "type": "git",
     "url": "https://github.com/ideyuta/zenigame.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "browserify": {
-    "transform": [
-      "coffeeify",
-      "debowerify"
-    ]
-  },
-  "main": "src/zenigame.styl",
-  "dependencies": {
-    "imagesloaded": "^3.1.8",
-    "marked": "^0.3.3",
-    "normalize.css": "^3.0.3"
-  },
-  "devDependencies": {
-    "bower": "^1.3.12",
-    "browser-sync": "^1.5.2",
-    "browserify": "^8.1.1",
-    "coffee-script": "^1.8.0",
-    "coffeeify": "^1.0.0",
-    "debowerify": "^1.2.0",
-    "del": "^0.1.3",
-    "gulp": "^3.8.10",
-    "gulp-cached": "^1.0.1",
-    "gulp-coffee": "^2.2.0",
-    "gulp-concat": "^2.4.1",
-    "gulp-cssmin": "^0.1.6",
-    "gulp-gh-pages": "^0.5.2",
-    "gulp-imagemin": "^1.0.1",
-    "gulp-jade": "^0.10.0",
-    "gulp-load-plugins": "^0.7.0",
-    "gulp-notify": "^2.0.0",
-    "gulp-plumber": "^0.6.6",
-    "gulp-remember": "^0.2.2",
-    "gulp-rename": "^1.1.0",
-    "gulp-size": "^1.1.0",
-    "gulp-stylus": "^2.0.5",
-    "gulp-uglify": "^1.0.1",
-    "gulp-using": "0.0.1",
-    "gulp-util": "^3.0.2",
-    "gulp-watch": "^1.0.7",
-    "main-bower-files": "^2.4.1",
-    "run-sequence": "^1.0.0",
-    "vinyl-source-stream": "^1.0.0"
+    "build:css": "stylus -c zenigame.styl --include-css -I node_modules -o zenigame.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:css": "chokidar src/ -c 'npm run build:css'"
   }
 }
