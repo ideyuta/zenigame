@@ -1,5 +1,8 @@
-node_modules
-bower_components
+# OSX
+#
 .DS_Store
-.tmp
-.sass-cache
+
+# node.js
+#
+node_modules/
+npm-debug.log
