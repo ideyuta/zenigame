@@ -14,6 +14,7 @@
     "css",
     "stylus"
   ],
+  "license": "MIT",
   "main": "zenigame.styl",
   "repository": {
     "type": "git",
